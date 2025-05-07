@@ -69,3 +69,57 @@ li {
       opacity: 1;
     }
   }
+h2 {
+    font-size: 60px;
+    text-align: center;
+	margin-bottom: 0;
+    font-family: "Creepster", system-ui;
+}
+
+h3 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 0;
+    font-family: "Dancing Script", cursive;;
+}
+
+#rise_to_glory{
+    display: flex;
+    flex-direction: column;
+    padding-top: 1px;
+    background-color: #818581;
+    width: 100%;
+}
+
+.centered-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.rise-common {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 10px 10px 10px;
+}
+
+.rise-common p {
+    width: 800px;
+	line-height: 1.8;
+	padding: 20px;
+	font-size: 25px;
+    font-family: "Dancing Script", cursive;
+}
+
+.rise-common img {
+	width: 400px;
+	height: 400px;
+}
+.rise-common img:hover {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1.6);
+}
