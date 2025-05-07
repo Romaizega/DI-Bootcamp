@@ -1,3 +1,9 @@
+.main-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
 body {
     background-color: #08314194;
 }
@@ -80,7 +86,7 @@ h3 {
     font-size: 30px;
     text-align: center;
     margin-bottom: 0;
-    font-family: "Dancing Script", cursive;;
+    font-family: "Dancing Script", cursive;
 }
 
 #rise_to_glory{
@@ -123,3 +129,71 @@ h3 {
     filter: blur(0);
     transform: scale(1.6);
 }
+
+#screen {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1px;
+    background-color: #999891;
+    width: 100%;
+}
+
+.screen-info {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1400px;
+    margin: 20px auto;
+}
+  
+.screen-info img {
+    width: 200px;
+    height: 250;
+    object-fit: contain;
+  }
+  
+.screen-text {
+    flex: 10;
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.trailer-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+.trophies-common{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.trophies-common p {
+    width: 800px;
+	line-height: 1.8;
+	padding: 20px;
+	font-size: 25px;
+    font-family: "Dancing Script";
+}
+
+.trophies-common img {
+	width: 440px;
+	height: 240px;
+    object-fit: contain
+}
+
+.quote-box {
+    font-size: 40px;
+    background: #444;
+    color: #110d01;
+    padding: 20px;
+    font-family: "Dancing Script", cursive;
+    margin: 30px 0;
+  }
+  
