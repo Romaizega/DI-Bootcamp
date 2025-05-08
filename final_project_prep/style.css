@@ -16,36 +16,41 @@ ul {
     justify-content: center;
     display: flex;
     background-color: #333;
-  }
+}
+
 li {
     float: left;
 }
+
 li {
     font-family: "Dancing Script", cursive;
     font-size: 30px !important;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-  }
-  li a {
+}
+
+li a {
     display: block;
     color: rgb(148, 160, 149);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-  }
-  li a:hover {
+}
+
+li a:hover {
     background-color: #111;
-  }
-  .hero-image {
+}
+
+.hero-image {
     width: 100%;
     height: 150%;
     display: block;
     margin: 0;
     padding: 0;
-  }
+}
 
-  .hero-text {
+.hero-text {
     position: absolute;
     top: 40%;
     left: 50%;
@@ -53,9 +58,9 @@ li {
     color: rgb(236, 242, 245);
     text-align: center;
     font-family: 'Dancing Script', cursive;
-  }
+}
   
-  .hero-text h1 {
+.hero-text h1 {
     font-size: 70px;
     margin: 0;
     background: linear-gradient(to right, #ffffff, #ffc107);
@@ -64,8 +69,8 @@ li {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
     animation: fadeInZoom 10s ease-in-out infinite;
     opacity: 0;
-  }
-  @keyframes fadeInZoom {
+}
+@keyframes fadeInZoom {
     from {
       transform: scale(0.9);
       opacity: 0;
@@ -74,7 +79,8 @@ li {
       transform: scale(1);
       opacity: 1;
     }
-  }
+}
+
 h2 {
     font-size: 60px;
     text-align: center;
@@ -204,8 +210,9 @@ footer {
     position: relative;
     background-color: #999891;
     gap: 20px;
-    font-size: 25px;
-  }
+    font-size: 25px;  
+}
+
 footer a i {
     color: #3a3a3b;
 }
@@ -221,7 +228,7 @@ footer a:hover i {
     align-items: center;
     gap: 60px;
     margin-top: 20px;
-  }
+}
   
 .behind-socials a i {
     font-size: 60px;
@@ -253,4 +260,100 @@ footer a:hover i {
     75% { content: '...'; }
     100% { content: ''; }
 }
-  
+
+@media (max-width: 768px) {
+
+  ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  li {
+    font-size: 20px !important;
+  }
+
+  .hero-image {
+    height: auto;
+  }
+
+  .hero-text h1 {
+    font-size: 40px;
+    padding: 10px;
+  }
+
+
+  .rise-common {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .rise-common img {
+    width: 90%;
+    height: auto;
+  }
+
+  .rise-common p {
+    width: 95%;
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .screen-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .screen-info img {
+    width: 80%;
+    height: auto;
+  }
+
+  .screen-text {
+    width: 90%;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .trailer-container iframe {
+    width: 90%;
+    height: auto;
+  }
+
+  .trophies-common {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .trophies-common img {
+    width: 80%;
+    height: auto;
+  }
+
+  .trophies-common p {
+    width: 90%;
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .behind-socials {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .quote-box {
+    font-size: 20px;
+    padding: 15px;
+  }
+
+  .continued {
+    font-size: 32px;
+    padding: 10px;
+  }
+}
