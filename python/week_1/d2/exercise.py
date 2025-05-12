@@ -96,3 +96,17 @@ while active:
         print("Invalid input. Please enter a number or 'buy' to finish.")
 
 print(f"Total ticket cost: ${total_cost}")
+
+# Exercise_10
+sandwich_orders = ["Tuna", "Pastrami", "Avocado", "Pastrami", "Egg", "Chicken", "Pastrami"]
+active = True
+while active:
+    if "Pastrami" not in sandwich_orders:
+        active = False
+    elif "Pastrami" in sandwich_orders:
+        sandwich_orders.remove("Pastrami")
+finished_sandwiches = []
+for items in sandwich_orders:
+    finished_sandwiches.append(items)
+    print(f"I made your {items} sandwich")
+print(finished_sandwiches)
