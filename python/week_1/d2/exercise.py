@@ -73,3 +73,26 @@ if len(toppings_list) == 0:
 else:
     price = len(toppings_list) * 2.5 + 10
     print(f"Your pizza cost {price} $")
+
+# Exercise_9
+total_cost = 0
+age_list = []
+active = True
+while active:
+    your_age = input("How old are you? (enter 'buy' when you are finished) : ").lower()
+    if your_age == "buy":
+        active = False
+    elif your_age.isdigit():
+        age = int(your_age)
+        if age <= 3:
+            print("Ticket is free")
+        elif age <= 12:
+            total_cost += 10
+            print("Ticket costs $10.")
+        else:
+            total_cost += 15
+            print("Ticket costs $15.")
+    else:
+        print("Invalid input. Please enter a number or 'buy' to finish.")
+
+print(f"Total ticket cost: ${total_cost}")
