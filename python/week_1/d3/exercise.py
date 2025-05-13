@@ -23,3 +23,35 @@ for name, age  in family.items():
         total_cost += 10
         print(f"Ticket for {name.capitalize()} costs $10")
 print(f"Total cost is ${total_cost}")
+
+# Exercise_3
+
+brand = {
+    "name": "Zara",
+    "creation_date" : 1975,
+    "creator_name": "Amancio Ortega Gaona",
+    "type_of_clothes ": ["men", "women", "children", "home"],
+    "international_competitors": ["Gap", "H&M", "Benetton"],
+    "number_stores": 7000,
+    "major_color":{ 
+        "France": "blue", 
+        "Spain": "red", 
+        "US": ["pink", "green"]
+    }
+}
+
+brand["number_stores"] = 2
+print(brand["type_of_clothes "])
+brand["country_creation"] = "Spain"
+brand["international_competitors"].append("Desigual")
+del brand["creation_date"]
+print(brand["international_competitors"][-1])
+print(brand["major_color"]["US"])
+print("keys:", brand.keys())
+
+more_on_zara = {
+    "creation_data": 1975,
+    "number_store": 3
+}
+new_brand = brand | more_on_zara
+print(new_brand)
