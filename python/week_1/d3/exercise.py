@@ -55,3 +55,10 @@ more_on_zara = {
 }
 new_brand = brand | more_on_zara
 print(new_brand)
+
+# Exercise_4
+
+users = ["Mickey", "Minnie", "Donald", "Ariel", "Pluto"]
+users_dic = {value: key for key, value in enumerate(users)}
+users_dic_2 = {i: name for i, name in enumerate(users)}
+users_dic_3 = {value: key for key, value in enumerate(sorted(users))}
