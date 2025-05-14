@@ -46,3 +46,37 @@ def make_great(magician_names):
         print(magician_names[i])
 show_magicians(magician_names)
 make_great(magician_names)
+
+# Exercise_7
+
+def get_random_temp():
+    temep = (round(random.uniform(-10, 40), 1))
+    return temep
+def main():
+    temper = get_random_temp()
+    print(f"The temperature right now is {temper} degrees Celsius")
+    if temper <= 0:
+        print("Brrr, that’s freezing! Wear some extra layers today.")
+    elif temper > 0 or temper <= 16:
+        print("Quite chilly! Don’t forget your coat.")
+    elif temper > 16 or temper <= 23:
+        print("Nice weather.")
+    elif temper > 24 or temper <= 32:
+        print("A bit warm, stay hydrated.")
+    else:
+        print("It’s really hot! Stay cool.")
+    get_random_temp
+main()
+
+
+def get_random_temp():
+    month_num = int(input("Write number of month: "))
+    if month_num == 12 or month_num ==2 or month_num ==1:
+        print("Brrr, that’s freezing! Wear some extra layers today.")
+    elif month_num == 3 or month_num==4 or month_num == 5:
+        print("Nice weather.")
+    elif month_num == 6 or month_num == 7 or month_num == 8:
+        print("It’s really hot! Stay cool.")
+    else:
+        print("A bit warm, stay hydrated.")
+get_random_temp()
