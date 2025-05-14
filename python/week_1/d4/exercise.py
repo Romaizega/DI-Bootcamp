@@ -25,3 +25,11 @@ def random_namber(your_number):
     else:
         print(f"Fail! your number: {your_number}, but Random number: {number}")
 random_namber(4)
+
+# Exercise_5
+def make_shirt(size = "large", text= "I love Python"):
+    print(f"The size of the shirt is {size} and the text is {text}")
+make_shirt()
+make_shirt("medium")
+make_shirt("small", "Someone's text")
+make_shirt(size="small", text="Hello!")
