@@ -33,3 +33,16 @@ make_shirt()
 make_shirt("medium")
 make_shirt("small", "Someone's text")
 make_shirt(size="small", text="Hello!")
+
+# Exercise_6
+
+magician_names = ["Harry Houdini", "David Blaine", "Criss Angel"]
+def show_magicians(magician_names):
+    for names in magician_names:
+        print(names)
+def make_great(magician_names):
+    for i, name in enumerate(magician_names):
+        magician_names[i] = "the Great " + name
+        print(magician_names[i])
+show_magicians(magician_names)
+make_great(magician_names)
