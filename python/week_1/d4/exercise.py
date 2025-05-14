@@ -57,11 +57,11 @@ def main():
     print(f"The temperature right now is {temper} degrees Celsius")
     if temper <= 0:
         print("Brrr, that’s freezing! Wear some extra layers today.")
-    elif temper > 0 or temper <= 16:
+    elif 0 < temper <= 16:
         print("Quite chilly! Don’t forget your coat.")
-    elif temper > 16 or temper <= 23:
+    elif 16 < temper <= 23:
         print("Nice weather.")
-    elif temper > 24 or temper <= 32:
+    elif 24 <= temper <= 32:
         print("A bit warm, stay hydrated.")
     else:
         print("It’s really hot! Stay cool.")
@@ -69,14 +69,40 @@ def main():
 main()
 
 
-def get_random_temp():
+def get_random_temp(season):
+    if season == "winter":
+        return round(random.uniform(-10, 10), 1)
+    elif season == "spring":
+        return round(random.uniform(10, 20), 1)
+    elif season == "summer":
+        return round(random.uniform(20, 35), 1)
+    elif season == "autumn":
+        return round(random.uniform(10, 20), 1)
+
+def main():
     month_num = int(input("Write number of month: "))
-    if month_num == 12 or month_num ==2 or month_num ==1:
-        print("Brrr, that’s freezing! Wear some extra layers today.")
-    elif month_num == 3 or month_num==4 or month_num == 5:
-        print("Nice weather.")
-    elif month_num == 6 or month_num == 7 or month_num == 8:
-        print("It’s really hot! Stay cool.")
+    if month_num in [12, 1, 2]:
+        season = "winter"
+    elif month_num in [3, 4, 5]:
+        season = "spring"
+    elif month_num in [6, 7, 8]:
+        season = "summer"
     else:
+        season = "autumn"
+
+    temp = get_random_temp(season)
+    print(f"The temperature right now is {temp} degrees Celsius.")
+
+    if temp <= 0:
+        print("Brrr, that’s freezing! Wear some extra layers today.")
+    elif 0 < temp <= 16:
+        print("Quite chilly! Don’t forget your coat.")
+    elif 16 < temp <= 23:
+        print("Nice weather.")
+    elif 24 <= temp <= 32:
         print("A bit warm, stay hydrated.")
-get_random_temp()
+    else:
+        print("It’s really hot! Stay cool.")
+    get_random_temp(season)
+main()
+    
