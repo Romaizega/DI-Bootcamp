@@ -1,4 +1,3 @@
-
 while True:
     start = input("Do you want to play with me? Eneter 'yes' and we continue: ").lower()
     if start == "yes":
@@ -38,7 +37,7 @@ def check_win():
     for column_ind in range(3):
         column = [list_of_game[row][column_ind] for row in range(3)]
         if column.count("o") == 3:
-            return name1
+            return name2
         elif column.count("x") == 3:
             return name1
     main_diag = [list_of_game[i][i] for i in range(3)]
@@ -56,8 +55,15 @@ def player_input():
     winner_found = False
     while attempt < 9 and not winner_found:
         if attempt % 2 == 0:
-            player_1_row = int(input(f"{name1} - write position for step row: "))
-            player_1_col = int(input(f"{name1} - Write position for step column: "))
+            try:
+                player_1_row = int(input(f"{name1} - write position for step row: "))
+                player_1_col = int(input(f"{name1} - Write position for step column: "))
+                if player_1_row not in range(3) or player_1_col not in range(3):
+                    print("Your input is out of range. Try 0, 1 or 2")
+                    continue
+            except:
+                print("You must enter only integer")
+                continue
             if list_of_game[player_1_row][player_1_col] not in ["", "-"]:
                 print("The cell is taken, plese eneter again")
                 continue
@@ -71,8 +77,15 @@ def player_input():
                 winner_found = True
         else:
             if attempt % 2 != 0:
-                player_2_row = int(input(f"{name2} - write position for step row: "))
-                player_2_col = int(input(f"{name2} - write position for step column: "))
+                try:
+                    player_2_row = int(input(f"{name2} - write position for step row: "))
+                    player_2_col = int(input(f"{name2} - write position for step column: "))
+                    if player_2_row not in range(3) or player_2_col not in range(3):
+                        print("Your input is out of range. Try 0, 1 or 2")
+                        continue
+                except:
+                    print("You must enter only integer")
+                    continue
                 if list_of_game[player_2_row][player_2_col] not in ["", "-"]:
                     print("The cell is taken, please enter again")
                     continue
@@ -89,5 +102,3 @@ def player_input():
         print("It's a tie!")
 display_board()
 player_input()
-greeting()
-
