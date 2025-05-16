@@ -14,7 +14,9 @@ list_of_game = [
 
 def greeting():
     player_1 = input("Hi, player N1 what's your name?: ")
+    print(f"Hi {player_1} yours - X")
     player_2 = input("Hi, player N2 what's your name?: ")
+    print(f"Hi {player_2} yours O")
     return player_1, player_2
 name1, name2 = greeting()
 
