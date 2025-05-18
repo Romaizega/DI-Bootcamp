@@ -99,7 +99,7 @@ class Zoo:
             letter = animal[0].upper()
             if letter not in self.my_animal:
                 self.my_animal[letter] = []
-                self.my_animal[letter].append(animal)
+            self.my_animal[letter].append(animal)
 
     def get_groups(self):
         for key, values in self.my_animal.items():
