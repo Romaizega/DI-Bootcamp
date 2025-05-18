@@ -11,7 +11,6 @@ age1 = int(input("Write age of the first cat: "))
 cat_name2 = input("Write name of the second cat: ")
 age2 = int(input("Write age of the second cat: "))
 
-
 cat_name3 = input("Write name of the third cat: ")
 age3 = int(input("Write age of the third cat: "))
 
