@@ -73,3 +73,51 @@ class Song:
 
 stairway = Song(["There’s a lady who's sure", "all that glitters is gold", "and she’s buying a stairway to heaven"])
 stairway.sing_me_song() 
+
+# Exercise_4
+
+class Zoo:
+    def __init__(self, zoo_name):
+        self.name = zoo_name
+        self.animals = []
+        self.my_animal = {}
+
+    def add_animal(self, new_animal):
+        if new_animal not in self.animals:
+            self.animals.append(new_animal)
+
+    def get_animals(self):
+        print(self.animals)
+
+    def sell_animal(self, animal_sold):
+        if animal_sold in self.animals:
+            self.animals.remove(animal_sold)
+
+    def sort_animals(self):
+        self.animals.sort()
+        for animal in self.animals:
+            letter = animal[0].upper()
+            if letter not in self.my_animal:
+                self.my_animal[letter] = []
+                self.my_animal[letter].append(animal)
+
+    def get_groups(self):
+        for key, values in self.my_animal.items():
+            print(f"{key}: {values}")
+
+ramat_gan_safari = Zoo("Ramat Gan Safari")
+
+ramat_gan_safari.add_animal("Giraffe")
+ramat_gan_safari.add_animal("Bear")
+ramat_gan_safari.add_animal("Baboon")
+ramat_gan_safari.add_animal("Babn")
+ramat_gan_safari.add_animal("Coat")
+ramat_gan_safari.add_animal("Cat")
+ramat_gan_safari.add_animal("Zebra")
+ramat_gan_safari.add_animal("Lion")
+
+ramat_gan_safari.get_animals()
+ramat_gan_safari.sell_animal("Bear")
+ramat_gan_safari.get_animals()
+ramat_gan_safari.sort_animals()
+ramat_gan_safari.get_groups()
