@@ -16,8 +16,7 @@ class Dog:
         power_other_dog = other_dog.run_speed() * other_dog.weight
         if power_dog > power_other_dog:
             return f"{self.name} won!"
-        elif power_dog < power_other_dog:
-            return f"{other_dog.name} won!"
+        else: return f"{other_dog.name} won!"
 
     
 dog1 = Dog("Rex", 4, 54)
