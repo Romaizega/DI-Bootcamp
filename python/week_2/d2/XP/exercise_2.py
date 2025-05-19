@@ -19,10 +19,10 @@ class Dog:
         else: return f"{other_dog.name} won!"
 
     
-dog1 = Dog("Rex", 4, 54)
-dog2 = Dog("Pex", 3, 65)
-dog3 = Dog("Pig", 7, 32)
+# dog1 = Dog("Rex", 4, 54)
+# dog2 = Dog("Pex", 3, 65)
+# dog3 = Dog("Pig", 7, 32)
 
-print(dog1.bark())
-print(dog2.run_speed())
-print(dog1.fight(dog2))
+# print(dog1.bark())
+# print(dog2.run_speed())
+# print(dog1.fight(dog2))
