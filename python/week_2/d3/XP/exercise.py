@@ -1,3 +1,5 @@
+import random, string
+
 # Exercise 1
 class Currency:
     def __init__(self, currency, amount):
@@ -37,5 +39,12 @@ c3 = Currency('shekel', 1)
 c4 = Currency('shekel', 10)
 
 
-# Exercise 2
+# Exercise 3
 
+def random_string():
+    my_letters = string.ascii_letters
+    my_string = ""
+    for i in range(5):
+        my_string += random.choice(my_letters)
+    print(my_string)
+random_string()
