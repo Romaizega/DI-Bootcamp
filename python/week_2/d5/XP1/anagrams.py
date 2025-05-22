@@ -20,7 +20,6 @@ def user_input():
             return user_word
 
 def get_anagram_word():
-    word = AnagramChecker("sowpods.txt")
     user_word = user_input()
     if word.is_valid_word(user_word):
         anagrams = word.get_anagrams(user_word)
