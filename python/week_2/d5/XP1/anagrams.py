@@ -10,6 +10,15 @@ while True:
         quit()
 
 def user_input():
+    """
+    Prompt the user to enter a single word.
+    The function validates that the input:
+    - Contains only one word
+    - Contains only alphabetic characters
+    - Has no leading or trailing spaces
+    Returns:
+        str: A valid word entered by the user
+    """
     while True:
         user_word = input("Write here any word: ").strip()
         if len(user_word.split()) != 1:
@@ -20,6 +29,10 @@ def user_input():
             return user_word
 
 def get_anagram_word():
+    """
+    Get a valid word from the user, check if it's in the dictionary,
+    and if so, find and display all of its valid anagrams.
+    """
     user_word = user_input()
     if word.is_valid_word(user_word):
         anagrams = word.get_anagrams(user_word)
