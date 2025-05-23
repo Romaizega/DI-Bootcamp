@@ -1,8 +1,8 @@
 import random
 
 class Game:
-    def __init__(self):
-        pass
+    # def __init__(self):
+    #     pass
 
     def get_user_item(self):
         print("You should choice rock, paper or scissors")

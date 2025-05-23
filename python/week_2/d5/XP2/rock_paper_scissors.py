@@ -1,4 +1,5 @@
 from game import Game
+from tabulate import tabulate
 
 def get_user_menu_choice():
 
@@ -15,10 +16,14 @@ def get_user_menu_choice():
             else: return user_input
         except:
             print("You must enter only number")
-# get_user_menu_choice()
 
 def print_result(results):
-    print(f"Wins: {results.get('win', 0)}, Losses: {results.get('loss', 0)}, Draws: {results.get('draw', 0)}")
+    table = [
+        ["Wins", results.get("win", 0)],
+        ["Losses", results.get("loss", 0)],
+        ["Draws", results.get("draw", 0)]
+    ]
+    print(tabulate(table, headers=["Result", "Count"], tablefmt="grid"))
     print("Thank you for playing!")
 
 def main():
