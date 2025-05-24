@@ -18,16 +18,17 @@ class Deck:
             self.new_deck = random.shuffle(self.deck)
             return self.deck
 
-        
     def deal(self):
-        # while len(self.deck) != 0:
-            choice_card = random.choice(self.deck)
-            for cards in self.deck:
-                if cards == choice_card:
-                    self.deck.remove(choice_card)
-            print(choice_card)
-            print(len(self.deck))
+        if not self.deck:
+            print("The deck is empty")
+            exit()
+        choice_card = random.choice(self.deck)
+        self.deck.remove(choice_card)
+        print(choice_card)
+        print(f"Cards left {len(self.deck)}")
 
 decker = Deck()
 decker.shuffle()
-decker.deal()
+while True:
+    input("Press Enter to deal a card...")
+    decker.deal()
