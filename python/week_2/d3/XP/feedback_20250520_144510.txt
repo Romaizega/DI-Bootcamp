@@ -1,0 +1,20 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/python/week_2/d3/XP/exercise.py
+suggestions for improvement:
+- In Exercise 1, the `__add__` method should return a new `Currency` object instead of just the sum of amounts. This is more consistent with object-oriented principles and avoids potential side effects.
+- Exercise 1's output for `print(c1 + c3)` should explicitly raise a TypeError, it currently only prints a message, and should explicitly raise the TypeError exception.
+- In Exercise 1,  add docstrings to all methods for better readability and understanding.
+- Improve the formatting of the output in Exercise 7. Consider using a library like `tabulate` or `pprint` for better presentation of the list of dictionaries.
+- In Exercise 7, the function `create_faker_users()` modifies a global variable (`data`). It's better to return the list of dictionaries from the function to avoid potential side effects and improve code clarity.
+- Exercise 2 is missing. The instructions mention creating `func.py` and `exercise_one.py`, but no code for these files is provided.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/python/week_2/d3/XP/exercise_one.py
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/python/week_2/d3/XP/func.py
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
