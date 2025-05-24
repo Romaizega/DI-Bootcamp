@@ -4,7 +4,7 @@ class Card:
     def create_deck(self):
         suit  =  ["Hearts", "Diamonds", "Clubs", "Spades"]
         value = ["A","2","3","4","5","6","7","8","9","10","J","Q","K"]
-        self.deck = [(sut, val) for sut in suit for val in value]
+        self.deck = [f"{sut} of {val}" for sut in suit for val in value]
         return self.deck
 
     def __str__(self):
