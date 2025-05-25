@@ -33,3 +33,16 @@ const suffix = ["st", "nd", "rd", "th", "th"]
 for (let i =0; i < colors2.length; i++) {
     console.log(`My ${numbers2[i]}${suffix[i]} is ${colors2[i]}`);
 }
+
+// Exercise_3
+
+
+let userInput;
+
+do {
+  userInput = prompt("Enter a number:");
+  console.log("typeof:", typeof userInput); 
+  userInput = Number(userInput);  
+} while (isNaN(userInput) || userInput < 10);
+
+console.log("You entered:", userInput, "is " + typeof userInput);
