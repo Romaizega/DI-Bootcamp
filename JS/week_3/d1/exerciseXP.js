@@ -77,16 +77,29 @@
 
 // Exercise_5
 
-const family = {
-    Parents: ["mother", "father"],
-    Childrer: ["twins", "son", "daughter"],
-    city: "Saint-Peter"
+// const family = {
+//     Parents: ["mother", "father"],
+//     Childrer: ["twins", "son", "daughter"],
+//     city: "Saint-Peter"
+// }
+
+// for (let key in family) {
+//     console.log(key)
+// }
+
+// for  (let key in family) {
+//     console.log(family[key]);
+// }
+
+// Exercise_6
+
+const details = {
+  my: 'name',
+  is: 'Rudolf',
+  the: 'reindeer'
 }
 
-for (let key in family) {
-    console.log(key)
+for (let key in details) {
+    console.log(key, details[key]);
 }
 
-for  (let key in family) {
-    console.log(family[key]);
-}
