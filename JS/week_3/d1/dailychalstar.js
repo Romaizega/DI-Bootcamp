@@ -11,7 +11,7 @@ for (let i = 0; i < 6; i++) {
     line2 = "";
     for (let j =0; j< 6; j++) {
         if (j <= i) {
-            line2 += "* ";
+            line2 += "  * ";
         }    
     }
 console.log(line2);
