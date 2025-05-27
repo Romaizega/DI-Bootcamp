@@ -1,0 +1,18 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/python/week_2/d5/XP1/anagram_checker.py
+suggestions for improvement:
+- The `get_anagrams` method could be optimized for performance by using a more efficient data structure for storing and searching the word list (e.g., a set or a Trie).
+- Add error handling for the case where the input file is not found or cannot be read.
+- The docstrings could be more detailed, explaining edge cases and return values more thoroughly.
+- The code lacks input validation in `get_anagrams` to handle non-string inputs which could lead to errors.
+Correctness: 95%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/python/week_2/d5/XP1/anagrams.py
+suggestions for improvement:
+- The `anagram_checker.py` file is missing, making it impossible to fully assess the correctness of the `AnagramChecker` class implementation. The provided code only shows the UI part (`anagrams.py`).
+- The program lacks error handling for file I/O operations (e.g., the `sowpods.txt` file might not exist).
+- The performance could be improved by using more efficient algorithms for anagram detection and word list searching. Currently, it iterates through the entire word list for each comparison.
+- Add a more robust menu system, allowing the user to easily restart or exit without having to quit the entire program. The current approach relies on the `quit()` function which is not ideal in a larger program.
+- The anagram finding logic (presumably in `AnagramChecker`) isn't shown, so its efficiency and correctness can't be evaluated.
+- Consider using a more descriptive variable name than `word` in `anagrams.py`.
+Correctness: 85%
+-----
