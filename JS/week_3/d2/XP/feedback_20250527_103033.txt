@@ -1,0 +1,48 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d2/XP/indexdom.html
+suggestions for improvement:
+- The provided code is only the HTML structure for Exercise 5.  It's missing the crucial `scriptdom.js` file which contains the JavaScript logic to solve the exercise.  Without the JavaScript, none of the exercise's requirements can be assessed.
+- Add the `scriptdom.js` file with the JavaScript implementation to allow for a proper evaluation.
+- Structure the JSON response to include separate scores and feedback for each exercise. Currently only exercise 5 is partially represented.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d2/XP/indexdom2.html
+suggestions for improvement:
+- No code is provided to implement the solutions to any of the exercises.  The HTML snippet only shows the starting point for Exercise 6.  The `scriptdom2.js` file is referenced but not included.
+- The JSON response should include the code for all the exercises.
+- Add the code for each exercise, and then evaluate correctness and readability based on that code.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d2/XP/indexxp.html
+suggestions for improvement:
+- The provided HTML file is empty except for a script inclusion.  All the exercises require significant JavaScript code within the HTML or a separate `.js` file that interacts with it. No code is provided to implement any of the exercises.
+- The `scriptxp.js` file is missing, preventing any assessment of the JavaScript code's correctness.
+- The exercises require DOM manipulation (Exercises 5, 6, 7). Without the JavaScript implementation, it's impossible to evaluate these aspects.
+- Add the JavaScript code that implements each exercise's requirements.
+- Structure the JavaScript code logically, separating functions and using meaningful variable names.
+- For DOM manipulation exercises, ensure that the code is robust and handles edge cases effectively.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d2/XP/scriptdom.js
+suggestions for improvement:
+- The code for Exercise 5 is mostly correct but lacks error handling and could be improved for readability.  Add checks to ensure elements exist before manipulating them.
+- Use more descriptive variable names (e.g., instead of `lists`, use `userList`).
+- The bonus part of Exercise 5 (alerting users) is not implemented.
+- Exercises 1, 2, 3, 4, 6, and 7 are missing entirely.
+- Add comments to explain complex logic or non-obvious steps.
+Correctness: 85%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d2/XP/scriptdom2.js
+suggestions for improvement:
+- The code is well-structured and easy to follow.  Minor improvements in readability could be achieved by adding comments explaining the purpose of each section of the code.
+- Consider using more descriptive variable names. For example, instead of `textLi`, `firstLi`, and `lastLi`, you could use `unorderedList`, `firstListItem`, and `lastListItem` respectively. This improves readability significantly.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d2/XP/scriptxp.js
+suggestions for improvement:
+- **Exercise 1:** The code correctly implements the `displayNumbersDivisible` function with a parameter for the divisor, fulfilling the bonus requirement. However, the use of a single `console.log` for the numbers and sum could be improved for better readability. Consider using a loop or array to accumulate the numbers and log them separately before showing the sum.
+- **Exercise 2:** The `myBill` function accurately calculates the total price and updates the stock, addressing the bonus part. The code is concise and readable.  The use of `if (item in stock && stock[item] > 0)` efficiently checks stock availability.
+- **Exercise 3:** The `changeEnough` function correctly calculates the total change and compares it to the item price, returning `true` or `false` as expected.  The code is easy to understand.
+- **Exercise 4:** The functions `hotelCost`, `planeRideCost`, and `rentalCarCost` effectively handle user input validation and calculations. The `totalVacationCost` function integrates them well. However, the use of multiple `if` statements in `planeRideCost` could be simplified using a `switch` statement or an object lookup. The bonus of moving prompts to `totalVacationCost` is not implemented.
+- **Exercise 5 & 6 & 7:** These exercises are not included in the provided code.  Scores cannot be provided without the code.
+Correctness: 85%
+-----
