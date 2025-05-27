@@ -1,0 +1,14 @@
+URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/python/week_1/d2/exercise.py
+suggestions for improvement:
+- In Exercise 1, while the code correctly uses sets and their operations, it doesn't explicitly handle potential errors (e.g., trying to remove a non-existent element).  Add error handling.
+- Exercise 2 correctly points out the immutability of tuples but could benefit from a more explicit explanation of why this is the case.
+- Exercise 7 lacks input validation; it assumes the user will always provide correctly formatted input. Improve error handling and input validation.
+- In Exercise 8, the program could be improved by using a more descriptive variable name than `active` for the loop control variable. Consider using a more descriptive name like `keep_adding_toppings`.
+- Exercise 9 could be improved by adding input validation to ensure the user enters numerical values for ages, handling cases of non-numeric input gracefully.
+- Exercise 10's `while` loop for removing 'Pastrami' is inefficient.  Use a `while` loop, but improve the logic to directly remove all instances in a more efficient manner (rather than checking for it and removing only one instance per iteration).
+Brief justification:
+- correctness: Most exercises demonstrate a good understanding of the core concepts (sets, tuples, lists, loops). However, some lack robust error handling and input validation, which slightly reduces the correctness score.  The exercises generally follow the instructions, but small improvements in efficiency and error handling could improve the accuracy. For example, exercise 10 inefficiently removes 'Pastrami'.
+- readability: The code is generally readable, with clear variable names and straightforward logic. However, some improvements could enhance readability. For instance, using more descriptive variable names would greatly enhance code understanding. Inconsistent spacing and styling further decrease the score slightly. 
+- performance: The performance is generally acceptable for these small-scale exercises.  However, some inefficient aspects, such as the `while` loop for removing 'Pastrami' in Exercise 10 or redundant checks, should be addressed to improve efficiency.
+- security: No significant security vulnerabilities are present in the code. The code doesn't handle external input in a way that introduces security risks (e.g., it doesn't directly execute user-provided input).
+

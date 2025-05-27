@@ -1,0 +1,46 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d2/XP/indexdom.html
+suggestions for improvement:
+- The provided code is only HTML and does not include the JavaScript (`scriptdom.js`) necessary to complete exercises 5 and 6.  Without the JavaScript implementation, it's impossible to assess correctness for these exercises.
+- No JavaScript code is provided to evaluate correctness for exercises 1-4 and 7.
+- Add the JavaScript code to allow for a complete evaluation.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d2/XP/indexdom2.html
+suggestions for improvement:
+- No code for exercises 1-7 was provided.  The HTML snippet shows only part of exercise 6. The `scriptdom2.js` file is missing, which contains the actual JavaScript implementation for the exercises.
+- The provided HTML only shows the initial setup for Exercise 6.  The JavaScript code to modify the navbar (Exercise 6) is entirely absent.
+- To accurately assess correctness, readability, and performance, the complete JavaScript code for all exercises is needed.
+- Add comments to explain the logic and purpose of different parts of the code for better readability.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d2/XP/indexxp.html
+suggestions for improvement:
+- No JavaScript code is provided in `scriptxp.js` or within the HTML to implement any of the exercises.  The HTML file is also empty except for a reference to an external script.
+- The exercises require significant JavaScript code to handle loops, conditionals, DOM manipulation, and user interaction. None of this is present.
+- Add the JavaScript code for each exercise to the `scriptxp.js` file.
+- Structure the `scriptxp.js` file to organize the code for each exercise clearly, possibly using functions or modules.
+- Ensure proper error handling (e.g., handling cases where user input is invalid or unexpected).
+- For Exercise 4, consider using more robust input validation beyond simple type checking. Use a loop to repeatedly prompt the user until valid input is received.
+- For Exercise 5 and 6, use more descriptive variable names to improve readability.
+- Add comments to explain the purpose and logic of different code sections.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d2/XP/scriptdom.js
+suggestions for improvement:
+- The code for Exercise 5 is partially correct.  It successfully modifies the DOM elements as requested, however, the bonus requirement (alerting if background color is light blue) is missing.
+- Improve readability by adding comments to explain the purpose of each code section.  Use more descriptive variable names (e.g., instead of `lists`, use `userList`).
+- The code directly manipulates the DOM using indices (e.g., `lists[0].children[1]`). This is fragile and can break if the HTML structure changes. Use more robust methods like querySelector or classList.contains for better maintainability.
+- Exercise 6 is incomplete. Only the first two steps are implemented. The last step, which involves using `firstElementChild` and `lastElementChild` to retrieve and display the text content of the first and last `<li>` elements, is missing.
+Correctness: 85%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d2/XP/scriptdom2.js
+suggestions for improvement:
+- The code is well-structured and easy to follow.  Minor improvements in readability could be achieved by adding comments explaining the purpose of each section of code.
+- Consider using more descriptive variable names (e.g., instead of `textLi`, use `unorderedList`).
+Correctness: 100%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d2/XP/scriptxp.js
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
