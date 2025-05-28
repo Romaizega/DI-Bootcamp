@@ -1,0 +1,10 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/python/week_2/d5/daily/dailychallenge.py
+suggestions for improvement:
+- The `Card` class should have `suit` and `value` attributes, not just a method that creates a deck.  The deck creation logic should reside within the `Deck` class.
+- The `shuffle` method in the `Deck` class should use `random.shuffle` correctly (it currently returns `None`).
+- The `deal` method could be improved by returning the dealt card instead of just printing it, allowing for more flexibility in how the dealt cards are used.
+- Add error handling for the case where the user interrupts the program before it naturally terminates.
+- Improve naming consistency (e.g., `sut` should be `suit`).
+- The `__str__` method in the `Card` class is not used effectively and should be removed or modified to represent a single card, not the entire deck.
+Correctness: 85%
+-----
