@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="sometext"></div>
+    <script>
+        const yourFamily = (number, par_name, locat, job) => `You will be a ${job} in ${locat}, and married to ${par_name} with ${number} kids.`
+        const myDiv = document.getElementById("sometext")
+        myDiv.textContent = yourFamily(4, "Poroshina-Nikitina", "Haifa", "developer")
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise_7</title>
+</head>
+<style>
+    .image {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      vertical-align: middle;
+    }
+</style>
+<body>
+    <div class="navbar" style="background-color: lightgray; padding: 10px;">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+    <div id="user-container"></div>
+    <img src="" alt="">
+  </div>
+    <script>
+        const userName = ((profile) => profile)("Petr");
+        const myNewDiv = document.getElementById("user-container");
+        myNewDiv.textContent = userName + " ";
+        const image = document.createElement("img")
+        myNewDiv.appendChild(image)
+        image.src = "https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Mark_Ruffalo_as_%22Professor_Hulk%22.jpeg/250px-Mark_Ruffalo_as_%22Professor_Hulk%22.jpeg"
+        </script>
+</body>
+</html>
