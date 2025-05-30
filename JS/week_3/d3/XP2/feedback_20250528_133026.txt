@@ -1,0 +1,38 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d3/XP2/EX1_index.html
+suggestions for improvement:
+- Exercise 1, Part I and II are correctly implemented.  However, Part III is incomplete. The code doesn't clear the interval when 5 paragraphs are added.  It only clears when the button is clicked.
+- Exercise 2 is missing. No JavaScript file is provided for this exercise.
+- Add comments to explain the logic of the code, especially in more complex parts.  For example, explain the purpose of using `defer` and `async` in the `<script>` tag.
+- Use more descriptive variable names. For instance, instead of just `i`, you could use `paragraphCount`.
+- Consider adding error handling.  What happens if the `container` element isn't found?
+Correctness: 70%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d3/XP2/EX1_script.js
+suggestions for improvement:
+- Part I and II of Exercise 1 are missing.  Only Part III is implemented.
+- The code for Exercise 2 (moving the box) is entirely missing.
+- The variable names could be more descriptive (e.g., `setTimeOut` -> `addParagraphToContainer`).
+- The code lacks comments explaining the logic, especially the condition for clearing the interval.
+- The `myMove` function is assigned to the button's `onclick` event but is never used for animation.  It only clears the interval.
+- Error handling (e.g., checking if the container element exists before appending) would improve robustness.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d3/XP2/EX2_index.html
+suggestions for improvement:
+- Exercise 1 is missing.  The provided code only addresses Exercise 2.
+- In Exercise 2, the animation is jerky because it's updating only every millisecond. A larger interval would improve smoothness.
+- Error handling is missing.  What happens if the `animate` div is already at the right edge? The code should gracefully handle this case.
+- Add comments to explain the logic within `myMove` function.
+- Use more descriptive variable names (e.g., instead of `x`, use `boxPositionX`).
+- Separate concerns. Move the styling from the HTML file to a dedicated CSS file.
+- The `defer` and `async` attributes are redundant on the `<script>` tag since it's at the end of `<head>`.  Use only `defer` for better control of script execution.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d3/XP2/EX2_script.js
+suggestions for improvement:
+- **Exercise 1: Part III:** The code doesn't clear the interval when 5 paragraphs are added.  It only clears on button click. Add a check within the `setInterval` function to count the paragraphs and call `clearInterval` when the count reaches 5.
+- **Exercise 1:  Missing Implementation:** Exercise 1, Parts I and II are completely missing. The provided code only addresses parts of Exercise 2.
+- **Exercise 2: Performance:** Using `setInterval` with a 1ms delay is highly inefficient.  It creates unnecessary load on the browser. A larger interval (e.g., 10ms or more) would be significantly more performant while still providing smooth animation.
+- **Exercise 2: Error Handling:**  There's no error handling. If `getElementById` fails (e.g., element not found), the code will throw an error.  It should include checks to handle such scenarios.
+Correctness: 85%
+-----
