@@ -1,0 +1,14 @@
+.task-item {
+  display: flex;
+  align-items: center;
+
+}
+
+.task-item p {
+  margin: 0;
+}
+
+.fa-times {
+  color: #888;
+  margin-left: left;
+}
