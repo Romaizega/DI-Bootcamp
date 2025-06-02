@@ -1,0 +1,74 @@
+.container {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    background-color: rgb(189, 185, 185);
+    gap: 5px;
+}
+
+.container > div {
+    border: 1px solid black;
+    width: 80px;
+    height: 100px;
+}
+
+.item1 {
+  grid-column: span 3;
+  background-color: white;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 80px;
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 6px;
+}
+
+.red {background-color: red; cursor: pointer;}
+.orangered {background-color: orangered; cursor: pointer;}
+.orange {background-color: orange; cursor: pointer;}
+.yellow {background-color: yellow; cursor: pointer;}
+.yellowgreen {background-color: yellowgreen; cursor: pointer;}
+.lightgreen {background-color:  lightgreen; cursor: pointer;}
+.green {background-color: green; cursor: pointer;}
+.turquoise {background-color: turquoise; cursor: pointer;}
+.cyan {background-color: cyan; cursor: pointer;}
+.lightskyblue {background-color: lightskyblue; cursor: pointer;}
+.dodgerblue {background-color: dodgerblue; cursor: pointer;}
+.blue {background-color: blue; cursor: pointer;}
+.darkblue {background-color: darkblue; cursor: pointer;}
+.indigo {background-color: indigo; cursor: pointer;}
+.darkmagenta {background-color: darkmagenta; cursor: pointer;}
+.violet {background-color: violet; cursor: pointer;}
+.lightpink {background-color: lightpink; cursor: pointer;}
+.lightgray {background-color: lightgray; cursor: pointer;}
+.gray {background-color: gray; cursor: pointer;}
+.black {
+    background-color: black;
+    border: 10px solid white;
+    cursor: pointer;
+}
+.white {
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.main {
+    display: flex;
+    align-self:flex-start;
+    gap: 0px;
+}
+
+.cells {
+    display: grid;
+    grid-template-columns: repeat(60, 20px);
+    gap: 0px;
+}
+.cell {
+  width: 20px;
+  height: 30px;
+  border: 0.01px solid lightgray;
+  box-sizing: border-box;
+  background-color: white;
+}
