@@ -60,3 +60,30 @@ const listLastName = users
   .filter(lastuser => lastuser.role === "Full Stack Resident")
   .map(nameuser => nameuser.lastName)
 console.log(listLastName);
+
+
+// Exercise_5 
+
+const epic = ['a', 'long', 'time', 'ago', 'in a', 'galaxy', 'far far', 'away'];
+const string = epic.reduce((mystring, words) => {
+    return mystring + " " + words
+},'');
+console.log(string);
+
+// Exercise_6 
+const students = [{name: "Ray", course: "Computer Science", isPassed: true}, 
+               {name: "Liam", course: "Computer Science", isPassed: false}, 
+               {name: "Jenner", course: "Information Technology", isPassed: true}, 
+               {name: "Marco", course: "Robotics", isPassed: true}, 
+               {name: "Kimberly", course: "Artificial Intelligence", isPassed: false}, 
+               {name: "Jamie", course: "Big Data", isPassed: false}];
+
+const passedStudent = students.filter((student) => student.isPassed)
+console.log(passedStudent);
+
+const congratStudent = students
+  .filter((student) => student.isPassed)
+  .forEach(student => {
+    console.log(`Good job ${student.name}, you passed the course in ${student.course}`)
+  })
+  
