@@ -1,0 +1,8 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_4/d1/DCH/dailychallenge.js
+suggestions for improvement:
+- Use more descriptive variable names (e.g., instead of `winner`, use `highScoringPlayers`).
+- Consider using `const` for `usernames` and `winner` arrays to prevent accidental reassignment.
+- Add comments to explain the purpose of each section of code, enhancing readability.
+- The code could be structured into functions to improve organization and reusability.
+Correctness: 100%
+-----

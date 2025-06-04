@@ -1,0 +1,8 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d4/Dailychall/dailrchallenge.js
+suggestions for improvement:
+- The function name `cloneGloceries` has a typo; it should be `cloneGroceries`.
+- The `cloneGroceries` function doesn't demonstrate pass-by-value vs. pass-by-reference as intended.  It modifies the original `groceries` object directly. A true demonstration would create a deep copy to show the difference.
+- The `cloneGroceries` function should explicitly log the values of `user` and `shopping` before and after the modifications to clearly show the effects of pass-by-value and pass-by-reference.
+- Add comments explaining the pass-by-value and pass-by-reference concepts demonstrated (or not demonstrated) in the code.
+Correctness: 70%
+-----
