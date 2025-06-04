@@ -1,0 +1,19 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d3/DCH/DCH_index.html
+suggestions for improvement:
+- The code lacks error handling for empty inputs.  It should explicitly check if each input field is populated before generating the story, providing user feedback if not.
+- The story generation should be more robust. The current implementation uses only one story; adding an array of stories and randomly selecting one would better fulfill the bonus requirement.
+- The shuffling functionality needs improvement. It should generate different stories upon each button click, not just change the single story.
+- Improve code readability by using more descriptive variable names and adding comments to explain complex logic.
+- The script should be included in the HTML using the `<script>` tag instead of a placeholder `src="...";`.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d3/DCH/DCH_script.js
+suggestions for improvement:
+- The code uses `trim()` for empty string checks, which is good for handling extra whitespace, but it doesn't explicitly check for null or undefined values. Adding checks for null or undefined inputs would enhance robustness.
+- Error handling could be improved.  Instead of a simple alert, consider displaying an error message near the relevant input fields, making it more user-friendly.
+- The code only displays one story at a time.  To fully address the bonus requirement, it should show stories sequentially on subsequent clicks of the shuffle button.
+- The code is missing the `id="shuffle" ` button in the HTML, which is crucial for the shuffle functionality to work.  It needs to be added to the HTML provided in the instructions.
+- Add comments to explain the logic and purpose of different parts of the code.  This will significantly improve readability.
+- Consider using a more descriptive variable names (e.g., instead of `inpNoun`, use `userInputNoun`).
+Correctness: 90%
+-----
