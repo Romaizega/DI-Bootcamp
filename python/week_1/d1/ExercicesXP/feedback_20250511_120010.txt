@@ -1,0 +1,10 @@
+URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/python/week_1/d1/ExercicesXP/daily_challeenge.py
+suggestions for improvement:
+- The variable name `your_word` could be more descriptive, perhaps `input_string`.
+- Consider adding a more informative message before requesting user input, such as 'Please enter a string of exactly 10 characters:'
+Brief justification:
+- correctness: The code perfectly implements all the requirements. It accurately checks the string length, prints the first and last characters, builds the string character by character using a loop, and includes the bonus jumbling functionality.  This directly addresses all points in the 'Chapter Content/Questions' section, including the use of a for loop and handling of string length.
+- readability: The code is well-structured and easy to follow.  The use of f-strings enhances readability. Minor improvements in variable naming and input prompt would slightly improve readability.
+- performance: The code's performance is efficient. The use of string slicing (`your_word[:character]`) and the `random.shuffle` function are optimized for this task. There are no unnecessary computations or loops.
+- security: The code doesn't involve any security risks as it only handles user input and string manipulation. No external files or network operations are performed.
+
