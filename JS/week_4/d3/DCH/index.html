@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily challenge</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daily Challenge</title>
 </head>
 <body>
-    <form action="outputdisplay.html" method="GET">
-        <input type="text" name="name" placeholder="Name..." id="name_id">
-        <input type="text" name="lastname" placeholder="Last name.." id="last_id">
-        <input type="submit" id="submit_id">
-    </form>
+  <form id="myForm">
+    <input type="text" name="name" placeholder="First name..." id="name">
+    <input type="text" name="lastname" placeholder="Last name..." id="lastname">
+    <input type="submit" value="Send">
+  </form>
+
+  <section id="output"></section>
+
+  <script>
+    const form = document.getElementById("myForm");
+    const output = document.getElementById("output");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const lastname = document.getElementById("lastname").value;
+      const jsonData = JSON.stringify({ name, lastname });
+      output.innerText = jsonData;
+    });
+  </script>
 </body>
 </html>
