@@ -1,0 +1,13 @@
+URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/python/week_1/d1/ExercicesXP/exercise_common.py
+suggestions for improvement:
+- Exercise 5: The 'info' string should correctly incorporate the age and shoe size variables.  The current string has a minor error in how it includes the age variable.
+- Exercise 5: Consider using more descriptive variable names (e.g., `my_name` instead of `name`).
+- Exercise 8:  The humor in the 'funny message' could be improved. More creative messages would enhance user experience.
+- Add comments to explain the purpose of each code block, improving code understanding and maintainability.
+- In Exercise 1, using a loop would be more efficient for a large number of repetitions, although for 4 iterations it is fine.
+Brief justification:
+- correctness: The code correctly addresses most exercises.  Exercise 1 uses a concise method to print the output multiple times. Exercise 2 accurately calculates the mathematical expression. Exercises 4, 6, 7, 9 correctly implement the described logic and variable usage. However, Exercise 5 contains a minor error in the construction of the output string concerning the age. Exercise 8's message could be more engaging.
+- readability: The code is generally readable, though some variable names could be more descriptive (Exercise 5).  Adding comments would improve understanding. The structure of each exercise is mostly clear, making it easy to follow.
+- performance: The code's performance is efficient for the tasks involved.  No obvious performance bottlenecks exist.
+- security: The code does not introduce any security vulnerabilities, as it performs only basic input/output operations and calculations. No sensitive data is handled.
+

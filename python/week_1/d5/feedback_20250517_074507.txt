@@ -1,0 +1,11 @@
+URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/python/week_1/d5/dailychallenge.py
+suggestions for improvement:
+- Exercise 1: The code for Challenge 1 correctly sorts and prints the comma-separated words. However,  the instructions mention using list comprehension, which is not implemented.
+- Exercise 2: The function in Challenge 2 correctly identifies the longest word.  However, it prints the result inside the function instead of returning it, deviating from the instructions to return the longest word. The function should return `long_word` instead of printing it.
+- Both exercises: Add docstrings to functions to explain their purpose, parameters, and return values. This enhances readability and understanding.
+Brief justification:
+- correctness: Challenge 1's code correctly implements the sorting and output as specified, except for not using list comprehension as instructed. Challenge 2's code largely meets the requirements but fails to return the longest word as specified. It prints it instead.  The core logic for both is correct, but there are minor deviations from instructions.
+- readability: The code is generally easy to follow.  However, adding docstrings would greatly improve readability and understanding, especially for the function in Challenge 2.  More descriptive variable names (e.g., instead of `words` perhaps `word` in the loop) would also enhance readability.
+- performance: The performance of both solutions is efficient for typical inputs. The algorithms used (sorting and linear search) have time complexities that are acceptable for most practical applications.  There's no obvious performance bottleneck.
+- security: There are no security concerns in this code. It only takes user input, sorts it, and prints it out; there's no interaction with external resources or sensitive data.
+
