@@ -24,5 +24,30 @@ async function creaStars() {
 }
 creaStars()
 
+const getStarsInfo = async() => {
+  try {
+    const starInfo = await fetch(`https://www.swapi.tech/api/people/1`)
+    if (! starInfo.ok) {
+      throw new Error (`Error: ${starInfo.status} ${starInfo.statusText}`)
+    }
+    const wholeData = await starInfo.json();
+    console.log(wholeData.result.properties);
+    const star = wholeData.result.properties;
+    const section = document.querySelector(".info")
+    console.log(section);
+    
+    const div = document.createElement("div");
+    div.className = "infoStar"
+    div.innerHTML = `
+    <h3> ${star.name}</h3>
+    <p> Height ${star.height} </p>
+    <p> Gender ${star.gender} </p>
+    <p> BirthY ${star.birth_year} </p>
+    `
+    section.appendChild(div)
 
-
+  } catch (error) {
+    console.log(error);
+  }
+}
+getStarsInfo()
