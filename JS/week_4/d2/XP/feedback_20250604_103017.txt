@@ -1,0 +1,19 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_4/d2/XP/exercise.js
+suggestions for improvement:
+- In Exercise 1, the code is already correct and efficient. No improvements needed.
+- In Exercise 2, the solution is correct, but adding type annotations to the function parameters would improve readability and maintainability.
+- Exercise 3 correctly converts the object to an array and modifies the IDs.  No significant improvements needed.
+- Exercise 4 is correct. No improvements needed.
+- Exercise 5 correctly identifies option 2 as the only valid constructor extending the Dog class.
+- Exercise 6, part 1 is correctly evaluated.  Part 2's explanation is clear. Part 3 and 4 are fully correct. Part 5 is also correct and fulfills the requirement.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_4/d2/XP/index.html
+suggestions for improvement:
+- Exercise 2: Add explicit return statement for better clarity.  The instructions imply a return value, but it's not explicitly stated in the function.
+- Exercise 3: The solution could be more concise using `Object.entries()` and `map()` for better readability.  The current approach is functional, but less elegant.
+- Exercise 5:  Add a comment explaining why only option 2 is correct.  The explanation should highlight the importance of `super()` in extending classes.
+- Exercise 6.3 and 6.4: The instructions ask for classes, and these are only partially implemented. The  `Mammal` class should correctly extend `Animal` and have a `sound()` method that returns the required information.
+- Exercise 6.5: The `farmerCow` object needs to be fully implemented and should call the `sound()` method with the moo sound, returning the expected output string.
+Correctness: 85%
+-----
