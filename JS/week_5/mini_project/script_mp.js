@@ -24,30 +24,54 @@ async function creaStars() {
 }
 creaStars()
 
-const getStarsInfo = async() => {
+const getRandomId = () => Math.floor(Math.random() * 89) +1;
+
+const getStarsInfo = async(id) => {
+  const section = document.querySelector(".info")
+  section.innerHTML = `
+    <div class="loaderBox">
+      <div class="loader-wheel"></div>
+      <div class="loader-text"></div>
+    </div>
+  `;
+
+  
   try {
-    const starInfo = await fetch(`https://www.swapi.tech/api/people/1`)
-    if (! starInfo.ok) {
-      throw new Error (`Error: ${starInfo.status} ${starInfo.statusText}`)
+    const starInfo = await fetch(`https://www.swapi.tech/api/people/${id}`);
+
+    if (!starInfo.ok) {
+      throw new Error ("Oh No! That person isn't available.")
     }
     const wholeData = await starInfo.json();
     console.log(wholeData.result.properties);
     const star = wholeData.result.properties;
-    const section = document.querySelector(".info")
-    console.log(section);
+    const homeWorld = await fetch(star.homeworld)
+    const homeData = await homeWorld.json()
+    const home = homeData.result.properties.name;
     
+    section.innerHTML = '';
     const div = document.createElement("div");
     div.className = "infoStar"
     div.innerHTML = `
     <h3> ${star.name}</h3>
-    <p> Height ${star.height} </p>
-    <p> Gender ${star.gender} </p>
-    <p> BirthY ${star.birth_year} </p>
+    <p> Height: ${star.height} </p>
+    <p> Gender: ${star.gender} </p>
+    <p> BirthY: ${star.birth_year} </p>
+    <p> Homeland: ${home} </p>
     `
     section.appendChild(div)
-
   } catch (error) {
-    console.log(error);
+        section.innerHTML = `
+      <div class="box">
+        <h2>Oh No! That person isn't available.</h2>
+      </div>
+    `;
   }
 }
-getStarsInfo()
+getStarsInfo(getRandomId())
+
+document.querySelector(".button").addEventListener("click", () => {
+  const randomId = getRandomId()
+  getStarsInfo(randomId)
+})
+
