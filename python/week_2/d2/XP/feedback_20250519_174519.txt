@@ -1,0 +1,30 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/python/week_2/d2/XP/exercise_1.py
+suggestions for improvement:
+- In the `Siamese` class,  the `unique_breed` method modifies the object's state by adding a `height` attribute. While functional, it's generally better practice to either return the height or have a separate setter method for better encapsulation. This improves readability and maintainability.
+- The `Charteux` class is misspelled as `Charteux` throughout the code.  It should be `Chartreux` for consistency and accuracy.
+- Add more comprehensive test cases for Exercise 1.  Test with empty lists and lists with only one type of cat.
+- Exercise 2, 3, and 4 are not implemented. The provided code only addresses Exercise 1.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/python/week_2/d2/XP/exercise_2.py
+suggestions for improvement:
+- Add docstrings to the methods to improve readability and understanding.
+- Consider adding input validation to the `Dog` class's `__init__` method to prevent invalid data (e.g., negative age or weight).
+Correctness: 100%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/python/week_2/d2/XP/exercise_3.py
+suggestions for improvement:
+- In the `PetDog` class's `__init__` method, explicitly initialize the `name`, `age`, and `weight` attributes using `self.name = name`, `self.age = age`, and `self.weight = weight`.  While the `super().__init__` call handles this implicitly because of the `Dog` class, making it explicit enhances readability and maintainability.
+- The `play` method in the `PetDog` class could be made more robust by handling the case where no arguments are provided to the function.  Currently, it will produce an error if no dogs are passed. Add a check to prevent this error.
+- Add docstrings to all methods and classes to improve readability and understanding. Docstrings explain what each method/class does, its parameters, and return values.
+Correctness: 95%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/python/week_2/d2/XP/exercise_4.py
+suggestions for improvement:
+- The `check_majority` method should explicitly check `names.is_18()` instead of using it as a boolean variable.  It currently attempts to use `names.is_18` as a boolean which is incorrect; it's a method and needs to be called.
+- Improve the error handling in `check_majority`. If a person with the given `first_name` is not found, the function should indicate this.
+- Add docstrings to the methods to improve readability and explain their functionality.
+- Consider adding more robust error handling (e.g., type checking) to the methods.
+- The family_presentation method has a typo. It should be "family" not "famyly"
+Correctness: 85%
+-----
