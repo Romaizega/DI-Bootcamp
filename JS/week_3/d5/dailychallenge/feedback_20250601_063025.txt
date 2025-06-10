@@ -1,0 +1,29 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d5/dailychallenge/index.html
+suggestions for improvement:
+- The JavaScript code (script.js) is missing, preventing a complete assessment of the task functionality.  The provided HTML only sets up the structure.
+- Implement `addTask()`, `doneTask()`, and `deleteTask()` functions in `script.js` as specified in the instructions.  Handle edge cases (e.g., empty input).
+- Add error handling (e.g., try...catch blocks) to make the code more robust.
+- The styling in style.css is missing, so the visual representation isn't assessed.  Ensure it matches the provided image.
+- The Bonus I and Bonus II features are not implemented.  Consider adding them to improve functionality.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d5/dailychallenge/script.js
+suggestions for improvement:
+- Use more descriptive variable names (e.g., instead of `checInput`, use `taskInput`).
+- Improve error handling; instead of an alert, provide visual feedback to the user about input errors.
+- Add a clear separation of concerns by separating DOM manipulation from data management.
+- Consider using a template literal for creating the task element to enhance readability and maintainability.
+- Add functionality for `deleteTask()` as specified in Bonus II.
+- Consider using a framework or library for improved DOM manipulation efficiency in larger applications.
+Correctness: 95%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d5/dailychallenge/style.css
+suggestions for improvement:
+- Add proper error handling for cases where the user might try to submit an empty task.  Currently, nothing happens if this occurs.
+- Implement the `doneTask()` function from Bonus I.  This function should toggle the 'done' property in the task object and visually reflect this change using CSS (e.g., text decoration: line-through; color: red;).
+- Implement the `deleteTask()` function from Bonus II.  This function should remove the task both from the DOM and the `tasks` array.  Use event delegation for better performance when managing many tasks.
+- Improve CSS styling for better visual appeal and alignment with the example image.  The provided CSS is minimal.
+- Add ARIA attributes to improve accessibility. For example, add `aria-label` to the checkbox and 'X' button. 
+- Use a more descriptive name for the `addTask` function (e.g. `handleTaskSubmission`). This improves readability and maintainability.
+Correctness: 85%
+-----
