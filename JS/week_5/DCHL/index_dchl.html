@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: gray;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      background: wheat;
+      padding: 2rem;
+      border-radius: 5px;
+      text-align: center;
+      width: 800px;
+      max-width: 90%;
+    }
+
+    h2 {
+      margin-bottom: 1.5rem;
+      color: #444;
+    }
+
+    .form-group {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    input,
+    select {
+      height: 50px;
+      border-radius: 5px;
+      border: 1px solid lightgray;
+      outline: none;
+      padding: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      width: 150px;
+    }
+
+    .form-control label {
+      align-items: start;
+      display: flex;
+      padding: 5px;
+      font-weight: 500;
+    }
+
+    .form-control i {
+      padding: 15px;
+      cursor: pointer;
+      transform: rotate(0deg);
+      transition: 0.3s;
+      font-size: 20px;
+      color: #333;
+    }
+
+    .form-output {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    button {
+      width: 200px;
+      height: 45px;
+      background: goldenrod;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      border-radius: 5px;
+      color: #eeecec;
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+    button:hover {
+      background: darkgoldenrod;
+    }
+
+    .result {
+      font-weight: 500;
+      font-size: 16px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Currency Converter</h2>
+
+    <div class="form-group">
+      <div class="form-control">
+        <label for="amount">Amount</label>
+        <input type="number" min="0" value="1" id="amount" />
+      </div>
+
+      <div class="form-control">
+        <label for="fromCountry">From</label>
+        <select id="fromCountry"></select>
+      </div>
+
+      <div class="form-control switch">
+        <label>&nbsp;</label>
+        <i class="fa-solid fa-right-left" id="switchBtn" title="Switch currencies"></i>
+      </div>
+
+      <div class="form-control">
+        <label for="toCountry">To</label>
+        <select id="toCountry"></select>
+      </div>
+    </div>
+    <div class="form-output">
+      <button id="convertBtn">Convert</button>
+      <div class="result" id="resultBox"></div>
+    </div>
+  </div>
+  <script>
+    const getMoney = async() => {
+    const switchBtn = document.getElementById("switchBtn");
+    const selectFrom = document.getElementById("fromCountry");
+    const selectTo = document.getElementById("toCountry");
+
+    switchBtn.addEventListener("click", () => {
+    const temp = selectFrom.value;
+    selectFrom.value = selectTo.value;
+    selectTo.value = temp;
+    });
+
+    try {
+      const money = await fetch(`https://v6.exchangerate-api.com/v6/feb054bdbad8f872e4057455/latest/USD`)
+      if(!money.ok){
+        throw new Error(`Error ${money.status} ${money.statusText}`)
+      }
+      const moneyData = await money.json()
+      console.log(moneyData.conversion_rates);
+      const codeMoney = Object.keys(moneyData.conversion_rates)
+      console.log(codeMoney);
+      const selectFrom = document.getElementById("fromCountry")
+      const selectTo = document.getElementById("toCountry")
+      const optionUSD = document.createElement("option");
+      const optionEUR = document.createElement("option")
+      optionUSD.value = "USD"
+      optionUSD.innerText = "USD"
+      optionEUR.value = "EUR"
+      optionEUR.innerText = "EUR"
+      selectFrom.appendChild(optionUSD)
+      selectTo.appendChild(optionEUR)
+
+      const allMoney = Object.entries(moneyData.conversion_rates)
+      for (let [code, rate] of allMoney){
+        if (code === "USD" || code === "EUR") continue;
+          const optionFrom = document.createElement("option")
+          optionFrom.value = code
+          optionFrom.innerText = code
+          selectFrom.appendChild(optionFrom);
+
+          const optionTo = document.createElement("option");
+          optionTo.value = code;
+          optionTo.innerText = code;
+          selectTo.appendChild(optionTo);
+
+      }    
+      const section = document.getElementById("resultBox")
+      const btn = document.getElementById("convertBtn")
+      btn.addEventListener("click", async() => {
+        const inputUser = document.getElementById("amount")
+        const numberUser = parseFloat(inputUser.value)
+        if(numberUser <= 0) {
+          return;
+        }
+        const moneyFrom = selectFrom.value
+        const moneyTo = selectTo.value
+        if(moneyFrom === moneyTo) {
+          section.innerHTML = `
+          <div class="result">
+          <h1> ${moneyFrom} </h1> 
+          </div>
+          `;
+          return
+        } else {
+          const getMonFrom = await fetch (`https://v6.exchangerate-api.com/v6/feb054bdbad8f872e4057455/latest/${moneyFrom}`)
+          try{
+            if(!getMonFrom.ok) {
+              throw new Error (`Error: ${getMonFrom.status} ${getMonFrom.statusText}`)
+            }
+            const datagetMoney = await getMonFrom.json()
+            const rateFrom = datagetMoney.conversion_rates[moneyTo];
+            const total = numberUser * rateFrom
+            section.innerHTML = `
+              <div class="result">
+              <h1> ${numberUser} of ${moneyFrom} ${total.toFixed(2)} ${moneyTo} </h1> 
+              </div>
+              `;
+          } catch (error) {
+            console.log(error);
+        } 
+        }
+      })  
+    } catch (error) {
+      console.log(error);
+      
+    }
+  }
+  getMoney()
+  </script>
+</body>
+</html>
