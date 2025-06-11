@@ -1,0 +1,7 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_4/d4/exercise_xp/exerciseXP.js
+suggestions for improvement:
+- In `compareToTen`, while functionally correct, returning the number itself in both resolve and reject might not be the clearest approach.  Consider returning a more descriptive message like 'Number is less than or equal to 10' or 'Number is greater than 10'.
+- Exercise 2 could benefit from using `Promise.resolve()` for conciseness, as suggested in the instructions (although not mandatory for correctness).
+- Add comments to explain the purpose of each promise and its actions (resolve/reject).  This would greatly enhance readability.
+Correctness: 90%
+-----
