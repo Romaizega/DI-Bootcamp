@@ -95,3 +95,15 @@ console.log(getAction("editor")); // Output: Edit content
 console.log(getAction("viewer")); // Output: View content
 console.log(getAction("guest")); // Output: Limited access
 console.log(getAction("unknown")); // Output: Invalid role
+
+
+// Exercise 9 
+function greet(item? : string | null) {
+    if (!item){
+        return "Hello guest"
+    }
+    else {
+        return `Hello ${item}`
+    }
+}
+console.log(greet());
