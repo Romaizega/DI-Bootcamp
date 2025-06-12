@@ -1,0 +1,60 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d4/XP/exercise_1.html
+suggestions for improvement:
+- Exercise 1: Add explanations to the comments predicting the output of each function call.  The current comments only state what will happen, not *why*.  The explanations should detail the scoping rules that lead to the predicted behavior. For example, explain block scope versus global scope, hoisting, and the difference between `let`, `const`, and `var`.
+- Exercise 1:  The instructions request adding explanations.  Currently, there are only placeholders for the explanations.
+- Exercise 1: Add actual code for the `const` scenarios in Exercise 1 (sections 1.2, 2.2, 4.2, 5.2) to demonstrate the behavior differences.
+- Exercise 7:  The instructions mention adding a profile picture, but no image source is provided.  The solution should either include a placeholder image URL or specify how the image URL would be obtained (e.g., from user data).
+- Exercise 8 Part II: The `displayJuice` function should use the `ingredients` array to display all six ingredients.  Currently, it will only show three (the last three added).
+Correctness: 75%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d4/XP/exercise_1.js
+suggestions for improvement:
+- Add comments to explain the code's logic within each function for better understanding.
+- In Exercise 1, provide predictions for all parts, including what happens when `let` is replaced with `const`.
+- Exercise 1 lacks the actual answers to the questions posed about what would happen if `let` were replaced with `const`. The comments only state what *would* happen; the complete solution should include predictions and the rationale behind those predictions.
+- In Exercise 2, explicitly declare the `winBattle` function before using it in the ternary operator. While it works in this case due to hoisting, it's better practice for clarity.
+- For Exercise 3, include more robust test cases in the example to demonstrate the function's ability to handle various input types (e.g., null, undefined, objects).
+- Exercise 7's instructions mention adding a profile picture, but there is no code to support it. The solution should include the necessary code for adding a profile image (perhaps by using a placeholder image URL).
+- Exercise 8, Part II:  The `displayJuice` function needs to access the `ingredients` array.  The current code doesn't show how this is accomplished. Also the use of `document.write` is generally discouraged in modern JS development. Consider using `innerHTML` or a more robust DOM manipulation approach.
+- Add error handling where appropriate (e.g., what if the user provides unexpected inputs in the functions?).
+Correctness: 80%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d4/XP/exercise_2_5.js
+suggestions for improvement:
+- Exercise 2: The `winBattle` function should return a boolean, not directly assign to `experiencePoints` within the arrow function definition.  The ternary operator should be used to assign a value to `experiencePoints` based on the result of `winBattle()`.
+- Exercise 2: The `experiencePoints` variable is missing. The code should create the variable and then assign the result of the ternary operator to it.
+- Exercise 2: There's no `console.log` for `experiencePoints`.
+- Exercise 5: The comment about the difference between function declaration and function expression is good but could be more detailed (e.g., discuss hoisting).  The code itself is only one method.
+- Exercise 5:  The exercise requests three different approaches (declaration, expression, arrow function). The provided code only uses an immediately invoked function expression.
+- Exercise 6 and 7:  These exercises require DOM manipulation, but no HTML is provided, and no DOM manipulation is present in the provided code.
+- Exercise 8: This exercise is entirely missing.
+Correctness: 70%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d4/XP/exercise_6.html
+suggestions for improvement:
+- Exercise 1: The code is missing the predicted values and explanations as comments.  The code should also handle the `const` vs. `let` scenarios as instructed.  Add comments for each section (#1.2, #2.2, #4.2, #5.2) explaining the difference in behavior.
+- Exercise 2: The code is missing the arrow function conversion of `winBattle()`. The variable `experiencePoints` should be created and assigned using a ternary operator.
+- Exercise 3: The code is missing the arrow function to check if a value is a string.  It should explicitly use `typeof` for reliable string checking.
+- Exercise 4: The code is missing the one-line arrow function to sum two numbers.
+- Exercise 5: The code is missing the function declaration, function expression, and one-line arrow function versions for the kg to grams conversion. The comment explaining the difference between declaration and expression is missing.
+- Exercise 6: The code correctly implements a self-invoking function that displays a sentence in the DOM.  However, the instructions suggest using `DOM manipulation` which this code lacks.  Instead of setting `textContent`, consider creating a new element and appending it to the DOM to improve separation of concerns. The code directly uses a string literal rather than creating the string dynamically. This makes modification more difficult.
+- Exercise 7: The code is missing the self-invoking function that adds a div with the user's name and profile picture to the navbar.  It needs actual DOM manipulation.
+- Exercise 8: The code is missing the nested functions (`makeJuice` and `addIngredients`) to create the juice bar functionality. Part II, which introduces additional complexity (multiple ingredients and the `displayJuice` function), is missing entirely.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d4/XP/exercise_7.html
+suggestions for improvement:
+- The self-invoking function should take the user's name and potentially a profile picture URL as arguments. It should then create and append the div and image elements to the navbar.
+- Use more descriptive variable names (e.g., instead of `profile`, use `userName` and change `myNewDiv` to `userDiv`).
+- The image URL should be passed as an argument to the function, or fetched dynamically if the user profile information is available.
+- Add error handling for cases where the navbar element or user information is not available.
+Correctness: 70%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d4/XP/exercise_8.html
+suggestions for improvement:
+- The variable names could be improved for better readability (e.g., `addIngredients` instead of `addVATingredientd`).
+- Add error handling for invalid `size` input in `makeJuice` function.
+- The code could benefit from more descriptive comments explaining the purpose of different parts.
+- Consider using template literals consistently for string concatenation for improved readability.
+Correctness: 80%
+-----
