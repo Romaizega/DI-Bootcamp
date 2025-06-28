@@ -1,0 +1,19 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/python/week_2/d5/XP2/game.py
+suggestions for improvement:
+- The `get_game_result` method can be simplified using a more concise approach. A nested conditional or a dictionary mapping could improve readability and maintainability.
+- Add comprehensive error handling in `get_user_menu_choice` to gracefully handle unexpected input (e.g., non-numeric input).
+- Implement the missing `rock-paper-scissors.py` file with the `get_user_menu_choice`, `print_results`, and `main` functions as specified in the instructions.
+- In `get_user_item`, the loop continues even if a valid input is provided. The `continue` statement is redundant.
+- The `game.py` file does not include an `__init__` method, even though the comments suggest one might be present. Consider adding an `__init__` to manage the game state if needed.
+Correctness: 85%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/python/week_2/d5/XP2/rock_paper_scissors.py
+suggestions for improvement:
+- The `get_user_menu_choice` function's error handling could be improved by specifying the type of exception caught instead of a bare `except` clause.  This makes it more robust and easier to debug.
+- The capitalization of "WIN", "LOSS", and "DRAW" in the `main` function should be consistent with the function's return value ("win", "loss", "draw").
+- The game logic (within the `game.py` file, which is not provided) needs to be reviewed to ensure it correctly implements the rules of Rock Paper Scissors. The provided code only checks for the outcome; the actual game logic is missing.
+- Add more comprehensive input validation in `get_user_menu_choice` to handle non-integer inputs more gracefully. Consider using a loop to continuously prompt the user until a valid integer is provided.
+- Improve the menu's presentation by using a more visually appealing format and adding clear instructions.
+- The `print_result` function uses the `tabulate` library, which is not included in the initial requirements or mentioned in the chapter content. Although it enhances readability, it adds an external dependency.
+Correctness: 90%
+-----
