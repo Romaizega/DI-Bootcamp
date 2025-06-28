@@ -1,0 +1,12 @@
+URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/python/week_2/d1/dailychaleenge.py
+suggestions for improvement:
+- The `get_info` method should use string formatting to align the animal names and counts into columns, matching the example output.  Currently, it simply prints each animal on a new line.
+- The `__init__` method prints the farm name. While not explicitly forbidden, it's generally better to separate initialization from output; the `get_info` method should handle output.
+- Add the bonus methods: `get_animal_types` and `get_short_info` as described in the instructions.
+- The `list_animals` attribute in the `__init__` method is unused and should be removed.
+Brief justification:
+- correctness: The code correctly implements the `Farm` class, `__init__`, `add_animal`, and partially implements `get_info`.  It adds animals to the dictionary correctly and handles incrementing existing animal counts. However, the formatting in `get_info` doesn't meet the example's columnar output requirement, which is explicitly stated in the instructions. The bonus features are missing.
+- readability: The code is well-structured and easy to understand. Variable and method names are descriptive. The use of f-strings improves readability. However, improving the formatting in `get_info` would increase readability.
+- performance: The code's performance is efficient for the given task. The dictionary-based animal storage provides fast lookups and updates.  No performance issues are apparent.
+- security: There are no security concerns in this code. It does not handle external input that could lead to vulnerabilities.
+
