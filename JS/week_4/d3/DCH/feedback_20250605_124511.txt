@@ -1,0 +1,17 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_4/d3/DCH/index.html
+suggestions for improvement:
+- The code only creates a form; it doesn't handle the submission or JSON output as required.
+- The form uses GET which is not ideal for submitting data.  It should use POST.
+- The 'outputdisplay.html' file is referenced but not provided.  The actual JSON output to the DOM isn't implemented.
+- Add JavaScript to handle form submission, data retrieval, JSON creation, and DOM manipulation.
+- Improve the placeholder text for better user experience.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_4/d3/DCH/outputdisplay.html
+suggestions for improvement:
+- The code doesn't create a form; it only displays data presumably passed through URL parameters.
+- The code lacks a form with 'name' and 'lastname' fields and a submit button as specified in the instructions.
+- It doesn't dynamically append JSON to the DOM after a form submission.
+- The code reads data from URL parameters instead of a form, deviating completely from the chapter's requirement of creating a form and handling its submission.
+Correctness: 20%
+-----
