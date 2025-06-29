@@ -1,0 +1,14 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d1/DailyWords/dchallnatbad.js
+suggestions for improvement:
+- The variable names could be slightly more descriptive. For example, `wordNot` could be `indexOfNot` and `wordBad` could be `indexOfBad`.
+- Adding comments to explain the logic within the `if` condition would enhance readability.  Specifically, clarifying the checks for the existence of "not" and "bad" and the order of their appearance.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d1/DailyWords/index2.html
+suggestions for improvement:
+- The code should include error handling for cases where 'not' or 'bad' are not found in the sentence.  Currently, it will produce `undefined` which is not ideal.
+- Improve variable names for better readability (e.g., `notIndex` instead of `wordNot`).
+- Add comments to explain the logic, especially the conditional statement.
+- The `defer` and `async` attributes on the script tag are redundant; `defer` is sufficient for this case.
+Correctness: 90%
+-----

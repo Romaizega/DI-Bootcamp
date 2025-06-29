@@ -1,0 +1,13 @@
+URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/python/week_1/d4/exercise.py
+suggestions for improvement:
+- In Exercise 6, the `make_great` function modifies the list in place.  While it works, it's generally better practice to create a new list with the modified names and return it, leaving the original list unchanged. This improves code clarity and prevents unexpected side effects.
+- Exercise 7 has two `main` functions.  Combine them into one function that handles both the simple temperature generation and the seasonal temperature generation, perhaps with a conditional check or a flag to determine which path to follow.  The user input could be handled within the function as well.
+- Exercise 7's `get_random_temp` function should be more descriptive (e.g., `get_random_temp_by_season`).  Better variable names (e.g., `temperature` instead of `temep`) throughout would also improve readability.
+- In Exercise 7, the final call to `get_random_temp` within the `main` function is redundant and unnecessary. Remove it.
+- Add docstrings to all functions to explain their purpose, parameters, and return values. This enhances readability and maintainability.
+Brief justification:
+- correctness: The code generally fulfills the requirements of each exercise. However, Exercise 6 modifies the list in place, deviating from good practice and Exercise 7 has duplicate main function definitions and some minor logic issues. The random temperature generation in Exercise 7 is correct, fulfilling the bonus aspects of floating-point numbers and seasonal variation.
+- readability: The code is well-formatted and easy to follow.  Variable names could be more descriptive in some places. The addition of docstrings would significantly improve readability. The structure of the code is logical and adheres to good indentation practices.
+- performance: The code's performance is efficient for the tasks involved.  There are no obvious inefficiencies in the algorithms used.
+- security: No security vulnerabilities are present in this code. It's a simple script without any external input validation or network interactions that could pose security risks.
+
