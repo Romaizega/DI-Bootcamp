@@ -1,0 +1,10 @@
+URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week6/d2/exercise_madatory/dailychall.sql
+suggestions for improvement:
+- The comments within the SQL code are good for explaining the output, but it would be better to separate the SQL queries and the comments/analysis into distinct sections for clarity. This improves readability and makes it easier to review the SQL independently of the explanations.
+- Consider using more descriptive table and column names.  `FirstTab` and `SecondTab` are not very informative.  Names like `Employees` and `EmployeeIDs` would be much clearer.
+Brief justification:
+- correctness: The SQL queries are correctly written and the predicted outputs are accurate.  The code directly addresses the problem of counting rows in `FirstTab` based on conditions involving `SecondTab` as specified in the chapter's questions.  The analysis of the `NOT IN` operator behavior with NULL values is also correct.
+- readability: The code is mostly readable, but embedding comments directly within the SQL statements slightly reduces readability. Separating the SQL and analysis would improve this.  Descriptive names for tables and columns would significantly enhance readability.
+- performance: The queries are efficient for the given dataset size.  For very large datasets, optimizing subqueries or using joins might be beneficial, but for this example, the performance is adequate. The `NOT IN` with a subquery involving `NULL` might not be the most performant approach;  a `LEFT JOIN` and `IS NULL` check might be a more efficient alternative in some database systems.
+- security: There are no security concerns in this code.  It only involves creating tables and performing simple `SELECT COUNT(*)` operations. No user input or external data is involved.
+
