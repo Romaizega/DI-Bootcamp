@@ -1,0 +1,9 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_5/mini_project/index_mp.html
+suggestions for improvement:
+- Improve error handling by providing more specific error messages to the user, indicating the type of error encountered (e.g., network error, API error).
+- Add loading indicator specifically to the button during API calls to prevent multiple clicks.
+- Enhance styling to better match the provided example image (colors, fonts, layout).
+- Consider adding input validation to prevent unexpected behavior if the API returns unexpected data.
+- The comment  `//4. Make sure you display the "Home World" of each Star Wars Character (use console.log() to help you get the data)` in the instructions is unnecessary as the code already correctly handles this.
+Correctness: 95%
+-----

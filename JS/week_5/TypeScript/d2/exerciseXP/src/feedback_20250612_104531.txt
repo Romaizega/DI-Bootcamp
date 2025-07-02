@@ -1,0 +1,10 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_5/TypeScript/d2/exerciseXP/src/exercisexp.ts
+suggestions for improvement:
+- In Exercise 1, add error handling or input validation to the `Employee` class constructor to prevent invalid data (e.g., negative salary).
+- In Exercise 1, consider adding getter methods for `name` and `salary` if you need to access these private properties in other parts of your code. This enhances encapsulation.
+- In Exercise 2, while the `readonly` modifier works correctly, adding more comprehensive tests to demonstrate the immutability of `id` would enhance the exercise's effectiveness.
+- In Exercise 3, the `Animal` class's `makeSound` method could have a default implementation to represent a generic animal sound instead of an empty string.
+- In Exercise 5, the `PremiumUser` interface doesn't explicitly define `membershipLevel` as optional; using `membershipLevel?: string` makes it optional. Although the code functions correctly due to the implementation of `printUserDetails`, adding `?` for clarity would align better with the instructions.
+- Add comments to explain the purpose of each class and method.  This will improve readability and maintainability.
+Correctness: 95%
+-----

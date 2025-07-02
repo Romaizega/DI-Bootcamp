@@ -1,0 +1,11 @@
+URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/python/week_1/d2/daily_challenge.py
+suggestions for improvement:
+- In Exercise 1, you could add input validation to handle non-integer inputs.  For example, a `try-except` block could catch `ValueError` exceptions.
+- In Exercise 2, the variable name `new_word` as a list is slightly misleading since it ultimately represents a string. Consider renaming it to something like `new_letters` or `unique_letters` for better clarity.
+- Both exercises could benefit from docstrings explaining what the code does, making them more self-documenting.
+Brief justification:
+- correctness: Both code examples correctly fulfill the requirements outlined in the chapter's 'Challenge 1' and 'Challenge 2'.  Exercise 1 accurately generates a list of multiples up to the specified length. Exercise 2 successfully removes consecutive duplicate letters from the input string.  The code aligns perfectly with the specified input/output examples and the descriptions of the challenges.
+- readability: The code is generally well-structured and easy to follow.  Variable names are mostly descriptive (although `new_word` in Exercise 2 could be improved). The logic is straightforward and uses clear iterative approaches. Minor improvements to naming and comments would enhance readability further.
+- performance: The algorithms used in both exercises are efficient for the given tasks. The time complexity is linear (O(n)) for both, making them suitable for the problem sizes described. There are no performance bottlenecks apparent in the code.
+- security: There are no apparent security vulnerabilities. The code only interacts with user inputs through the `input()` function, and there's no external data processing or system interaction involved, hence eliminating risks like SQL injection or command injection.
+

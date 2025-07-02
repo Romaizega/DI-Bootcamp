@@ -1,0 +1,13 @@
+URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/python/week_2/d4/dailychall.py
+suggestions for improvement:
+- The `most_common_word` method should handle ties in word frequencies more robustly.  Currently, it only returns the first word encountered with the maximum frequency.
+- Add error handling for `from_file` to gracefully handle file not found exceptions.
+- The `remove_punctuation`, `remove_stop_words`, and `remove_special_characters` methods should modify the `self.text` attribute directly instead of creating and returning new strings for better encapsulation.
+- Consider using more comprehensive stop word lists.
+- Add docstrings to all methods to explain their functionality, parameters, and return values.
+Brief justification:
+- correctness: The code implements most of the requirements outlined in the Chapter Content/Questions.  The `Text` class correctly handles string analysis methods like `word_frequency`, `unique_words`, and class method `from_file`.  The `TextModification` class (inheriting from `Text`) implements text cleaning methods. However, `most_common_word` lacks robustness for ties, and error handling is missing in `from_file`. The text cleaning methods return new strings instead of modifying the original text in-place, which deviates slightly from best practices for class methods.
+- readability: The code is generally well-structured and easy to understand. Variable names are descriptive, and the logic within each method is relatively clear.  However, adding docstrings would significantly improve readability.
+- performance: The performance of the methods is acceptable for smaller texts.  However, for very large texts, some improvements could be made, like using more efficient data structures or algorithms for frequency counting.  The current approach has O(n*m) complexity in the worst case, where n is the number of words and m is the number of unique words.
+- security: The code incorporates good security practices in terms of file handling by using a `with` statement to ensure the file is closed properly.  The use of regular expressions in `remove_special_characters` is robust.  There are no obvious security vulnerabilities in the code.
+

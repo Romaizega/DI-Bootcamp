@@ -1,0 +1,17 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d2/DCH/indexdc.html
+suggestions for improvement:
+- Use more descriptive variable names (e.g., instead of just `planets`, use `solarSystemPlanets`).
+- The moon creation logic could be improved for better readability and maintainability. Consider using a helper function or a more structured data representation (like an array of objects) to handle planets and their moons more elegantly.
+- Add comments to explain complex logic or non-obvious code sections.
+- Improve the color assignment for planets; perhaps use an array of colors and map it to the planets for more efficient and organized color management.
+- The bonus part (creating moons) is partially implemented but lacks elegance.  A better structure would involve representing planets and moons as objects with properties, making it easier to handle varying numbers of moons per planet.
+Correctness: 85%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d2/DCH/scriptdc.js
+suggestions for improvement:
+- The bonus part of creating moons is not implemented.  The instructions explicitly asked for moons to be created and appended to their respective planets.
+- The code uses inline styling (`div.style.backgroundColor`) which is generally less preferable to using CSS classes.  A better approach would be to create CSS classes for each planet's color and add those classes to the divs.
+- Error handling should be added.  If a planet name doesn't have a corresponding color in the `colors` object, the background color will be undefined.
+- The variable name `color` added to the classList is not descriptive and could be improved to something like `planet-color`.
+Correctness: 90%
+-----
