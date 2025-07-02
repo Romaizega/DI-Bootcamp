@@ -1,6 +1,4 @@
 const products = require('.//products.js')
-// console.log(products);
-
 
 const getItem = (item) => {
   for(let product of products){

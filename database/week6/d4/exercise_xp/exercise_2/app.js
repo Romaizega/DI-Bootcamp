@@ -8,6 +8,5 @@ const averAge = () => {
   const totalAge = sum / person.length
   return totalAge.toFixed(2)
 }
-
 console.log(averAge());
  

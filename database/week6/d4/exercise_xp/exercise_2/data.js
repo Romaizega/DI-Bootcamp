@@ -15,5 +15,4 @@ export const person = [
   location: "Tel Aviv"
 }
 ]
-
 export default person
