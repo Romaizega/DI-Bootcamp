@@ -1,0 +1,8 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_5/TypeScript/exerciseXP/src/exercisexp.ts
+suggestions for improvement:
+- In Exercise 1, use a more descriptive variable name like `helloWorld` instead of `hello`.
+- In Exercise 7,  add an HTML element with the id "input" to the HTML file to make the code executable.  The current code will throw an error if run directly because `document.getElementById("input")` will return null.  Consider adding error handling for cases where the element isn't found.
+- In Exercise 9, the function overloading isn't explicitly demonstrated.  Consider creating separate function signatures for different parameter types or use optional parameters more effectively to show clearer overloading.
+- Improve code comments and use consistent naming conventions (e.g., camelCase for variables).
+Correctness: 95%
+-----
