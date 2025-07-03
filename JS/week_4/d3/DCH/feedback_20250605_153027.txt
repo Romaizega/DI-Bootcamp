@@ -1,0 +1,7 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_4/d3/DCH/index.html
+suggestions for improvement:
+- Improve styling to match the example image more closely.  The example shows a specific font and layout.
+- Add error handling for empty inputs.  Currently, submitting with empty fields will just output an empty JSON object. A user-friendly message could improve the user experience.
+- Consider using `textContent` instead of `innerText` for better performance and cross-browser compatibility, especially with complex content.
+Correctness: 100%
+-----
