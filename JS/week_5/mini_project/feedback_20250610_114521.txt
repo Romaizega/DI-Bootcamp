@@ -1,0 +1,31 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_5/mini_project/index_mp.html
+suggestions for improvement:
+- The provided HTML only sets up the basic structure.  It's missing the crucial JavaScript logic to fetch data from the API, handle loading states, display the character information, and manage error conditions as specified in the instructions.
+- The CSS (`style_mp.css`) and the bulk of the functionality reside in the JavaScript file (`script_mp.js`), which are not provided. Without these files, it's impossible to assess the correctness of the implementation.
+- Add loading and error indicators as described in the instructions using appropriate CSS and JavaScript to visually communicate loading and error states to the user.
+- Implement proper error handling.  Currently, there's no mechanism to catch and display errors during the API request.
+- The homeworld should be fetched and displayed. The instructions mention fetching the homeworld data, and this is missing from the provided code.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_5/mini_project/script_mp.js
+suggestions for improvement:
+- The loading animation is not using Font Awesome as instructed.  Use the linked Font Awesome library and replace the custom loader with a spinning icon.
+- Error handling could be improved by providing more specific error messages to the user.  For example, distinguish between network errors and API errors.
+- Consider adding input validation to prevent unexpected behavior if the API returns unexpected data.
+- The star background is a nice touch, but it's not directly related to the core functionality and might be considered outside the scope of the assignment, unless explicitly stated.
+- The code uses two separate fetch calls to get the character and homeworld data. While this works, it's inefficient.  It's better to get the homeworld id from the character details and then make a single additional fetch call to get the homeworld information. This improves performance.
+- Add better styling to the `.infoStar` div to ensure the information is presented cleanly and consistently with the design in the provided image.
+Correctness: 85%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_5/mini_project/style_mp.css
+suggestions for improvement:
+- The code is only CSS and HTML, there is no Javascript to fetch data from the API and display it.  The assignment requires using the Fetch API and async/await.
+- Add JavaScript code to fetch data from `https://www.swapi.tech/api/people/` (or a random character endpoint).
+- Implement error handling to display an error message if the API request fails.
+- Use the provided FontAwesome link to include a loading animation.
+- Structure the HTML to include elements for displaying character information (name, height, gender, birth year, homeworld).
+- The CSS is well-structured and readable but lacks any functionality to display the fetched data. 
+- Add a button to trigger the API call and update the displayed information.
+- Improve the styling of the loading screen to match the provided example image more closely. 
+Correctness: 0%
+-----

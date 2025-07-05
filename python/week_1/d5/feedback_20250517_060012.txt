@@ -1,0 +1,15 @@
+URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/python/week_1/d5/miniprojectweek1.py
+suggestions for improvement:
+- Improve code readability by using more descriptive variable names. For example, instead of `list_of_game`, use `board`.  Also break down the `player_input` function into smaller, more manageable functions. One to handle input validation and another to update the board. 
+- Add explicit handling for a tie game. Currently, the tie condition is checked only after the loop completes.
+- The `display_board` function modifies the board, making it less clear that it's purpose is only to display the board. It should only display, not modify.
+- The input validation in `player_input` can be improved by using a loop to repeatedly ask for input until valid input is received. Currently, some checks are implicit and error handling is not optimal.
+- Case sensitivity issue:  The `check_win` function uses lowercase 'x' and 'o' to check for a win, but the board is populated with uppercase 'X' and 'O' in the `player_input` function.  This will lead to incorrect win detection.  Make both functions consistent in case.
+- Add a function to clear the board to allow for multiple games.
+- The initial prompt to start the game could be improved. Consider using a simpler, more user-friendly way to prompt for input.
+Brief justification:
+- correctness: The code mostly implements the Tic Tac Toe game.  It has functions for displaying the board, getting player input, and checking for a winner.  However, it lacks proper handling for tie games and has case sensitivity issue and has some issues with input validation and readability. It fulfills the basic requirements but has several areas needing improvement to meet the standards set in the chapter content.
+- readability: The code's readability could be significantly improved. Variable names are not always descriptive. The `player_input` function is particularly long and could be broken down into smaller, more focused functions to improve clarity and maintainability. The use of nested loops and conditionals makes parts of the code hard to follow.
+- performance: The code's performance is reasonably good for a simple game of this size. No significant performance bottlenecks are apparent, though the win check could be slightly optimized by breaking the diagonal checks into separate functions. The code is reasonably efficient for the task at hand.
+- security: The code is relatively secure in the sense that it does not have any obvious vulnerabilities.  It handles potential exceptions reasonably.  It does rely on user input, so it does not prevent malicious input that tries to crash the game or cause issues with unintended side effects. The simple nature of the game inherently limits security risks.
+
