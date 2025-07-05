@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Emoji Game</title>
+</head>
+<body>
+  <h2>Emoji Game</h2>
+  <form id="emoji_form"></form>
+  <p id="feedback"></p>
+  <p id="score">Score: 0</p>
+  <h3>Leaderboard</h3>
+  <ul id="leaderboard"></ul>
+
+  <script>
+    let score = 0;
+    let correctAnswer = "";
+
+    const renderOptions = (options, symbol) => {
+      const html = options.map(option =>
+        `<label><input type="radio" name="emoji" value="${option}"> ${option}</label><br>`
+      ).join("");
+      document.getElementById("emoji_form").innerHTML = `
+        <p>${symbol}</p>
+        ${html}
+        <input type="submit" />
+      `;
+    };
+
+    const updateLeaderboard = () => {
+      fetch("/leaderboard")
+        .then(res => res.json())
+        .then(data => {
+          const list = data.map((item, i) =>
+            `<li>#${i + 1}  ${item.score} points</li>`
+          ).join("");
+          document.getElementById("leaderboard").innerHTML = list;
+        });
+    };
+
+    const startNewRound = () => {
+      fetch("/game")
+        .then(res => res.json())
+        .then(data => {
+          correctAnswer = data.correct;
+          renderOptions(data.options, data.symbol);
+        });
+    };
+
+    document.getElementById("emoji_form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const selected = document.querySelector('input[name="emoji"]:checked');
+      if (!selected) return alert("Choose an answer!");
+
+      fetch("/guess", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ guess: selected.value, correct: correctAnswer })
+      })
+        .then(res => res.json())
+        .then(data => {
+          if (data.correct) {
+            score++;
+            document.getElementById("feedback").innerText = "Correct!";
+          } else {
+            document.getElementById("feedback").innerText = `Wrong! It was "${correctAnswer}"`;
+          }
+          document.getElementById("score").innerText = `Score: ${score}`;
+
+          fetch("/leaderboard", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ score })
+          }).then(updateLeaderboard);
+
+          setTimeout(startNewRound, 1000);
+        });
+    });
+
+    updateLeaderboard();
+    startNewRound();
+  </script>
+</body>
+</html>
