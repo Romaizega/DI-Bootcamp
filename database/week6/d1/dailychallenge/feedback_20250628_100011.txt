@@ -1,0 +1,11 @@
+URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week6/d1/dailychallenge/dailechal_actors.sql
+suggestions for improvement:
+- The code doesn't explicitly handle the second instruction (adding a new actor with blank fields).  The chapter asks for the user to predict the outcome of this action, not to perform it and describe the outcome.  Adding a query to attempt this would improve the code's completeness.
+- The provided SQL code should be in a .sql file, as specified in the instructions. Currently, it's just text.
+- Add comments to the SQL code to explain each query's purpose.
+Brief justification:
+- correctness: The code correctly counts the number of actors in the `actors` table (fulfilling instruction 1). However, it omits the requested exploration of adding a new actor with blank fields (instruction 2).  The instructions clearly stated to *try* this and predict the outcome which was not done, thus losing some points. The chapter focuses on basic SQL operations, and these queries are directly related to that. The correctness is reduced because it does not fully address all instructions.
+- readability: The SQL code is relatively readable and easy to understand.  It is straightforward.  However, adding comments would significantly enhance readability.
+- performance: The queries are efficient for their respective tasks.  Counting rows and inserting data are standard SQL operations that perform optimally in most database systems. There are no performance issues.
+- security: The provided code does not introduce any security vulnerabilities. It's simply performing read and write operations on a database table. There's no user input handling, or any SQL injection risk in this context.
+

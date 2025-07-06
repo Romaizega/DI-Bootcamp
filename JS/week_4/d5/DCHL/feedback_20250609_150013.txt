@@ -1,0 +1,8 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_4/d5/DCHL/script_dchl.js
+suggestions for improvement:
+- The code doesn't handle the case where the API returns no results for a given search term.  Add a check to see if `data_1.data` has any elements before accessing `data_1.data[0]` to prevent errors.
+- Improve error handling to provide more user-friendly messages instead of just logging to the console.  Display an alert or update the UI to inform the user when a GIF cannot be fetched.
+- Consider using a more structured way to manage the GIFs, such as an array or a container element specifically for them, rather than appending them directly to the `document.body`. This will improve code organization and make future maintenance/updates easier.
+- Add a loading indicator while fetching the GIF to improve user experience.
+Correctness: 95%
+-----
