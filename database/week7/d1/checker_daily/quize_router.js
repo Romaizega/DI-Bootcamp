@@ -44,10 +44,13 @@ const triviaQuestions = [
   }
 ];
 
+let score = 0;
+let total = 0;
+
 router.get("/quiz", (req, res) => {
   const randomIndex = Math.floor(Math.random() * triviaQuestions.length);
   const question = triviaQuestions[randomIndex];
-  
+
   res.json({
     id: randomIndex,
     question: question.question
@@ -59,23 +62,25 @@ router.post("/quiz", (req, res) => {
   if (!triviaQuestions[id]) {
     return res.status(400).json({ error: "Invalid question ID" });
   }
+
   const correctAnswer = triviaQuestions[id].answer;
-  const isCorrect = guess.trim().toLowerCase() === correctAnswer.trim().toLowerCase();
+  const isCorrect =
+    guess.trim().toLowerCase() === correctAnswer.trim().toLowerCase();
+
+  total++;
+  if (isCorrect) score++;
+
   res.json({
     correct: isCorrect,
     correctAnswer: correctAnswer
   });
 });
 
-router.get("/leaderboard", (req, res) => {
-  res.json(leaderboard.slice(0, 5));
+router.get("/quiz/score", (req, res) => {
+  res.json({
+    score,
+    total
+  });
 });
 
-router.post("/leaderboard", (req, res) => {
-  const { score } = req.body;
-  leaderboard.push({ score });
-  leaderboard.sort((a, b) => b.score - a.score);
-  res.status(200).json();
-});
-
-module.exports = router
+module.exports = router;
