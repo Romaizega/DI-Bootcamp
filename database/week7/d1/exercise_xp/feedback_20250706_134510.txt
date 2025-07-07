@@ -1,0 +1,49 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/exercise_xp/exercise_xp_1/app.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/exercise_xp/exercise_xp_1/package.json
+suggestions for improvement:
+- The provided code is a `package.json` file, not the actual implementation of the exercises.  It only sets up the project dependencies and scripts.  The exercises require the creation of `app.js` and route files with actual code to handle requests.
+- Implement the `app.js` file to create the Express application, handle routing, and start the server.
+- Implement the `routes/index.js` file for Exercise 1, defining routes for `/` and `/about`.
+- Implement the `routes/todos.js` file for Exercise 2, including CRUD operations for to-do items.  This requires using methods like `app.get`, `app.post`, `app.put`, and `app.delete` and handling JSON request bodies.
+- Implement the `routes/books.js` file for Exercise 3, similarly implementing CRUD operations for books.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/exercise_xp/exercise_xp_1/routers/index_router.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/exercise_xp/exercise_xp_2/app.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/exercise_xp/exercise_xp_2/package.json
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/exercise_xp/exercise_xp_2/routers/todo.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/exercise_xp/exercise_xp_3/app.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/exercise_xp/exercise_xp_3/package.json
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/exercise_xp/exercise_xp_3/routers/router_books.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----

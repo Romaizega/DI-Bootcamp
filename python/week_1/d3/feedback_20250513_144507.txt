@@ -1,0 +1,12 @@
+URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/python/week_1/d3/exercise.py
+suggestions for improvement:
+- **Exercise 2:** The conditional logic for calculating the ticket cost has a minor error.  `total_cost =+ 0` should be `total_cost += 0` (or simply omitted as it doesn't change the value). The bonus part (user input) is missing.
+- **Exercise 3:**  The code doesn't fully handle the nested structure in `major_color`. While it correctly adds and modifies elements, the output for the US major colors reflects the list structure but might require further formatting based on how the output is supposed to look.  Also, the merge using the `|` operator in the bonus section does not update number_stores correctly, there's a typo.
+- **Exercise 3:** Consider using more descriptive variable names (e.g., instead of  `brand`, perhaps `zara_brand_info`).
+- **Exercise 4:** The code correctly creates the three dictionaries as specified.  Consider adding comments to explain the logic behind each dictionary creation.
+Brief justification:
+- correctness: Exercise 1 is fully correct. Exercise 2 is mostly correct, except for the minor error in the cost calculation and the missing bonus part. Exercise 3 is largely correct but needs improvements in handling nested data and the merge part. Exercise 4 is fully correct.
+- readability: The code is generally readable.  However, more descriptive variable names and comments would enhance readability, especially in Exercise 3.
+- performance: The code's performance is efficient for the given tasks.  No significant performance issues are observed.
+- security: There are no security concerns in the provided code.
+
