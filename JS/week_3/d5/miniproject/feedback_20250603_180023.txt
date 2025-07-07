@@ -1,0 +1,30 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d5/miniproject/index.html
+suggestions for improvement:
+- Implement the grid of squares dynamically using JavaScript instead of hardcoding in HTML. This makes the code more flexible and maintainable.  The size of the grid should be easily configurable.
+- Improve the CSS for better styling and responsiveness.  The current CSS is minimal.
+- Add error handling and input validation where applicable (currently there's no error handling if something goes wrong).
+- Use more descriptive variable and class names in both HTML and JavaScript.  For example, instead of `item1`, use `clearButton`. This improves code readability and maintainability.
+- Separate concerns better by moving the color selection logic entirely into JavaScript.  This will decouple the logic from the HTML structure.
+- Add a mechanism to allow the user to specify the grid size.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d5/miniproject/script.js
+suggestions for improvement:
+- Improve code structure by using more functions to break down the logic into smaller, more manageable parts. For example, separate the grid creation from the color selection and painting logic.
+- Use `document.querySelector` instead of `document.getElementsByClassName` where possible, as it's more efficient and avoids potential issues if multiple elements share the same class.
+- Add error handling. For instance, check if elements exist before attempting to access their properties.
+- The color selection should be more robust – perhaps use a dedicated color picker input or a list of color options for better UX.
+- Add comments to explain different parts of the code, improving readability and maintainability.  Many steps are not immediately clear.
+- Consider using a more efficient way to create the grid of cells, perhaps using `innerHTML` with a loop to generate the HTML directly rather than creating each cell individually.
+- The clear button functionality could be more concise. Use `forEach` instead of a `for...of` loop.
+Correctness: 85%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d5/miniproject/style.css
+suggestions for improvement:
+- The code only provides the HTML and CSS for the structure.  It lacks the JavaScript functionality required for selecting colors and drawing on the grid, which are core requirements mentioned in the 'What you will learn' and 'Project Brief' sections.
+- The CSS is somewhat repetitive. Consider using a loop or a CSS preprocessor to generate the color classes.
+- The grid size is hardcoded. Allow the user to specify the grid size or offer different grid sizes.
+- Add JavaScript to handle `mousedown`, `mouseup`, and `mouseover` events to implement the drawing functionality as instructed.
+- Improve accessibility. Add ARIA attributes to make the interface accessible to screen readers.
+Correctness: 60%
+-----
