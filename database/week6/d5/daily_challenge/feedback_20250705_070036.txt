@@ -1,0 +1,27 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week6/d5/daily_challenge/app.js
+suggestions for improvement:
+- The front-end (HTML form and Fetch API usage) is missing. The instructions clearly state that a form should be used to submit the guess using the Fetch API.  The provided code only implements the backend API.
+- Error handling is minimal. The code lacks robust error handling for cases like invalid input or unexpected server issues.
+- The leaderboard implementation is rudimentary. It doesn't handle user identification, making it a simple, unsorted list of scores.  Authentication and better leaderboard data structuring (e.g., using user IDs and names) are missing.
+- Security: The code is vulnerable to simple injection attacks (e.g., someone could inject malicious scripts into the leaderboard). Input sanitization and validation should be implemented. Consider using a database for a more robust leaderboard.
+- The `getRandomEmoji` and `getOptions` functions could be optimized slightly to avoid potential infinite loops in edge cases, although this is not a major concern in practice.
+Correctness: 85%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week6/d5/daily_challenge/index.html
+suggestions for improvement:
+- The code lacks server-side implementation.  The `/game`, `/guess`, and `/leaderboard` endpoints are referenced but not defined.
+- Error handling is minimal.  The code should include more robust error handling for network requests and unexpected responses.
+- Security:  The leaderboard implementation is vulnerable.  It directly accepts scores from the client without any validation or sanitization, potentially allowing for score manipulation.
+- Readability: Consider using more descriptive variable names (e.g., instead of `selected`, use `userGuess`).
+- Performance:  Fetching the leaderboard after every guess might impact performance.  Consider optimizing this to update less frequently.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week6/d5/daily_challenge/package.json
+suggestions for improvement:
+- The provided code is only a `package.json` file.  It doesn't contain any code to implement the emoji guessing game as described in the chapter content.  It only sets up the project dependencies.  The `app.js` and game logic are missing.
+- Add the actual Express server implementation in `app.js` including the emoji array, game logic (random emoji selection, answer checking, score tracking, etc.), and a form for user interaction.
+- Implement the client-side Fetch API calls to send the user's guess to the server.
+- Implement the leaderboard functionality (likely requiring database integration).
+- Add error handling to the server-side code (for example, handle cases where the user input is invalid or the server encounters an unexpected error).
+Correctness: 20%
+-----

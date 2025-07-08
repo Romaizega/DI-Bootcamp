@@ -1,0 +1,57 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/checker_exercise/app_1.js
+suggestions for improvement:
+- The `index_router` should be more descriptive, maybe `mainRouter` or `homeRouter`. This improves clarity.
+- Error handling is missing.  The server should gracefully handle potential errors (e.g., database connection errors, invalid requests).
+- Add input validation to prevent vulnerabilities like SQL injection or cross-site scripting (XSS).
+- Consider using a more robust method for defining routes instead of directly using app.use('/', page_router).
+- The provided code only addresses Exercise 1 partially, lacking the crucial implementation details for Exercises 2 and 3. The `index_router` is not provided, and  the code doesn't include the 'about' route mentioned in Exercise 1.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/checker_exercise/app_2.js
+suggestions for improvement:
+- The code is missing the implementation of the exercises.  It sets up an Express.js server and attempts to use a router, but the `./routers/todo` module and the router's functionality are not provided.
+- The `todo` router is not defined.  The instructions in Exercises 2 and 3 clearly outline the creation of API endpoints for to-do items and books, which are missing entirely.
+- Error handling is missing.  The server should gracefully handle errors and provide informative responses.
+- Input validation is missing.  The server should validate input data to prevent vulnerabilities like injection attacks.
+- There's no functionality for GET, POST, PUT, and DELETE requests specified in Exercises 2 and 3.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/checker_exercise/app_3.js
+suggestions for improvement:
+- The code does not fulfill the requirements of Exercises 1 and 2.  It's missing the implementation of the routes for those exercises.
+- The `router` is imported from `./routers/router_books`, but this file is not provided.  The exercise requires creating routes in `routes/books.js` and `routes/todos.js` for Exercises 3 and 2 respectively.
+- The code only addresses Exercise 3 partially, as it lacks the actual implementation of the book CRUD operations within the imported `router_books` module.
+- Error handling (e.g., for invalid input or database errors) is missing. 
+- Input validation is crucial for security.  The code lacks validation to prevent vulnerabilities like injection attacks (e.g., SQL injection if using a database other than in-memory).
+- Consider using a more descriptive port name (e.g., `const PORT = process.env.PORT || 3000;` allowing flexibility and avoiding hardcoding).
+Correctness: 0%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/checker_exercise/index_router_1.js
+suggestions for improvement:
+- Add comments explaining the purpose of each route.
+- Consider using more descriptive route names, if appropriate for the application's context.
+- For larger applications, explore using a more structured approach to organize routes (e.g., grouping them into separate files within the `routes` directory).
+Correctness: 100%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/checker_exercise/router_books_3.js
+suggestions for improvement:
+- Fix the typo 'booikId' to 'bookId' for consistency and readability.
+- Implement input validation to prevent unexpected data or malicious inputs (e.g., ensure 'year' is a number, handle potential errors in request body).
+- Consider using a more robust data store than an in-memory array (e.g., a database like MongoDB or PostgreSQL) for production applications.  An in-memory store loses all data on server restart.
+- Add error handling for unexpected situations (e.g., what if `req.body` is missing required fields?).
+- Improve the DELETE response to return the deleted book object rather than just a confirmation message, for better API design and debugging. 
+- Add logging for better debugging and monitoring.
+- Consider using a more descriptive status code for POST requests.  While 200 works, 201 (Created) is more appropriate for successful resource creation.
+Correctness: 95%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/checker_exercise/todo_2.js
+suggestions for improvement:
+- Use a more robust database solution than an in-memory array for production environments.  Consider using a database like MongoDB, PostgreSQL, or SQLite.
+- Implement input validation to prevent injection attacks and ensure data integrity.  Check for data types and lengths of incoming requests.
+- Add error handling for unexpected errors during database operations (e.g., database connection failures).
+- Improve error responses by providing more informative error messages.  For example, include the specific error type and a unique error ID.
+- Add better logging to track requests and potential errors. This aids debugging and monitoring.
+- The `id` generation in `POST /todos` is simple and could lead to conflicts if multiple processes are used. Consider using UUIDs for unique IDs.
+- The code lacks comprehensive unit tests to ensure the functionality works as expected and to catch regressions in future updates.
+Correctness: 95%
+-----
