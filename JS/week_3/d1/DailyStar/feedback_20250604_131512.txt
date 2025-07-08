@@ -1,0 +1,18 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d1/DailyStar/dailychalstar.js
+suggestions for improvement:
+- The first loop doesn't accurately recreate the pattern. It prints a single line of stars then adds a new line of stars cumulatively with each iteration, not the triangle pattern that the instructions ask for.  It should create a single line at each loop iteration.
+- The nested loop solution is mostly correct but could be improved in terms of spacing and efficiency. The nested loop adds extra spaces that are not part of the desired output.
+- Use more descriptive variable names (e.g., `numberOfStars` instead of `i` and `j`)
+- Add comments explaining the logic of each loop.
+- The first loop should be removed as it does not meet the requirements; the challenge explicitly asks for a solution with nested loops and then with a single loop.  The first loop is not a single loop solution to the problem.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d1/DailyStar/indexdc1.html
+suggestions for improvement:
+- The code is missing the implementation in `dailychalstar.js`.  The HTML file only sets up the basic structure. The challenge requires the JavaScript code to generate the pattern using both single and nested loops.
+- Add comments to explain the logic within the `dailychalstar.js` file (once implemented). This will significantly improve readability.
+- Consider using template literals (backticks ``) for creating the strings to improve readability, especially if the pattern were more complex.
+- While the single loop approach is efficient, the instructions explicitly ask for both single and nested loop implementations. Currently, only the structure for a solution is provided.
+- The `defer` and `async` attributes on the `<script>` tag are appropriate for the situation, preventing the script from blocking page rendering. 
+Correctness: 80%
+-----
