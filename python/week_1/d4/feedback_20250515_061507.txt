@@ -1,0 +1,11 @@
+URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/python/week_1/d4/dailychallenge.py
+suggestions for improvement:
+- The code correctly extracts alphabetic characters from the matrix string column-wise. However, it fails to address the requirement of replacing non-alphabetic characters between alphabetic characters with spaces.
+- The code could be significantly improved in terms of readability by using more descriptive variable names and adding comments to explain the logic.  The list comprehension for creating `matrix_2` is concise but might be harder to understand for someone unfamiliar with this technique.
+- The algorithm is efficient for this relatively small matrix.  For significantly larger matrices, optimizing the column-wise traversal might improve performance. Consider using `zip()` for a more Pythonic column-wise iteration.
+Brief justification:
+- correctness: The code successfully converts the input string into a 2D list, iterates through columns, and filters alphabetic characters.  However, it misses the crucial step of replacing sequences of non-alphabetic characters with spaces as described in Step 4 of the Chapter Content/Questions.  Therefore, it only partially fulfills the task. It achieves 70% because it correctly addresses steps 1, 2, and 3.
+- readability: The code is functional but lacks clarity.  Variable names like `matrix`, `matrix_2`, `my_matrix` are not very descriptive. The use of nested loops could also be improved for clarity, potentially by using a more descriptive loop structure. List comprehension is used in a way that might be hard for less experienced developers to understand. The lack of comments makes it harder to follow.
+- performance: The algorithm's performance is acceptable for the given input size. The time complexity is approximately O(m*n), where 'm' is the number of rows and 'n' is the number of columns. This is a reasonable approach for this problem, and it does not appear to have any obvious inefficiencies. However, for larger matrices, a more efficient approach (possibly involving a different iteration method or using NumPy for matrix operations) could be considered.
+- security: The code does not handle any user inputs, making security concerns irrelevant in this context.  There are no vulnerabilities or security risks associated with this code snippet.
+

@@ -1,0 +1,7 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_5/TypeScript/d3/DCHL/src/dailychall.ts
+suggestions for improvement:
+- The function could include error handling for cases where the input array contains elements that are not of type `User`, `Product`, or `Order`.  A more robust solution might check the type of `arr` before accessing its properties.
+- Using a `switch` statement instead of multiple `if` statements could improve readability and potentially performance for a larger number of types.
+- Consider adding a default case in a `switch` statement to handle unexpected data types, providing a clear error message instead of silently ignoring them.
+Correctness: 100%
+-----
