@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+</head>
+<body>
+  <h2>Login</h2>
+  <form id="login">
+    <label for="username">Username:</label>
+    <input type="text" id="username"><br><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password"><br><br>
+    <button id="loginBtn" disabled>Log in</button>
+  </form>
+
+  <p id="message"></p>
+
+  <script defer>
+    const inputs = document.querySelectorAll("input");
+    const loginBtn = document.getElementById("loginBtn");
+    const loginForm = document.getElementById("login");
+    const message = document.getElementById("message");
+
+    const validateLogin = () => {
+      const allFilled = Array.from(inputs).every(input => input.value.trim() !== "");
+      loginBtn.disabled = !allFilled;
+    };
+
+    inputs.forEach(input => input.addEventListener("input", validateLogin));
+    validateLogin();
+
+    loginForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      message.textContent = "";
+      message.className = "";
+
+      const data = {
+        username: document.getElementById("username").value.trim(),
+        password: document.getElementById("password").value.trim()
+      };
+
+      try {
+        const res = await fetch("http://localhost:5000/users/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data)
+        });
+
+        const result = await res.json();
+
+        if (res.ok) {
+          message.textContent = "Login successful!";
+          message.classList.add("success");
+          loginForm.reset();
+          validateLogin();
+        } else {
+          message.textContent = result.error || "Login failed.";
+          message.classList.add("error");
+        }
+      } catch (err) {
+        console.error("Error:", err);
+        message.textContent = "Something went wrong.";
+        message.classList.add("error");
+      }
+    });
+  </script>
+</body>
+</html>

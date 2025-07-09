@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register</title>
+</head>
+<body>
+  <h2>Register</h2>
+  <form id="register">
+    <label for="first_name">First name:</label>
+    <input type="text" id="first_name"><br><br>
+
+    <label for="last_name">Last name:</label>
+    <input type="text" id="last_name"><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email"><br><br>
+
+    <label for="username">Username:</label>
+    <input type="text" id="username"><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password"><br><br>
+
+    <button id="registerBtn" disabled>Register</button>
+  </form>
+
+  <p id="message" style="font-weight: bold;"></p>
+
+  <script defer>
+    const inputReg = document.querySelectorAll("input");
+    const registerBtn = document.getElementById("registerBtn");
+    const registerForm = document.getElementById("register");
+    const message = document.getElementById("message");
+
+    const validate = () => {
+      const allFilled = Array.from(inputReg).every(input => input.value.trim() !== '');
+      registerBtn.disabled = !allFilled;
+    };
+
+    inputReg.forEach(input => input.addEventListener("input", validate));
+    validate();
+
+    registerForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const data = {
+        first_name: document.getElementById("first_name").value.trim(),
+        last_name: document.getElementById("last_name").value.trim(),
+        email: document.getElementById("email").value.trim(),
+        username: document.getElementById("username").value.trim(),
+        password: document.getElementById("password").value.trim()
+      };
+
+      try {
+        const res = await fetch("http://localhost:5000/users/register", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(data)
+        });
+
+        const result = await res.json();
+
+        if (res.ok) {
+          message.textContent = "Hello, your account is now created!";
+          message.style.color = "green";
+          registerForm.reset();
+          registerBtn.disabled = true;
+        } else {
+          message.textContent = result.error || "Registration failed";
+          message.style.color = "red";
+        }
+
+      } catch (err) {
+        console.error("Network error:", err);
+        message.textContent = "Something went wrong, try again later.";
+        message.style.color = "red";
+      }
+    });
+  </script>
+</body>
+</html>
