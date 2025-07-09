@@ -1,0 +1,28 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/python/week_2/d4/XP/exercase.py
+suggestions for improvement:
+- The `get_words_from_file` function should handle potential `FileNotFoundError` exceptions more gracefully.  Currently, it will crash if the file isn't found.  A `try-except` block should be added.
+- The variable names could be more descriptive (e.g., `lengt_sent` to `sentence_length`, `senten` to `words`, etc.).
+- Add a check to ensure the word list is not empty before attempting to select random words.  This prevents errors if the word list file is empty or improperly formatted.
+- The `main` function could benefit from a loop to allow the user to generate multiple sentences without restarting the program.
+- The program assumes the word list file (`word_list.txt`) is in the same directory as the script.  It would be more robust to allow the user to specify the file path or handle cases where the file might be located elsewhere.
+- In `get_random_sentence`, the sentence is built by repeatedly appending words and spaces. A more efficient approach would be to use `' '.join(random_words)` after selecting all words.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/python/week_2/d4/XP/exercise2.py
+suggestions for improvement:
+- The code for Exercise 1 (random sentence generator) is missing.  The provided code only addresses Exercise 2.
+- Add more robust error handling. For instance, check if the file exists before attempting to read it in `get_words_from_file` (Exercise 1). Also, handle potential `KeyError` exceptions when accessing nested JSON keys (Exercise 2).
+- The date format 'YYYY-MM-DD' should be explicitly specified in the code instead of relying on the system's default. Consider using `strftime('%Y-%m-%d')` for better consistency across different systems.
+- For Exercise 1, implement input validation as specified in the instructions: Check if the input is an integer and is between 2 and 20 (inclusive).
+- The `main` function (Exercise 1) is missing.  The structure should follow the outlined steps: print a message, request user input, validate, and call the sentence generation function.
+Correctness: 95%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/python/week_2/d4/XP/file.json
+suggestions for improvement:
+- The provided code snippet only addresses Exercise 2.  Exercise 1 (random sentence generator) is missing entirely.
+- Error handling (try-except blocks) is absent in both exercises. The code should handle potential file I/O errors and invalid user input more robustly.
+- The date in the JSON is hardcoded.  It should allow the user to input this value.
+- The code lacks a main function to drive the execution. This makes it less reusable and less organized.
+- Exercise 2 is missing the steps of saving the modified JSON to a file, which is explicitly stated in the instructions.
+Correctness: 80%
+-----

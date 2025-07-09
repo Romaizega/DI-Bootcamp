@@ -1,0 +1,35 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/checker_daily/app.js
+suggestions for improvement:
+- The code only sets up the Express.js server and routing.  It's missing the crucial implementation of the trivia quiz logic (questions, answers, score tracking, and route handlers for GET `/quiz`, POST `/quiz`, and GET `/quiz/score`).
+- The `quize_router.js` file is missing, which contains the actual route handlers. This needs to be implemented.
+- Error handling is absent. The application should handle potential errors (e.g., invalid input, unexpected exceptions).
+- Security:  No input sanitization is implemented, making the application vulnerable to injection attacks if user input is directly used in queries (though there are currently no queries).
+- The use of `quize_router` instead of `quiz_router` is a minor spelling error.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/checker_daily/index.html
+suggestions for improvement:
+- The provided code is only a basic HTML structure for a quiz.  It lacks the server-side Express.js implementation with routing (`express.Router`) and the backend logic to handle questions, answers, scoring, and user interaction as specified in the chapter content.
+- The `script.js` file is missing, so the functionality described in the problem statement cannot be assessed. The HTML provides client-side structure, but no actual quiz logic.
+- The instructions clearly state to use Express.js and `express.Router` to create the trivia quiz game. This code only provides a basic HTML frontend; there is no server-side component.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/checker_daily/quize_router.js
+suggestions for improvement:
+- Implement proper question management to avoid repeating questions within a single quiz.
+- Improve error handling for missing request body parameters in the POST /quiz route.
+- Add input sanitization to prevent potential vulnerabilities (e.g., SQL injection, though not directly applicable here, it's a good practice).
+- Use a more robust method for storing quiz state (session, database) instead of relying on request parameters.  The current approach is prone to errors if the client manipulates the `id`.
+- Consider separating the quiz logic from the routing logic for better organization and maintainability.
+- Enhance the user interface. The current JSON responses are suitable for an API, but a more user-friendly interface (e.g., using templating engines like EJS or Handlebars) would improve the user experience.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/checker_daily/script.js
+suggestions for improvement:
+- The code is missing the server-side Express.js implementation.  The client-side code correctly interacts with hypothetical `/quiz` routes but these routes need to be created.
+- Error handling is minimal. The code should include more robust error handling for network requests and invalid user inputs.
+- The `triviaQuestions` array is not defined in the provided code, making it incomplete. The server needs to provide this array.
+- The client-side code assumes a specific JSON response structure from the server, which should be explicitly defined and enforced.
+- Implement proper input sanitization on the server to prevent XSS vulnerabilities.
+Correctness: 70%
+-----
