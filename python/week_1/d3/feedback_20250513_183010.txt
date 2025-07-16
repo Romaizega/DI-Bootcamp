@@ -1,0 +1,13 @@
+URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/python/week_1/d3/dailechallenge.py
+suggestions for improvement:
+- In Exercise 1, the program doesn't explicitly handle cases with non-alphabetic characters.  Adding error handling (e.g., using `isalpha()`) would improve robustness.
+- Exercise 1 could benefit from a more descriptive variable name than `my_dict`.  Something like `letter_index_dict` would enhance readability.
+- In Exercise 2, the code directly modifies the input `wallet` and `price` strings. It's better practice to create copies to avoid unintended side effects.
+- Exercise 2 could use a more descriptive variable name than `my_list`.  `affordable_items` would be clearer.
+- Add comments to both exercises to explain the purpose of different code blocks or complex operations.
+Brief justification:
+- correctness: Both exercises largely meet the requirements.  Exercise 1 correctly generates the letter index dictionary as specified in the examples. Exercise 2 correctly processes the provided data, converts prices, filters affordable items, sorts them and outputs the result or "Nothing" as expected.  However, Exercise 1 lacks error handling for non-alphabetic input; this would improve the completeness of the solution.
+- readability: The code is generally understandable. However, more descriptive variable names and comments would significantly improve readability. The use of `my_dict` and `my_list` is somewhat vague and could cause confusion for readers not already familiar with the code.
+- performance: The performance of both exercises is acceptable for the problem size. The loops are straightforward and efficient, and operations are reasonably optimized.  There is no significant performance bottleneck identified.
+- security: There are no apparent security vulnerabilities in the provided code. The code only interacts with user input and pre-defined data, with no external data sources or sensitive operations.
+

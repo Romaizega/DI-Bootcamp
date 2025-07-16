@@ -1,0 +1,10 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/miniproject/folder_for_checker/miniproject.js
+suggestions for improvement:
+- The tasks are stored in memory, not in a JSON file as required.  Implement file I/O using `fs` to read and write tasks to `tasks.json`.
+- Error handling is basic. Provide more specific error messages and consider using a more robust error handling mechanism.
+- The `id` generation is simplistic and could lead to collisions. Implement a more robust ID generation strategy (e.g., using UUIDs).
+- Input validation could be more thorough.  Consider using a validation library to handle more complex data validation scenarios.
+- Add logging for better debugging and monitoring.
+- The `deleteTask` route returns all tasks, not just a success message.  Modify to return just the success message.
+Correctness: 60%
+-----
