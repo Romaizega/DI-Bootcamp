@@ -1,0 +1,8 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_5/TypeScript/d2/DCHL/src/dchl.ts
+suggestions for improvement:
+- The `Library` constructor should ideally handle the case where the initial `books` array is not provided or is null or undefined.
+- Add input validation to prevent adding books with duplicate ISBNs to avoid data inconsistencies.
+- Consider adding error handling to `getBookDetails` to manage cases where no book matches the provided ISBN, rather than just returning `undefined`.
+- The code lacks comments explaining the purpose of various methods and the overall design choices. Adding comments will greatly improve readability.
+Correctness: 95%
+-----

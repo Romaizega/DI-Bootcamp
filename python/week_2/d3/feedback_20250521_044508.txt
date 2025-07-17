@@ -1,0 +1,12 @@
+URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/python/week_2/d3/dailychallenge.py
+suggestions for improvement:
+- Add input validation to ensure radius and diameter are non-negative numbers.
+- The `__init__` method could be improved by handling cases where both radius and diameter are provided, perhaps raising a ValueError or using a more informative error message.  Currently, it silently prioritizes radius.
+- Consider adding a `__repr__` method for better debugging and representation in interactive environments.
+- The bonus task of drawing the circles with Turtle is not implemented.
+Brief justification:
+- correctness: The code correctly implements a Circle class with methods for calculating area, adding circles, and comparing them using dunder methods (`__add__`, `__eq__`, `__gt__`, `__lt__`).  It fulfills most of the requirements specified in the Chapter Content/Questions. The missing element is the bonus task and some minor edge cases in input handling. 
+- readability: The code is well-structured and easy to understand.  Method names are descriptive, and the code generally follows Python's style guidelines. However,  minor improvements could enhance clarity, especially in error handling.
+- performance: The code's performance is good.  The algorithms used are efficient for the tasks involved. No obvious performance bottlenecks exist.
+- security: The code is secure as it's a simple class and doesn't handle any external input that could lead to vulnerabilities. The `__add__` method includes a type check to prevent adding non-Circle objects, making it more robust. 
+
