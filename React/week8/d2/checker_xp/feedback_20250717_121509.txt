@@ -1,0 +1,8 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/React/week8/d2/checker_xp/Exercise.jsx
+suggestions for improvement:
+- In Exercise 4, the `useEffect` hook lacks a cleanup function.  While not strictly required for this simple example, it's a best practice to include one to prevent memory leaks or unexpected behavior if the component unmounts before the effect completes.
+- Exercise 4 doesn't fully meet the requirements. It alerts 'useEffect reached' instead of changing the color to yellow after 5 seconds.  Add a `setTimeout` function inside the `useEffect` hook to achieve this.
+- The `Phone` component in Exercise 3 doesn't directly use the `color` prop; it only utilizes the state variable `newcolor`.  Using the provided color prop would be a better approach.
+- The code for Exercise 1 is structured well, but the variable names in `Car.jsx` could be improved. Using more descriptive names than `name` and `model` enhances readability.
+Correctness: 90%
+-----
