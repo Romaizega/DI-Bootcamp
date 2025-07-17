@@ -1,0 +1,43 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/daily_challenge/app.js
+suggestions for improvement:
+- The code only sets up the Express.js server and routing structure.  It's missing the crucial implementation of the trivia quiz logic (handling GET /quiz, POST /quiz, GET /quiz/score, managing the quiz state, and providing feedback).
+- The `quize_router.js` file (referenced but not provided) is essential for a complete evaluation. The provided code only shows the server setup.
+- Add input sanitization to prevent vulnerabilities like Cross-Site Scripting (XSS).
+- Consider using a more robust method for handling the quiz state, potentially session management or database storage, instead of relying on a simple in-memory solution (if that's the case in the missing `quize_router.js` file).
+Correctness: 20%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/daily_challenge/package.json
+suggestions for improvement:
+- The provided code is a `package.json` file. It does not contain any implementation of an Express.js trivia quiz game.  It only sets up the project dependencies. The core functionality described in the chapter content is entirely missing.
+- Implement the Express.js server with the `/quiz`, `/quiz/`, and `/quiz/score` routes as specified in the instructions. 
+- Add the `triviaQuestions` array and the game logic to manage the quiz state (current question, score, etc.).
+- Use `express.Router` to organize the routes effectively.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/daily_challenge/public/index.html
+suggestions for improvement:
+- The provided code is only a frontend HTML file.  It lacks the backend Express.js server and the `/quiz`, `/quiz/score` routes as specified in the instructions.  It does not implement the trivia game logic or interact with a server.
+- The instructions explicitly require the use of `express.Router`. This is entirely missing.
+- The client-side JavaScript (in `/script.js`, which is not provided) is needed to handle the interaction with the server,  but it is absent.  Without it, the HTML is just a static page.
+- Add server-side code (using Express.js and `express.Router`) to handle the quiz logic, including question retrieval, answer checking, score tracking, and routing.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/daily_challenge/public/script.js
+suggestions for improvement:
+- The code is missing the server-side Express.js implementation.  The provided code only handles the client-side interactions (fetching and displaying questions and handling responses). The `/quiz/score` route is also missing.
+- Error handling is minimal. The code should include more robust error handling for network issues or invalid server responses.
+- The client-side code makes assumptions about the structure of the JSON responses from the server.  It should be more flexible and handle potential variations in the response format.
+- Consider using a templating engine (like EJS or Handlebars) for cleaner separation of concerns between server-side logic and client-side rendering.
+- Security:  The code is vulnerable to Cross-Site Scripting (XSS) attacks because it directly inserts user-provided data (`data.correctAnswer`) into the feedback message without proper sanitization.
+Correctness: 70%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/daily_challenge/routers/quize_router.js
+suggestions for improvement:
+- Implement `/quiz/score` route to display the final score.
+- Improve error handling for missing question IDs.
+- Add state management to track user progress and score throughout the quiz.
+- Remove the leaderboard functionality as it's not part of the requirements.
+- Use a more robust method for question selection to avoid repeating questions in a single session.
+- Sanitize user inputs to prevent potential security vulnerabilities.
+Correctness: 70%
+-----

@@ -1,0 +1,36 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/miniproject/task_managment/controllers/tasksController.js
+suggestions for improvement:
+- Implement file I/O to store and retrieve tasks from `tasks.json` instead of relying on an in-memory array.  The instructions explicitly state to use a JSON file for persistent storage.
+- Improve error handling. While the code catches errors, it could provide more specific error messages (e.g., differentiate between file system errors and validation errors).
+- Enhance input validation.  Sanitize user inputs to prevent injection attacks and handle unexpected data types more robustly.
+- Use a more robust ID generation strategy than `tasks.length + 1`. This is prone to issues if tasks are deleted.
+- Add more comprehensive testing. The provided code lacks explicit tests.  Use a testing framework (like Jest) to ensure all functionalities work correctly.
+Correctness: 85%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/miniproject/task_managment/models/tasks.js
+suggestions for improvement:
+- The provided code is just a sample JSON data structure.  It does not implement an Express.js API, handle file I/O, or include any of the functionality described in the Chapter Content/Questions (GET, POST, PUT, DELETE routes, validation, error handling).
+- The assignment requires building an Express.js application with API routes to manage tasks stored in a JSON file. This code snippet only provides sample task data.
+- A complete solution would need to include Express.js server setup, routing, file system operations (using `fs` module), request handling, and response sending.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/miniproject/task_managment/package.json
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/miniproject/task_managment/routers/routers.js
+suggestions for improvement:
+- Implement proper input validation in the controllers to handle cases where required fields are missing or data types are incorrect.  Currently, error handling is likely lacking robustness.
+- Add comprehensive error handling within the controllers (`tasksController.js`).  Handle file I/O errors, JSON parsing errors, and other potential exceptions gracefully, returning appropriate HTTP status codes (e.g., 400 Bad Request, 500 Internal Server Error).
+- Improve file I/O performance. Consider asynchronous file operations to prevent blocking the main thread, especially with a large number of tasks.
+- Implement better security measures.  Sanitize user inputs to prevent injection attacks (e.g.,  SQL injection if you were using a database, which you're not). Consider using a more robust approach for data storage than a simple JSON file, especially in production environments. (e.g. a database).
+- The `tasks.json` file should be explicitly created if it doesn't exist.  Currently, if the file is missing, there will be an error.
+- Add more descriptive error messages to the responses to provide better feedback to the client.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/miniproject/task_managment/server.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
