@@ -1,0 +1,102 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/exercise_xp/blog-api/controllers/postcontrollers.js
+suggestions for improvement:
+- Improve error handling: Provide more specific error messages to the client.  For example, instead of a generic "Server error", indicate the nature of the database error when possible.
+- Input validation: Add more robust input validation to prevent SQL injection and other vulnerabilities.  Sanitize user inputs before using them in database queries.
+- Consistent error handling: The `getPost` function has a slightly different error handling structure than the others. Standardize the error responses (e.g., always return a JSON object with an `error` property).
+- Add logging: Include logging for debugging and monitoring purposes. Log successful requests and errors to help with troubleshooting.
+- Use a more descriptive variable name in `updatePost`: `updPost` could be renamed to something more self-explanatory like `updatedPost`.
+- Handle PUT request properly in `updatePost`:  The function doesn't explicitly return a response after updating the post. It should return a success or error status with an appropriate JSON response.
+- Typographical error: In `getPost` and `updatePost`, there's a typo "Post not foud". It should be "Post not found".
+Correctness: 95%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/exercise_xp/blog-api/db.js
+suggestions for improvement:
+- The code only provides the database connection setup.  It's missing the Express.js server, API routes, and the actual CRUD operations for blog posts or books as specified in Exercises 1 and 2.
+- Error handling is absent. The code should include try-catch blocks to handle potential database connection errors and other exceptions.
+- Security needs improvement. Storing database credentials directly in environment variables is not best practice for production. Consider using a more secure method like a secrets manager.
+- The code lacks input validation.  Before interacting with the database, inputs should be validated to prevent SQL injection and other vulnerabilities.
+- Add comments to explain the purpose of the code and the different parts.
+- Consider using a more robust ORM (Object-Relational Mapper) like Sequelize, TypeORM, or Prisma instead of directly using Knex for database interactions. This can enhance code organization and readability.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/exercise_xp/blog-api/package.json
+suggestions for improvement:
+- The provided code is only a `package.json` file.  It defines project dependencies (express, knex, pg, and dotenv) but does not contain any actual implementation of the API endpoints or database interactions described in the exercises.  It lacks the crucial `server.js` (or `app.js`) and database setup/interaction code.
+- The `dev` script uses `node --watch`, which is helpful for development, but production deployments should use a proper process manager (like PM2 or systemd).
+- The `package.json` doesn't specify a start script.  A `start`: "node server.js" script would be helpful for starting the server.
+- No error handling or security measures are implemented (since there's no code). The exercises explicitly mention error handling. SQL injection prevention should be considered in the database queries.
+- Add `.gitignore` to exclude node_modules folder
+- The project structure is missing  `config`, `controllers`, `models`, and `routes` folders as specified in the exercises.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/exercise_xp/blog-api/routers/routers.js
+suggestions for improvement:
+- The code lacks error handling.  It should include try...catch blocks in the controllers to handle database errors and other potential issues.  The instructions mention error handling for invalid routes and server errors, which is missing.
+- The code is missing the actual implementation of the database interaction (using Knex or a similar ORM) in the `postcontrollers`.  The `getPosts`, `getPost`, etc., functions are not defined, making this code incomplete.
+- The code assumes a properly configured database connection.  The instructions mention creating a `posts` table, but the code doesn't show that setup.  Consider adding connection details to a `.env` file and loading them in the server.js file.
+- Security is lacking.  Input validation is crucial to prevent SQL injection attacks.  The code needs input sanitization before using data from requests in database queries.
+- The directory structure is mentioned but not enforced by this code snippet.  While the code refers to '../controllers/postcontrollers', it's not clear if the actual files and folders exist.  A more comprehensive example would include at least skeletons of these files.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/exercise_xp/blog-api/server.js
+suggestions for improvement:
+- The code is missing the database connection and the implementation of the CRUD operations for blog posts.  The instructions explicitly state to use Knex to query data from a Postgres database.  No database interaction is present.
+- Error handling for invalid routes and server errors is missing as instructed in Exercise 1.
+- The directory structure specified in the exercises is not fully implemented.  While a `routers` directory is implied, it needs to be created and populated with actual route handlers.
+- The `posts_routers` require statement assumes the existence of a file and structure that isn't provided.  The code should explicitly create this file and define the routes.
+- Security is lacking. Input validation and sanitization are absent.  Without these, the API is vulnerable to SQL injection and other attacks.
+- Exercise 2 is completely ignored. The code only addresses a portion of Exercise 1.
+Correctness: 60%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/exercise_xp/book-api/config/server.js
+suggestions for improvement:
+- The code lacks implementation for database interaction (using Knex or a similar library) as required by the chapter content.
+- The code doesn't implement all CRUD operations (only GET is partially implemented).
+- Error handling is missing.  The server could crash unexpectedly.
+- The `books_routers` import is incomplete and needs the actual router implementation.
+- Security considerations such as input validation are absent.
+- The code only handles one endpoint `/api/books` instead of `/posts` for Exercise 1 and does not include all the required endpoints from both exercises. 
+- The directory structure specified in the instructions is not reflected in the given code.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/exercise_xp/book-api/controllers/book_controllers.js
+suggestions for improvement:
+- Implement PUT and DELETE routes for complete CRUD functionality as specified in Exercise 2.
+- Add input validation to `postBook` to ensure `title`, `author`, and `publishedYear` are present in `req.body` before inserting into the database.
+- Improve error handling: provide more specific error messages to the client and log errors for debugging purposes.
+- Use parameterized queries to prevent SQL injection vulnerabilities.
+- Consider using a more robust error handling approach (e.g., centralized error middleware).
+- The `getBook` function uses a `try...catch` block that catches all errors, including the `404` that's meant to be returned when a book isn't found.  This masks the intended behavior.  The error handling needs refinement.
+- Add input sanitization to prevent issues like XSS attacks.
+Correctness: 85%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/exercise_xp/book-api/models/db.js
+suggestions for improvement:
+- The code only provides the database connection setup.  It's missing the Express.js server, API routes, and CRUD operations for blog posts or books as specified in Exercises 1 and 2.
+- Error handling is completely absent. The code should include try-catch blocks to handle potential database connection errors and other exceptions.
+- Security is a concern because database credentials are stored in environment variables. While this is better than hardcoding, consider using a more secure method for managing sensitive information, such as a secrets manager.
+- The code lacks input validation.  Before writing data to the database, it should validate that the input data meets the required format and constraints.
+- Add comments to explain the purpose of different code sections and configuration options for better readability.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/exercise_xp/book-api/package.json
+suggestions for improvement:
+- The provided code is a `package.json` file, which defines project metadata and dependencies. It does not contain any code to solve the exercises described in the chapter content.  The exercises require building Express.js APIs with database connections (using Knex and PostgreSQL).
+- The `package.json` includes necessary dependencies (`express`, `knex`, `pg`), which is a good start, but the actual API implementation is missing.
+- Add the actual server code (likely in `server.js` or `app.js` as described in the exercises) to implement the API routes and database interactions.
+- Implement proper error handling and input validation to improve security and robustness.
+- Structure the project into the specified directory structure (`config`, `controllers`, `models`, `routes`) to enhance maintainability and scalability.
+- Use environment variables (through `.env` file and `dotenv` package) to manage sensitive information like database credentials rather than hardcoding them.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/exercise_xp/book-api/routers/routers.js
+suggestions for improvement:
+- The code only implements GET, POST routes for books.  PUT and DELETE routes for CRUD operations are missing, as required by Exercise 1 and 2.
+- Error handling is missing.  The code should include error handling for database queries and other potential errors.
+- Database interaction (using Knex or similar) is not shown. The instructions specified using Knex to query a database.  The provided code lacks this crucial element.
+- The code lacks input validation.  Before adding books to the database, the inputs should be validated to prevent vulnerabilities and ensure data integrity. 
+- The `book_controllers` file is not included, making a complete evaluation impossible.  The correctness score is reduced due to this missing piece.
+- More descriptive route names could improve readability (e.g., `/api/books` instead of `/`).
+- Consider using async/await for better readability and error handling in the controllers.
+Correctness: 70%
+-----

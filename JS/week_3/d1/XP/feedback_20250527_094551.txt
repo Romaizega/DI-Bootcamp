@@ -1,0 +1,26 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d1/XP/exerciseXP.js
+suggestions for improvement:
+- The provided code does not address any of the exercises described in the Chapter Content/Questions. It solves different problems.
+- Exercise 1 requires a function `displayNumbersDivisible` which is missing.  The code shows array manipulation, but not the core functionality asked for.
+- Exercise 2 involves manipulating the `stock` and `prices` objects to calculate a shopping bill. This is not present in the provided code.
+- Exercise 3 needs a function `changeEnough` to check if enough change exists for a purchase. The code does not contain this function.
+- Exercise 4 requires functions for hotel, plane, and rental car costs, culminating in a `totalVacationCost` function. These are absent.
+- Exercise 5 involves DOM manipulation using Javascript.  The provided code does not interact with the DOM at all.
+- Exercise 6 also focuses on DOM manipulation (changing attributes, creating elements).  It is not present.
+- Exercise 7 requires creating book divs dynamically. No DOM interaction is shown in the provided code.
+- The code uses inconsistent naming conventions (e.g., `colors`, `colors2`, `people`). Consistent naming enhances readability.
+- Add comments explaining the purpose of each code block. This improves readability significantly.
+- Some loops can be simplified or replaced with array methods (e.g., `forEach`, `map`, `reduce`) for better performance and readability.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d1/XP/indexXP.html
+suggestions for improvement:
+- No code is provided for any of the exercises.  The HTML file is empty except for a reference to a JavaScript file that doesn't exist.
+- All exercises require JavaScript code to be written and executed. There is no JavaScript code submitted.
+- Implement all exercises as described in the instructions.
+- For Exercise 4, consider using a more robust method for input validation instead of relying solely on type checking.  Consider using a loop that continues to prompt until valid input is received.
+- For Exercise 5, consider adding error handling to your JavaScript code to gracefully handle situations where the DOM elements might not be found.
+- For Exercise 7, make sure that your image URLs are valid and accessible. Use descriptive variable names to improve the readability of the code.
+- Add error handling where appropriate. For example, in Exercise 3, consider handling cases where the input array might not be in the correct format or where the itemPrice is negative.
+Correctness: 0%
+-----
