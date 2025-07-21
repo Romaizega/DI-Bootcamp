@@ -1,0 +1,34 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/checker_daily/app.js
+suggestions for improvement:
+- The provided code only sets up the Express.js server and routing.  It's missing the crucial parts: the `quiz_router.js` file containing the actual route handlers for GET `/quiz`, POST `/quiz`, and GET `/quiz/score`, the trivia questions data structure, and the game logic to manage the quiz state (current question, score, etc.).
+- The `public` directory is referenced, but no static files are specified.  Consider adding placeholder HTML files for the quiz interface.
+- Error handling is missing. The application should handle potential errors gracefully (e.g., invalid input, missing data).
+Correctness: 20%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/checker_daily/index.html
+suggestions for improvement:
+- The provided code is only a frontend HTML file.  It lacks the crucial backend Express.js server and routing components specified in the chapter instructions.
+- The instructions explicitly require the use of `express.Router` for the routes `/quiz`, `/quiz/`, and `/quiz/score`.  This is entirely missing.
+- The code doesn't implement any game logic, such as tracking the user's score or progressing through the questions.
+- The `triviaQuestions` array, which should be part of the server-side code, is not present.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/checker_daily/quize_router.js
+suggestions for improvement:
+- The `/quiz` route should maintain state to track the user's progress through the questions, instead of randomly selecting a question each time.  A question index should be stored in the session or a similar mechanism.
+- The `/quiz/score` route is missing.  This route should display the final score after the user answers all questions.
+- Error handling could be improved.  For example, what happens if the user tries to submit an answer to a question that doesn't exist?  What happens if the user tries to access `/quiz/score` before completing the quiz?
+- The `/leaderboard` route is not part of the specified requirements. It should be removed or clearly separated into its own module.
+- The implementation uses a `randomIndex` for each request.  This means the user could potentially see the same question multiple times, or miss questions entirely.  A more robust approach is needed to ensure all questions are presented and only once per session.
+- Consider using more descriptive variable names (e.g., `userAnswer` instead of `guess`).
+Correctness: 70%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/checker_daily/script.js
+suggestions for improvement:
+- The provided code is missing the server-side Express.js implementation.  The client-side JavaScript interacts with `/quiz` endpoints, implying a backend, but it's not included.
+- Error handling is minimal.  The code should gracefully handle network errors or unexpected responses from the server.
+- The quiz uses a hardcoded `id` in the POST request which may not be necessary if the backend correctly handles which question is being answered based on sequence.  This might indicate a mismatch in the design of the client and server side interaction.
+- Consider using a more robust templating engine (like EJS or Handlebars) for generating dynamic HTML instead of directly manipulating the DOM.
+- Add input validation on the client side to prevent issues like script injection or unexpected input types.
+Correctness: 70%
+-----
