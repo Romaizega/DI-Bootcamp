@@ -1,0 +1,28 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/checker_daily/app.js
+suggestions for improvement:
+- The code is missing the crucial implementation of the quiz logic within the `quize_router.js` file.  The provided code only sets up the Express.js server and routes, but doesn't handle the quiz questions, answers, score tracking, or user interaction as specified in the chapter content.
+- Add error handling for cases like invalid user input or unexpected issues during the quiz.
+- Consider using a more robust templating engine (e.g., EJS, Handlebars) for better separation of concerns and easier management of the HTML views for the quiz interface.
+- The `public` directory needs to be created and populated with appropriate HTML files to render the quiz front-end.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/checker_daily/quize_router.js
+suggestions for improvement:
+- The quiz doesn't handle the end of the quiz gracefully.  It should detect when all questions have been asked and redirect to the score page.
+- The question selection is random, but there's no mechanism to prevent repeated questions. This should be addressed to ensure each question is asked only once.
+- Error handling could be improved.  While it checks for invalid question IDs, it doesn't handle other potential errors (e.g., missing request body).
+- The use of a global `score` and `total` variables is not ideal for a multi-user environment.  Consider storing this information in the session or using a database for better scalability and isolation.
+- The application lacks input validation.  User inputs should be sanitized to prevent security vulnerabilities like cross-site scripting (XSS).
+- The responses should be more user-friendly. Instead of just sending JSON, consider sending HTML or using a templating engine to create a better user experience.
+- Add more informative messages to the responses like 'Correct! Next question...' or 'Incorrect. The answer was...' to improve user feedback.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/checker_daily/script.js
+suggestions for improvement:
+- The provided code is missing the server-side Express.js implementation.  The frontend code assumes the existence of `/quiz` GET and POST routes, but these are not defined.
+- Error handling is minimal. The code should include more robust error handling for network requests and invalid user input.
+- The quiz ends abruptly; there's no explicit mechanism to display the final score after the last question. The `/quiz/score` route is not implemented.
+- Security:  While this client-side code isn't inherently insecure, it's crucial to remember that the server-side needs proper input sanitization and validation to prevent vulnerabilities like SQL injection or cross-site scripting (XSS) if the trivia data were not hardcoded.
+- The client-side code directly uses `setTimeout` for question transitions. This could be handled more efficiently and elegantly through promises or async/await.
+Correctness: 70%
+-----

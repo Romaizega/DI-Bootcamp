@@ -1,0 +1,7 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_4/d1/XP/exercise.js
+suggestions for improvement:
+- In Exercise 2, the ternary operator can be simplified with a lookup array or a function for ordinal suffix generation. This improves readability and maintainability.
+- Exercise 4's bonus part could use more descriptive variable names for better understanding.  For example, instead of `onlyRole` and `listLastName`, consider names like `fullStackResidents` and `fullStackResidentLastNames`.
+- Add comments to explain the logic in more complex parts of the code (e.g., the ternary operator in Exercise 2).
+Correctness: 95%
+-----
