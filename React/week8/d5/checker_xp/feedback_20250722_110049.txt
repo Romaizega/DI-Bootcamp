@@ -1,0 +1,7 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/React/week8/d5/checker_xp/App.jsx
+suggestions for improvement:
+- In `DarkLight`, the `useEffect` hook could be optimized to only update the body class name when the `color` state actually changes.  Currently, it runs on every render.
+- The `CounterChar` component is good, but could include error handling (e.g., checking if `inputRef.current` is null before accessing its value) for robustness. 
+- The naming of the context (`ColorContext`) and related components (`DarkLight`, `ButtonColor`, etc.) is a bit misleading since the component handles more than just color, it is also a theme switcher. Consider a more appropriate name, like `ThemeContext`.
+Correctness: 80%
+-----

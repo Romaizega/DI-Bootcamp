@@ -1,0 +1,8 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/React/week8/d1/checker_dchl/App.jsx
+suggestions for improvement:
+- Add error handling for image loading failures.  If an image URL is invalid or unavailable, the carousel should gracefully handle the situation, perhaps displaying a placeholder image or message.
+- Consider using more descriptive class names (e.g., `carousel-image`, `carousel-caption`) for better maintainability and readability.
+- The image URLs are hardcoded. For better maintainability, consider storing them in an array or fetching them from an external data source.
+- Add styling to improve the visual presentation.  The default styling might not perfectly align with design preferences.
+Correctness: 95%
+-----
