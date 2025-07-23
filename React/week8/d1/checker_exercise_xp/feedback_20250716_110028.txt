@@ -1,0 +1,8 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/React/week8/d1/checker_exercise_xp/App.jsx
+suggestions for improvement:
+- In `App_1`,  the JSX element `myelement` is rendered as a string representation instead of the actual JSX element. It should be directly rendered without the extra `<p>` tag.
+- In `Exercise_3`, the `style_header` object is defined but not applied to the `<h1>` tag. Inline styles should be used (`style={style_header}`) or the class name should be corrected to match the CSS class (remove `.style_header` and use `className = 'style_header'` in JSX) to utilize the CSS file correctly.  Currently, the CSS class `para` works because its name was corrected, but `style_header` is defined incorrectly.
+- Add error handling for potential issues like the image loading in `Exercise_3` failing (network error, image not found, etc.)
+- Consider using functional components with hooks instead of class components where appropriate (Exercise_3). This improves readability and maintainability.
+Correctness: 85%
+-----

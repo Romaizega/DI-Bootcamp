@@ -1,0 +1,10 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_4/d4/DCHL/dailychallenge.js
+suggestions for improvement:
+- In `makeAllCaps`, the arrow function within `map` is unnecessarily complex.  Simplify it to `arr => arr.toUpperCase()`. 
+- Improve error messages in both `makeAllCaps` and `sortWords` to be more informative (e.g., specifying which element caused the rejection).
+- Add input validation in `toMorse` to handle cases beyond single characters (e.g., spaces or special characters that are not in the Morse code).
+- In `toMorse`,  consider using `Array.prototype.map` for a more concise and functional approach to translate the input string. 
+- The `joinWords` function directly manipulates the DOM. It would be better to accept a DOM element as a parameter to be more flexible and testable.
+- Add more comprehensive error handling in `toJs` to catch JSON.parse errors and improve the error message.
+Correctness: 90%
+-----

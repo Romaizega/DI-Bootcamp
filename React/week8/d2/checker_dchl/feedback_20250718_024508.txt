@@ -1,0 +1,8 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/React/week8/d2/checker_dchl/App.jsx
+suggestions for improvement:
+- The `vote` function could be optimized for performance with a more efficient search algorithm if the array of languages were significantly larger.  Consider using a different data structure or a more optimized search method if performance becomes a concern.
+- Add error handling for unexpected input to the `vote` function. While unlikely in this simple example, it's good practice. 
+- Consider using a more descriptive name for the `updadLang` variable (e.g., `updatedLanguages`).
+- Improve accessibility by adding ARIA attributes to the button elements.
+Correctness: 100%
+-----
