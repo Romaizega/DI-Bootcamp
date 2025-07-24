@@ -1,0 +1,61 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/miniproject/daily_challenge/task_api_2/controllers/userControllers.js
+suggestions for improvement:
+- Implement input validation for all routes to prevent injection attacks and ensure data integrity.  Sanitize all user inputs before processing.
+- Improve error handling by providing more specific error messages to the client, especially regarding file system operations.
+- Use a more robust database solution instead of JSON file storage for production environments. JSON file storage is unsuitable for scaling and concurrent access.
+- Add rate limiting to prevent brute-force attacks on the login endpoint.
+- The `updateUser` function should update only the fields provided in the request body, not overwrite the entire user object. This prevents accidental data loss.
+- Consider using a more sophisticated logging system for better debugging and monitoring.
+- Add unit tests to improve code quality and ensure reliability.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/miniproject/daily_challenge/task_api_2/models/user.json
+suggestions for improvement:
+- The provided code is a JSON array representing sample user data. It does not implement any of the required functionality (Express.js server, routing, Bcrypt hashing, file I/O, HTML forms, etc.).
+- The JSON data lacks consistency:  some objects use 'name', 'email', 'password' while others use 'username', 'first_name', 'last_name', 'email', 'password'. This inconsistency violates a key requirement for database design.
+- The passwords are not properly hashed.  While one password appears to be bcrypt hashed, the others are plain text, posing a major security risk. 
+- There's no implementation of the HTML forms for registration and login as specified in the challenge.
+- The code doesn't handle error conditions during file read/write operations or user registration/login.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/miniproject/daily_challenge/task_api_2/public/login.html
+suggestions for improvement:
+- The provided code only includes the HTML and JavaScript for a login form.  It's missing the backend (Express.js, Bcrypt, JSON file storage) and the registration form entirely, which are crucial parts of the assignment. 
+- Implement the Express.js server with the POST `/register` and POST `/login` routes as specified.  Handle password hashing with Bcrypt and store user data in a JSON file.
+- Add robust error handling to catch potential issues during file I/O and handle cases where usernames or passwords already exist.
+- The server-side should implement input validation to prevent vulnerabilities like SQL injection (though this is less relevant since you're using JSON file storage).
+- Implement GET `/users` and GET `/users/:id`, and PUT `/users/:id` routes. 
+- Improve the security by adding more robust password validation (e.g., minimum length, complexity requirements) and protection against brute-force attacks.
+- The client-side should include input validation to ensure that only appropriate data is sent to the server.
+Correctness: 50%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/miniproject/daily_challenge/task_api_2/public/register.html
+suggestions for improvement:
+- The provided code only implements the front-end registration form.  It's missing the back-end Express.js server, the user data storage (JSON file), the bcrypt password hashing, and the other API routes specified in the chapter content.
+- The server-side code (missing here) needs robust error handling for file operations, input validation (beyond the client-side validation), and secure password handling (using bcrypt).
+- Add input validation on the server-side to prevent vulnerabilities like SQL injection (though not directly applicable to JSON storage, it's good practice) and to handle unexpected or malicious input.
+- Implement proper authentication and authorization for the `/users`, `/users/:id`, and `/users/:id` routes. Currently, they are publicly accessible which is a security risk.
+- The client-side validation is good, but it's crucial to repeat and strengthen this validation on the server-side to prevent client-side manipulation.
+Correctness: 70%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/miniproject/daily_challenge/task_api_2/routers/routers.js
+suggestions for improvement:
+- Implement proper input validation on the client-side and server-side to prevent vulnerabilities like SQL injection and cross-site scripting (XSS).
+- Add more robust error handling, including specific HTTP status codes for different error types (e.g., 400 Bad Request, 404 Not Found, 500 Internal Server Error).  Currently, error handling seems minimal.
+- The `/users` and `/users/:id` routes should be protected with authentication.  The instructions specified that these routes were for demonstration only, but it is best practice to secure them.
+- Improve the user experience by providing more informative error messages to the client.
+- Use a more secure way to store user data than a simple JSON file. Consider a database like MongoDB or PostgreSQL for production environments.
+- Add better logging for debugging and monitoring.
+- The `getAllUser`, `getUserById`, and `updateUser` routes are missing from the instructions. They should either be removed or implemented to align with the assignment.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/miniproject/daily_challenge/task_api_2/server.js
+suggestions for improvement:
+- The provided code only sets up the Express.js server and routes.  It's missing the crucial implementation of the `/register`, `/login`, `/users`, `/users/:id`, and `/users/:id` (PUT) routes within `routers.js`.  These routes need to handle user registration (including password hashing with bcrypt), login (password verification), and user data retrieval/modification from a JSON file.
+- Error handling is completely absent. The code needs robust error handling for file I/O operations, validation, and bcrypt operations.
+- The JSON file (`users.json`) for storing users is not included. This file needs to be created and managed by the API.
+- Input validation is missing.  The API should validate user inputs (username, password, etc.) to prevent vulnerabilities and ensure data integrity.
+- Security needs improvement.  Password storage should use strong salting and hashing with bcrypt, and sessions should be implemented for user authentication and authorization (instead of just storing usernames and passwords).  The GET routes should have authentication middleware.
+- The HTML files for the registration and login forms are not provided.
+Correctness: 70%
+-----

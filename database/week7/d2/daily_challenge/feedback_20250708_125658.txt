@@ -1,0 +1,41 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/daily_challenge/config/server.js
+suggestions for improvement:
+- The provided code only sets up the Express.js server and routes.  It lacks the crucial implementation details for user registration, login, database interaction (using Knex), password hashing with bcrypt, and the actual routes handling.
+- The code is missing the `userRouters.js` file which contains the actual route handlers.  Without this file, the functionality described in the instructions cannot be assessed.
+- There's no database connection setup or Knex integration.  The instructions clearly state to use Knex for database querying.
+- No error handling or input validation is implemented, making the application vulnerable to various attacks.
+- The `hashpwd` table is not ideal for security, passwords should be stored directly in the `users` table after hashing.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/daily_challenge/controllers/userControllers.js
+suggestions for improvement:
+- Improve error handling: Provide more specific error messages to the client.  Instead of generic 'Server error', indicate the nature of the problem (e.g., database connection error, validation error).
+- Input validation: Add more robust input validation to prevent SQL injection and other vulnerabilities.  Sanitize user inputs before querying the database.
+- Optimize database queries: The `updateUser` function could be optimized to only update the fields that have changed.  This will reduce unnecessary database writes.
+- Use consistent error handling:  Maintain a consistent style for error handling across all functions. For instance, always return JSON objects with an `error` property for easier client-side processing. 
+- Remove unnecessary array destructuring: In `updateUser`,  `const [updatUser] = ...` can simply be `const updatUser = ...` since only one row is expected.
+- Add logging: Implement more comprehensive logging to aid in debugging and monitoring.
+- Consider using middleware: Refactor the input validation logic into a middleware function for better code organization and reusability. 
+- Separate concerns: Controllers should focus on controlling the flow of logic, not handling all the database interactions. Consider creating separate services or repositories for managing database operations.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/daily_challenge/models/db.js
+suggestions for improvement:
+- The provided code only sets up the database connection using Knex.js.  It doesn't implement any of the Express.js API routes, user registration/login logic, bcrypt password hashing, or the required CRUD operations as specified in the chapter content.
+- The database credentials are stored in environment variables, which is good practice. However,  it's crucial to never commit these to version control.
+- Add error handling to the database connection to gracefully handle connection failures.
+- Implement the missing Express.js API routes, controllers, models, and user authentication logic using bcrypt.
+- Create the `users` and `hashpwd` tables (as per the instructions).
+- Implement transaction handling for user creation.
+- Use parameterized queries (prepared statements) to prevent SQL injection vulnerabilities.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/daily_challenge/routers/userRouters.js
+suggestions for improvement:
+- The code lacks implementation details for the controllers and database interaction.  The `userControllers` file needs to be implemented to handle database queries using Knex and password hashing with bcrypt.
+- Error handling is missing. The code should include error handling for database operations and user input validation.
+- The database schema (users and hashpwd tables) is not defined in the provided code. This should be implemented using Knex migrations.
+- The security score is lowered because while bcrypt is mentioned, its actual implementation within the controllers is not visible and therefore its effectiveness can't be assessed. Salt generation and proper bcrypt usage are crucial and need to be explicitly shown.
+- Transactions are mentioned as a requirement but not implemented in the provided code snippet. The `registerUser` controller needs to use database transactions to ensure atomicity.
+Correctness: 80%
+-----
