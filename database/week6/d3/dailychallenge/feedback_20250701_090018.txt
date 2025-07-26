@@ -1,0 +1,9 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week6/d3/dailychallenge/dailychall.sql
+suggestions for improvement:
+- In Part 1, the schema for `customer_profile` should use `customer_id` instead of `customer_profile_id` as the primary key to enforce the one-to-one relationship correctly.  The current implementation allows for multiple profiles for a single customer.  The primary key should be a composite key consisting of `customer_id` and `isLoggedIn`. 
+- The query to get the number of customers who are not logged in could be improved by using a `COUNT(*)` with a `WHERE` clause directly on the `customer_profile` table, avoiding the `LEFT JOIN` which might cause unnecessary overhead. For example `SELECT COUNT(*) FROM customer_profile WHERE isLoggedIn = false;`
+- In Part 2,  while the `ON DELETE CASCADE` is correctly used, consider adding `ON UPDATE CASCADE` to all foreign keys for data consistency.  If a book title or student name is updated, corresponding entries in the `Library` table should update accordingly.
+- Add indexes to foreign key columns in the `Library` table (`book_fk_id` and `student_id`) to improve the performance of JOIN operations. 
+- The code uses subqueries extensively within INSERT statements.  For improved readability and potentially better performance, consider using joins instead where appropriate.
+Correctness: 95%
+-----
