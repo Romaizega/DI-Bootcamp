@@ -1,0 +1,105 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d3/XP1/EX1_index.html
+suggestions for improvement:
+- The code is missing the implementation for Exercise 2 (Forms) and Exercise 3 (Transform the sentence).
+- Exercise 1: The bonus features (hover effects) are implemented using inline event handlers, which is not best practice.  These should be added using `addEventListener` for better separation of concerns and maintainability.
+- Exercise 1:  While the last paragraph is removed, there's no error handling for cases where the article might not have a last paragraph. 
+- Exercise 1: The button to bold paragraphs is added, but its functionality should be within a dedicated function for better code organization.
+- Use of `defer` and `async` for the script is good practice and improves performance (defer is usually preferred over async in this case).
+- Consider adding more descriptive IDs and classes to elements for improved maintainability and CSS styling.
+- The inline CSS for the hover effect should be separated into an external stylesheet.
+- Error Handling is missing. There should be checks to prevent errors (e.g., if the element to be manipulated doesn't exist).
+Correctness: 85%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d3/XP1/EX1_script.js
+suggestions for improvement:
+- Add missing HTML elements for the button and ensure the `id` of button is 'btn'.
+- Implement the second bonus task (paragraph fade-out on hover).
+- Add error handling for cases where elements might not be found (e.g., if the HTML structure changes).
+- Use more descriptive variable names (e.g., instead of `myh1`, use `articleHeading`).
+- Consider using a CSS class for styling instead of directly manipulating inline styles for better separation of concerns.
+- Structure the code into functions to improve organization and readability. For example, separate functions for event handling, DOM manipulation, and styling.
+Correctness: 85%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d3/XP1/EX1_style.css
+suggestions for improvement:
+- The provided code is only a CSS snippet for styling an `<h1>` tag. It does not address any of the JavaScript DOM manipulation, event handling, or form processing tasks outlined in the exercises.
+- The CSS itself lacks specificity.  The `border: 1;` is incomplete and will likely render unexpectedly.  Consider adding units (e.g., `border: 1px solid black;`).
+- No JavaScript code is present to implement the exercises' requirements, which focus on DOM manipulation, event listeners, and form handling.
+- Add all the JavaScript code required to solve the exercises.  Each exercise needs its own separate JavaScript function that completes the specific tasks.
+- Structure your JavaScript code logically; for example, use functions for each exercise to improve readability and organization.
+- Consider adding error handling (e.g., checking if elements exist before manipulating them) for robustness.
+- For Exercise 2,  validate user input more thoroughly to prevent issues with empty submissions or unexpected input types.
+- For Exercise 4, include the formula for calculating the volume of a sphere and handle potential errors (like non-numeric input).
+Correctness: 0%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d3/XP1/EX2_index.html
+suggestions for improvement:
+- Exercise 1 is missing entirely.
+- Exercise 3 is missing entirely.
+- Exercise 4 is missing entirely.
+- The provided code only addresses part of Exercise 2.  It's missing input validation and error handling.
+- The `EX2_script.js` and `EX2_style.css` files are not included, making a complete assessment impossible.  The provided HTML is incomplete without the Javascript functionality to check if the code correctly implements the described functionality.
+- Add comments to explain the purpose of different code sections and improve understanding.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d3/XP1/EX2_script.js
+suggestions for improvement:
+- The code for Exercise 1 is missing.  The provided code only addresses Exercise 2.
+- In `handleSubmit`, using `e.target.fname.value` and `e.target.lname.value` is less robust than using `document.getElementById` directly. If the form structure changes, this approach might break.
+- Error handling could be improved.  The code assumes the form inputs are always present. Adding checks would enhance robustness.
+- Add comments explaining the purpose of each function and major code sections to improve readability.
+- Consider using more descriptive variable names (e.g., `firstNameInput` instead of `myInput1`).
+Correctness: 80%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d3/XP1/EX2_style.css
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d3/XP1/EX3_index.html
+suggestions for improvement:
+- The provided code is missing the implementation of Exercises 1, 2, and 4.  Only Exercise 3 is partially addressed.
+- The `EX3_script.js` and `EX3_style.css` files are not included, making it impossible to assess the complete solution for Exercise 3.
+- Exercise 3 is incomplete. While the HTML structure for Exercise 3 is present, the JavaScript functions (`getBoldItems`, `highlight`, `returnItemsToDefault`) are not provided to assess their functionality.
+- Add comments to the JavaScript code to explain the purpose of different code sections and functions, improving readability and maintainability.
+Correctness: 70%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d3/XP1/EX3_script.js
+suggestions for improvement:
+- The code for Exercise 1, 2, and 4 is missing.  The provided code only addresses Exercise 3.
+- The `getBoldItems` function logs the bold items to the console, which is unnecessary. The function should solely collect and assign the items to the `allBoldItems` variable.
+- Add error handling for cases where the paragraph with the strong tags might not be found.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d3/XP1/EX3_style.css
+suggestions for improvement:
+- Exercise 1:  The bonus features (random font size on hover and fade-out effect) are missing.  The code for adding the button to bold paragraphs is also absent.
+- Exercise 1: Add comments to explain the purpose of each section of code.
+- Exercise 2: The code for handling form submission and appending list items is missing.
+- Exercise 3: The code for `getBoldItems()`, `highlight()`, and `returnItemsToDefault()` functions, along with the event listeners for mouseover and mouseout, are not provided.
+- Exercise 4: The JavaScript code to calculate the volume of a sphere and update the form is missing.
+- Exercise 5 is completely missing.
+- Overall:  The provided CSS styling for strong tags is not related to the exercises and doesn't contribute to the solutions.
+Correctness: 85%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d3/XP1/EX4_index.html
+suggestions for improvement:
+- The provided HTML is only a portion of the complete exercises.  The code for Exercises 1, 2, and 3 are missing.
+- The `EX4_script.js` file is not included, making it impossible to assess the correctness of the sphere volume calculation.  The HTML structure looks correct, but without the JS, we can't evaluate the functionality.
+- Add comments to the JavaScript code (if provided) to explain the purpose of different sections and functions. This improves readability and maintainability.
+- Consider adding input validation to the radius field to ensure the user enters a positive numeric value.  Currently, it only checks for a required field, not the data type or range.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d3/XP1/EX4_script.js
+suggestions for improvement:
+- Add input validation to handle non-numeric radius inputs.
+- Improve user experience by providing feedback if the radius is invalid or empty.
+- Consider using more descriptive variable names (e.g., radius instead of r).
+- Add error handling for potential exceptions (e.g., if the radius is NaN).
+Correctness: 80%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d3/XP1/EX4_style.css
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
