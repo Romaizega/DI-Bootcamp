@@ -1,0 +1,7 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/React/week8/d3/checker_xp/App.jsx
+suggestions for improvement:
+- In `Colors` component, the `getSnapshotBeforeUpdate` method returns `null`. While not strictly incorrect, returning useful data from this method (e.g., the previous state) allows for more sophisticated updates in `componentDidUpdate`. Consider returning `prevState.favoriteColor` to store the previous color.
+- The styling in `ErrorBoundary` is inline. It's generally better practice to separate styling into a CSS file or use styled-components for better maintainability and readability.
+- Add comments to explain the purpose of different sections of the code, especially in `App.js` where the different simulations are presented. This will improve the understandability of the code.
+Correctness: 95%
+-----
