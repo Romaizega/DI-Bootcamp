@@ -1,0 +1,9 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week6/d3/exercises/exercise_xp.sql
+suggestions for improvement:
+- Exercise 1, point 4 and 5:  Consider adding constraints to the `new_film` table (e.g., unique name) and adding more robust checks to `customer_review` (e.g., data type validation, length restrictions on titles).
+- Exercise 2, point 6:  The queries for finding the four movies could be more efficient. For example, instead of multiple separate queries, a single query combining conditions with appropriate JOINs could improve performance and readability.
+- Add comments to explain complex queries or logic in Exercise 2, especially for the movie search in point 6.  Improve error handling.
+- Standardize naming conventions (e.g., use underscores for multi-word column names consistently).
+- Consider adding indexes to frequently queried columns for performance optimization.
+Correctness: 90%
+-----

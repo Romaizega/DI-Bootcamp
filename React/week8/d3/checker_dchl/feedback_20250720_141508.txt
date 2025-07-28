@@ -1,0 +1,9 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/React/week8/d3/checker_dchl/App.jsx
+suggestions for improvement:
+- The `handleChange` function is not implemented as requested.  The instructions explicitly state to create a single `handleChange` function to handle all inputs.  Instead, separate handlers are created for each input field. This violates the instructions.  Consolidate into one function for better code organization and reusability.
+- The `App.js` component does not create a stateful component with props, as instructed.  It simply renders the `Forms` component.  This needs to be corrected.
+- While the URL parameter creation works correctly, the challenge description specifies that the parameters should be generated on submit, however the URL is updated directly. This is a minor deviation that could be improved for better user experience and adherence to the instructions.
+- Consider using a more descriptive name for `sex` state variable. For example,  `gender` is more suitable.
+- Improve the form's accessibility by adding appropriate labels for all inputs, especially radio buttons.
+Correctness: 95%
+-----
