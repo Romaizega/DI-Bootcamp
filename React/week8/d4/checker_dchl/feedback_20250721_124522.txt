@@ -1,0 +1,9 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/React/week8/d4/checker_dchl/App.jsx
+suggestions for improvement:
+- Add error handling for the case where the server is unreachable or returns a non-2xx status code.
+- Consider using a more descriptive state variable name than `serverResponse`.
+- Improve security by validating user inputs on the server-side to prevent vulnerabilities like XSS attacks.
+- For better readability, separate the React component and the Express server code into separate files (App.js and server.js).
+- Enhance performance by optimizing the fetching process. For example, you can add a timeout to the fetch request to avoid indefinite waiting if the server is unavailable.
+Correctness: 100%
+-----

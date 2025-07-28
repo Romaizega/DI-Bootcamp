@@ -1,0 +1,53 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/exercise_xp/blog-api/controllers/postcontrollers.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/exercise_xp/blog-api/db.js
+suggestions for improvement:
+- The provided code only sets up the database connection using Knex.js.  It does not implement any of the Express.js API routes or the CRUD operations required in Exercises 1 and 2.  The exercises require creating an Express.js server, defining routes for CRUD operations, handling requests, and interacting with the database using the established Knex connection.  The missing implementation of Express.js routes and the CRUD logic represents a significant omission.
+- The code uses environment variables for database credentials, which is good practice. However, it lacks input validation and error handling during the database connection process.  This can lead to application crashes or security vulnerabilities if the environment variables are missing or incorrectly formatted.
+- Add proper error handling for database connection failures.  The current code silently fails if the connection fails.  Implement robust error handling to inform the user of connection problems and prevent unexpected crashes.
+- Consider adding connection pooling to improve performance. Knex allows configuration for connection pooling to reduce the overhead of repeatedly establishing database connections.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/exercise_xp/blog-api/package.json
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/exercise_xp/blog-api/routers/routers.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/exercise_xp/blog-api/server.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/exercise_xp/book-api/config/server.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/exercise_xp/book-api/controllers/book_controllers.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/exercise_xp/book-api/models/db.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/exercise_xp/book-api/package.json
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/exercise_xp/book-api/routers/routers.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----

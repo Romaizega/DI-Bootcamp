@@ -1,0 +1,38 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/daily_challenge/config/server.js
+suggestions for improvement:
+- The code only sets up the Express.js server and routes; it lacks the crucial implementation details for user registration, login, and database interaction.
+- The `user_routers` require statement assumes a `userRouters.js` file exists and functions correctly to handle the API routes.  This file is not provided, and its implementation is critical to the task's success.
+- No database connection or Knex setup is present. The code does not create tables or interact with a database.
+- Password hashing (bcrypt) is not implemented. The instructions specify using bcrypt for security.
+- Error handling is missing. The application lacks mechanisms to gracefully handle potential errors (e.g., database errors, invalid inputs).
+- Transaction management (as required in point 5) is absent.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/daily_challenge/controllers/userControllers.js
+suggestions for improvement:
+- The `updateUser` function has a typo: `User not foud` should be `User not found`.
+- Add input validation to prevent SQL injection vulnerabilities in the `updateUser`, `registerUser`, and `loginUser` functions. Sanitize all inputs from the request body before using them in database queries.
+- Consider using a more robust error handling mechanism, potentially a centralized error handler middleware, instead of handling errors individually in each function. This improves code maintainability and readability.
+- The `users` and `hashpwd` table design is not ideal.  Storing passwords separately in `hashpwd` is inefficient and complicates queries.  Combine password and user details into a single `users` table.
+- Add more comprehensive logging for debugging and security auditing.
+- Improve error messages to be more informative and user-friendly, avoiding revealing sensitive information.
+- While transactions are used for registration, it's crucial to handle potential transaction failures more gracefully, preventing partial updates (e.g., user created but password not hashed).
+- For production, implement rate limiting to protect against brute-force attacks.
+Correctness: 85%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/daily_challenge/models/db.js
+suggestions for improvement:
+- The provided code only sets up the database connection using Knex.js.  It does not implement any of the Express.js API routes, user registration, login, bcrypt hashing, or the other requirements outlined in the Chapter Content/Questions.
+- The code lacks error handling for database connection failures.
+- Storing database credentials directly in a .env file, while common, is not the most secure practice for production environments. Consider using a more robust secrets management solution.
+- The code is missing crucial elements like the implementation of Express.js routes, user models, controllers, and bcrypt integration for password hashing and verification, which are central to meeting the requirements.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/daily_challenge/routers/userRouters.js
+suggestions for improvement:
+- The code lacks implementation details for user registration, login, and database interaction.  The `userControllers` file needs to be implemented with the specifics of hashing passwords using bcrypt, handling database queries with Knex, and transaction management.
+- Error handling is missing.  The code should include proper error handling for database operations and user input validation.
+- Security needs improvement.  While it mentions bcrypt, the actual implementation within the controllers is crucial and missing.  Input sanitization is also important to prevent injection attacks.
+- The database schema (users and hashpwd tables) is not defined in the provided code.  This should be explicitly created, potentially using migrations with Knex.
+Correctness: 80%
+-----

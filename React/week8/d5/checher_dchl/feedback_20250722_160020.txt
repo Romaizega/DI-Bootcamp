@@ -1,0 +1,8 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/React/week8/d5/checher_dchl/App.jsx
+suggestions for improvement:
+- The spelling of 'Complited' should be corrected to 'Completed' in the button text.
+- Consider adding error handling for unexpected actions in the reducer.
+- For better readability, you could extract the filtering logic into a separate function.
+- The use of `useRef` is good, but the implementation might be enhanced.  Currently, `inputRef` is not directly used for focusing on the input field when editing.  Adding `inputRef.current.focus()` inside `handleEditTask` would enhance user experience.
+Correctness: 95%
+-----
