@@ -1,0 +1,19 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d1/XP/exerciseXP.js
+suggestions for improvement:
+- Exercise 1, part I, point 5: The `slice` method needs parameters to specify the portion of the array to copy.  The current code doesn't remove 'Mary' or 'Yourname'.
+- Exercise 1, part I, point 7: While the code correctly gets the last element, adding a comment explaining the logic would improve readability.
+- Exercise 2: The bonus part could be made more efficient by using a single loop and a lookup array for suffixes.
+- Exercise 3: The code handles non-numeric input and doesn't crash but could provide more user-friendly feedback if the input is not a number.
+- Exercise 6: The code iterates through the object keys but doesn't construct the sentence as requested.  It prints key-value pairs instead of the intended phrase.
+- Overall: Add comments to explain the logic of each step, especially in more complex parts of the code.
+Correctness: 90%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d1/XP/indexXP.html
+suggestions for improvement:
+- Add comments to explain the logic of each part, especially in the loops and array manipulations.
+- Use more descriptive variable names. For example, instead of `last`, use `lastPerson`.
+- In Exercise 2, the bonus part can be improved by using a more efficient method to get the ordinal suffix instead of creating a separate array.
+- In Exercise 7, the solution could be optimized for larger arrays by using a more efficient sorting algorithm.
+- Handle potential errors, such as the user entering non-numeric input in Exercise 3.
+Correctness: 85%
+-----
