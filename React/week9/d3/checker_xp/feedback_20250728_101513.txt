@@ -1,0 +1,9 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/React/week9/d3/checker_xp/App.jsx
+suggestions for improvement:
+- The provided code only renders a `Users` component.  It lacks the Redux store setup, Redux Thunk middleware, Redux slices for user data, Thunk action creators, and the implementation of `useSelector` and `useDispatch` as detailed in the chapter instructions.  The code does not fetch or display user data from an API.
+- Add the necessary Redux setup (store, thunk middleware, slice, etc.) as outlined in steps 1-5 of Exercise 1.
+- Implement a Thunk action creator to fetch user data from an API.
+- Create a UserData component that uses `useSelector` to access and display the fetched data and `useDispatch` to dispatch the Thunk action.
+- Include error handling to manage potential API request failures.
+Correctness: 20%
+-----
