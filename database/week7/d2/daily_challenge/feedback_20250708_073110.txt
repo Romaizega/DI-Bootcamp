@@ -1,0 +1,46 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/daily_challenge/config/server.js
+suggestions for improvement:
+- The code only sets up the Express.js server and routes.  It lacks the crucial implementation details for user registration, login, database interaction (using Knex), password hashing (using bcrypt), and the actual route handlers.
+- The `users` table and `hashpwd` table schemas are not defined.  The database connection is missing.
+- No error handling is implemented. The code will crash silently if there are database errors or other issues.
+- The bcrypt library isn't included or used for password hashing.
+- The instructions specify using `express.Router`. While the code uses it, there's no implementation within `/routers/userRouters` shown.
+- Transaction management for adding a user (as required) is not present.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/daily_challenge/controllers/userControllers.js
+suggestions for improvement:
+- Improve error handling for database operations, providing more specific error messages.
+- Add input validation to prevent common vulnerabilities like SQL injection.
+- Consider using a more robust approach for handling transactions, potentially with better rollback strategies.
+- The use of two separate tables for users and passwords (`users` and `hashpwd`) is unusual and can lead to data inconsistencies. It would be better to store the hashed password directly in the `users` table. 
+- Add more comprehensive logging to help debug issues.
+- The `updateUser` function lacks input validation and should check for the presence of fields before attempting to update them.
+Correctness: 85%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/daily_challenge/models/db.js
+suggestions for improvement:
+- The code only sets up the database connection using Knex.js.  It does not implement any of the Express.js API routes or user management functionality (registration, login, user retrieval, update) as required by the chapter content.
+- The code is missing crucial components: Express.js app creation, route definition, bcrypt integration for password hashing and verification, and the implementation of the API endpoints for user management.
+- Storing database credentials directly in a `.env` file, while common, is still a security risk. Consider more secure secrets management for production.
+- Add error handling to the database connection.  If the connection fails, the application should handle the error gracefully.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/daily_challenge/package.json
+suggestions for improvement:
+- This is a `package.json` file, not an implementation of the API.  It only lists dependencies.  The actual code for the API routes, database interactions, and user authentication is missing.
+- The `package.json` includes necessary dependencies (Express, Knex, bcrypt, pg), which is good. However, it doesn't show how these are used to fulfill the requirements.
+- Add the actual implementation of the API endpoints, including handling requests and database interactions with Knex.
+- Implement robust input validation to prevent SQL injection and other security vulnerabilities. The current `package.json` alone does not address security.
+- Implement proper error handling and response formatting for different scenarios (e.g., successful registration, login failure, database errors).
+Correctness: 20%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/daily_challenge/routers/userRouters.js
+suggestions for improvement:
+- The code is missing the database interaction using Knex.js as specified in the chapter content.  The controllers (`userControllers`) are not provided, and without them, we cannot assess if they correctly implement database queries, bcrypt hashing, and transactions.
+- The `users` and `hashpwd` table schema are not defined in the code.  The requirements mention creating these tables, but there's no database schema creation code present.
+- Error handling and input validation are missing. The code should include checks for invalid inputs and handle potential database errors gracefully.
+- The security score is lowered because while bcrypt is mentioned, the actual implementation and its robustness in the `userControllers` are unknown.  Proper salting and sufficient rounds should be used.
+- The routes are well-structured and easy to understand, leveraging Express.js's routing capabilities effectively.
+Correctness: 80%
+-----

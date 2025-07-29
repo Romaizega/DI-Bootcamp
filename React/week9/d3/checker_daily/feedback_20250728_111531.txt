@@ -1,0 +1,9 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/React/week9/d3/checker_daily/App.jsx
+suggestions for improvement:
+- The loading indicator is missing.  The instructions specify that a loading icon should be displayed during the asynchronous operations. Add a visual indicator (like a spinner) to the `AgeCounter` component based on the `status` in the Redux store.
+- The `ageCounterSlice` uses both synchronous (incrementAge, dicrementAge) and asynchronous actions.  The challenge states to use only asynchronous actions (`ageUpAsync`, `ageDownAsync`). The synchronous reducers should be removed.
+- There are typos in the code: 'delaDecrementAge' should likely be 'delayDecrementAge', and 'dicrementAge' should be 'decrementAge'.
+- The code uses `setTimeout` for asynchronous actions.  Consider using a more robust solution for fetching data from an API or performing other tasks that could fail or take unpredictable amounts of time.
+- Improve variable naming for better readability. For example, `agecount` could be renamed to `age`.
+Correctness: 85%
+-----

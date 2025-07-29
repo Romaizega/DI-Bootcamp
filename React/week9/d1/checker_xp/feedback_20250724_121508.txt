@@ -1,0 +1,9 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/React/week9/d1/checker_xp/App.jsx
+suggestions for improvement:
+- Use a more descriptive name for `ACTION_ADD_TASKS`, `ACTION_REMOVE_TASKS`, and `ACTION_MARK_TASKS` (e.g., `ADD_TODO`, `REMOVE_TODO`, `TOGGLE_TODO_COMPLETION`).
+- Consider using `immer` to simplify reducer logic and enhance readability. Immer allows direct mutation of the state within the reducer, making it easier to update complex objects.
+- Add error handling in case of unexpected actions or data.
+- Improve the UI with CSS styling for a better user experience.
+- The initial state contains a hardcoded todo.  Consider starting with an empty todo list in the initial state.
+Correctness: 95%
+-----

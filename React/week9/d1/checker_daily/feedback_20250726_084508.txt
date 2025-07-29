@@ -1,0 +1,10 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/React/week9/d1/checker_daily/App.jsx
+suggestions for improvement:
+- Improve error handling for cases where a day key is missing from `tododays` in `SelectDay`.  Currently, it might cause an error.
+- Add a date picker component instead of a simple select to allow for better user experience.
+- In `TodoList`, add visual cues to the user when an edit is in progress (e.g., highlight the edited task).
+- Implement input validation in `TodoList` to prevent adding tasks with empty titles or descriptions.
+- Consider using a more robust state management solution for larger applications (e.g., Zustand or Jotai) as Redux can become overly complex for simpler applications
+- Add loading states and error handling to enhance UX in case of API calls or other asynchronous actions (though not explicitly in scope of provided instructions).
+Correctness: 95%
+-----

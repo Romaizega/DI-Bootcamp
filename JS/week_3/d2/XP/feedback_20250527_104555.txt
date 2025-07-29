@@ -1,0 +1,64 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d2/XP/exercise5.js
+suggestions for improvement:
+- Add error handling for cases where elements might not exist (e.g., check if `lists[0].children[1]` exists before accessing it).
+- Use more descriptive variable names (e.g., instead of `lists`, use `userList`).
+- For better maintainability, consider refactoring the code into functions (e.g., a function to modify list items, a function to add classes).
+- The bonus requirement in Exercise 5 (alerting users if the background is light blue) is not implemented.
+- Exercises 1-4, 6 and 7 are missing.  The code only addresses parts of Exercise 5.
+Correctness: 75%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d2/XP/exercise6.js
+suggestions for improvement:
+- The code is well-structured and easy to follow.  Minor improvements in readability could be achieved by adding comments to explain the purpose of each section of the code.
+- Consider using more descriptive variable names (e.g., instead of `textLi`, use `userList`).
+Correctness: 100%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d2/XP/exercise7.js
+suggestions for improvement:
+- Add error handling for cases where the image URL is invalid or the `.listBooks` section is not found.
+- Consider using CSS classes instead of inline styles for better separation of concerns and maintainability.  For example, instead of `titleAuthor.style.color = "red";`, add a class to the `titleAuthor` element and style it in a CSS file.
+- The code could be made slightly more readable by extracting the creation of the book element into a separate function.
+- Add alt text to the images for accessibility.
+Correctness: 95%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d2/XP/index7.html
+suggestions for improvement:
+- The provided HTML file is incomplete. It lacks the necessary JavaScript code to fulfill the requirements of Exercise 7.
+- The `script.js` file is missing, preventing any assessment of the JavaScript implementation.
+- The exercise requires creating an array of book objects, rendering them dynamically using the DOM, styling the elements based on conditions (e.g., alreadyRead), and handling image display.  None of this is present.
+- Add the `script.js` file with the JavaScript code to implement Exercise 7.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d2/XP/indexdom.html
+suggestions for improvement:
+- The provided code is only HTML; there's no JavaScript (`scriptdom.js`) to assess.  The exercises require JavaScript to manipulate the DOM.  Without the `scriptdom.js` file, it's impossible to evaluate the correctness of the DOM manipulation aspects.
+- Add the JavaScript code that implements the solutions to Exercises 1-7.  Each exercise has specific requirements for functions, DOM manipulation, and logic that need to be coded and tested.
+- Structure the JavaScript code clearly with comments to improve readability. Separate functions for each exercise and use meaningful variable names.
+- Include error handling (e.g., `try...catch` blocks) where appropriate, particularly in user input handling, to prevent unexpected crashes.
+- For Exercise 4, consider using more robust input validation instead of relying solely on simple type checking.  Consider using regular expressions to validate numerical input, for instance.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d2/XP/indexdom2.html
+suggestions for improvement:
+- No code is provided to implement the solutions for exercises 1-7.  The HTML snippet only shows a basic navbar, which is part of Exercise 6 but lacks the Javascript implementation.
+- The provided HTML and script tag are incomplete.  The `scriptdom2.js` file is referenced but not included in the response.
+- The exercises require Javascript functions and DOM manipulation which are completely missing from the provided code.
+- To achieve a higher correctness score, provide the Javascript code implementing each exercise.  Each exercise should be in a separate file or clearly sectioned off within a single file.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d2/XP/indexxp.html
+suggestions for improvement:
+- No JavaScript code is provided in `scriptxp.js` or anywhere else to implement the exercises.  The HTML file is a barebones structure with only a reference to a missing JavaScript file.
+- All exercises require JavaScript code to manipulate data and the DOM.  Without the code, none of the exercises are solved.
+- Add the JavaScript code for each exercise in `scriptxp.js` to enable evaluation.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d2/XP/scriptxp.js
+suggestions for improvement:
+- **Exercise 1:** The code for Exercise 1 is correct and efficient.  The bonus requirement (adding a `divisor` parameter) is implemented flawlessly. No significant improvements are needed.
+- **Exercise 2:** The `myBill()` function correctly calculates the total price, considering stock availability and updating the stock. The bonus requirement (decreasing stock) is also correctly implemented.  Consider adding error handling for cases where `prices` might not have an entry for a given item in `shoppingList`.
+- **Exercise 3:** The `changeEnough()` function accurately determines if enough change is available.  The code is clear and easy to follow. No major improvements are needed.
+- **Exercise 4:** The functions `hotelCost()`, `planeRideCost()`, and `rentalCarCost()` correctly handle user input and calculations. The `totalVacationCost()` function works as expected. The input validation using `do...while` loops is good. However, the prompt for destination in `planeRideCost` is case-sensitive, which could be improved for a better user experience.  Consider using a switch statement or a map for `planeRideCost()` to improve readability and maintainability.  The bonus (moving prompts to `totalVacationCost()`) would require significant refactoring, which is beyond the scope of this simple implementation.
+- **Exercise 5 & 6 & 7:**  These exercises require DOM manipulation which is not included in the provided code.  Therefore, a correctness score cannot be given for these exercises without the relevant code.
+Correctness: 85%
+-----
