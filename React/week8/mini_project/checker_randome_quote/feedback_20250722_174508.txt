@@ -1,0 +1,9 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/React/week8/mini_project/checker_randome_quote/App.jsx
+suggestions for improvement:
+- The code doesn't prevent displaying the same quote twice consecutively.  Implement a mechanism to ensure uniqueness.
+- Add error handling.  What happens if `quotes` or `colors` is empty? Consider a fallback message or loading indicator.
+- Improve styling.  The current styling is minimal. Consider adding more robust styling for better presentation.
+- The variable names `getRandomeQuote` and `getRandomeColor` have a typo ('Randome').
+- Consider using a more descriptive name for the component than 'Quotes'.
+Correctness: 85%
+-----

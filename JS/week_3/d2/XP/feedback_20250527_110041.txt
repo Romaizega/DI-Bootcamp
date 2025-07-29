@@ -1,0 +1,70 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d2/XP/exercise5.js
+suggestions for improvement:
+- Use more descriptive variable names.  For example, instead of `lists`, use `userList`. This improves readability.
+- Add comments to explain complex logic or non-obvious code sections.  This would greatly enhance readability.
+- The code to change the background color and font size is directly modifying the DOM. Consider using CSS classes for better separation of concerns and maintainability. This improves both readability and maintainability.
+- The bonus requirement in Exercise 5 (alerting users based on background color) is not implemented.
+- Exercises 1-4 and 6-7 are missing. The provided code only addresses parts of Exercise 5.
+- Error handling (e.g., checking if elements exist before manipulating them) would improve robustness.
+Correctness: 85%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d2/XP/exercise6.js
+suggestions for improvement:
+- The code is well-structured and easy to follow.  Consider adding comments to explain the purpose of each section, especially for developers unfamiliar with the context.
+- While functional, using `document.querySelector('ul')` might select the wrong `<ul>` if there are multiple ones.  It's better to be more specific, perhaps using an ID or a more specific class selector if available in the HTML.
+- Error handling could be improved.  For example, check if `firstElementChild` and `lastElementChild` exist before accessing `textContent` to prevent potential errors if the `<ul>` is empty.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d2/XP/exercise7.js
+suggestions for improvement:
+- Add error handling for cases where the `.listBooks` section might not be found.
+- Improve styling by using CSS classes instead of inline styles (img width and text color).
+- Consider adding more descriptive class names to the divs and paragraphs for better maintainability and styling.
+- For larger datasets, consider optimizing rendering to avoid potential performance issues (though not a problem with only two books).
+Correctness: 95%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d2/XP/index7.html
+suggestions for improvement:
+- The `exercise7.js` file is missing, preventing a complete assessment of correctness.  The HTML structure is correct.
+- Add comments explaining the purpose of different code sections and complex logic within the `exercise7.js` file to improve readability.
+- Consider using more descriptive variable names (e.g., instead of `allBooks`, `bookCollection` or `myBooksList` might be clearer).
+- The code should handle potential errors, such as the absence of the `.listBooks` section or issues with image loading (e.g., using `try...catch` blocks and providing fallback content).
+- The instructions mention setting the image width to 100px. This should be added to the Javascript code, and explicitly shown in the provided code.
+- The provided HTML only includes the `<section>` element.  The Javascript code (which is missing) should dynamically create and append the necessary `div` elements for each book, containing the title, author, image, and styled according to whether the book has been read.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d2/XP/indexdom.html
+suggestions for improvement:
+- No code for exercises 1-4 and 6-7 is provided.
+- The HTML for exercise 5 is incomplete.  The `exercise5.js` file is missing, so no assessment of the JavaScript functionality is possible.
+- The provided HTML snippet for exercise 5 is only the starting point, not a complete solution.  It needs a corresponding JavaScript file to perform the DOM manipulations described.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d2/XP/indexdom2.html
+suggestions for improvement:
+- The provided HTML snippet is incomplete.  It's missing the crucial `exercise6.js` file containing the JavaScript code that actually implements the solutions for Exercise 6.  Without this code, correctness cannot be fully assessed.
+- The instructions mention using `setAttribute` to change the `id` attribute.  The solution should explicitly show this.
+- The instructions mention using `createElement`, `createTextNode`, `appendChild` to add a new 'Logout' item. This should be explicitly shown in the code.
+- The instructions mention using `firstElementChild` and `lastElementChild` to retrieve and display the first and last list item text. The code should demonstrate this.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d2/XP/indexxp.html
+suggestions for improvement:
+- The provided HTML file is empty except for a script inclusion.  All the exercises require JavaScript code to be written and integrated, and this is missing.
+- No JavaScript file (`scriptxp.js`) is provided, so no code can be assessed for correctness or readability.
+- Add the necessary JavaScript code for each exercise in the `scriptxp.js` file.
+- Structure the `scriptxp.js` file logically, with clear separation between exercises. For example, use functions or modules to separate the code for each exercise.
+- Add comments to explain the logic and purpose of different code sections.
+- Use descriptive variable names.
+- Handle potential errors, like invalid user input in Exercise 4, more robustly. Currently error handling is not present which is a major flaw.
+Correctness: 0%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_3/d2/XP/scriptxp.js
+suggestions for improvement:
+- **Exercise 1:** The code correctly calculates and displays numbers divisible by a given divisor and their sum.  The bonus requirement (adding a parameter) is implemented perfectly. However, consider adding input validation to handle non-numeric divisor inputs.
+- **Exercise 2:** The code accurately calculates the bill and updates the stock.  The use of `if (item in stock && stock[item] > 0)` is efficient. The bonus requirement (decreasing stock) is implemented.  Consider using a more descriptive variable name than `total` (e.g., `totalPrice`).
+- **Exercise 3:** The function correctly determines affordability based on the provided change.  The calculations are clear and the logic is straightforward. However, consider using a loop for calculating the total amount from the array rather than multiple individual variable assignments to make the code more concise and adaptable to different currency systems.
+- **Exercise 4:** The functions generally work correctly, but the error handling could be improved. The use of `do...while` loops for input validation is appropriate.  The bonus (moving prompt to `totalVacationCost`) would significantly improve code structure, although the functions would need to accept inputs instead of directly prompting the user.
+- **Exercise 5 & 6 & 7:**  These exercises are not included in the submitted code.  Therefore, a score cannot be given.  Add code for these exercises to get a full evaluation.
+Correctness: 90%
+-----
