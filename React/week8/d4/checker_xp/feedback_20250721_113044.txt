@@ -1,0 +1,10 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/React/week8/d4/checker_xp/App.jsx
+suggestions for improvement:
+- Use `react-router-dom` instead of `react-router`. The instructions specified `react-router-dom`.
+- In `App.js`, the `path` `/home` is redundant as you already have a route for `/` that renders the `Home` component. Remove the `/home` route.
+- Consider adding loading states and error handling to your JSON fetching components (`PostList`, `Example1`, `Example2`, `Example3`) to improve user experience.
+- Improve the styling of your components for better visual presentation. The current styling is minimal.
+- Add more robust error handling within the `ErrorBoundary` component. Consider capturing more specific error information and providing more meaningful feedback to the user.
+- The `Shop` component immediately throws an error; this might not be the desired behavior for an error boundary demonstration.  Consider a more gradual error introduction.
+Correctness: 90%
+-----
