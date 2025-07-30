@@ -1,0 +1,37 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/daily_challenge/config/server.js
+suggestions for improvement:
+- The code is missing crucial parts of the API implementation:  database connection, user model, bcrypt integration for password hashing and verification, and the actual implementation of the POST /register and POST /login routes, GET /users, GET /users/:id and PUT /users/:id routes.  The provided code only sets up the Express server and mounts a router.  It doesn't define the table structure or handle transactions.
+- The `userRouters` import assumes a file exists and functions correctly.  The code should include the router definition itself for a complete evaluation.
+- Error handling is missing. The server should gracefully handle database errors and input validation errors.
+- Security is severely lacking:  No password hashing is implemented, making it extremely vulnerable to attacks.  Input validation is missing making it vulnerable to injection attacks.
+Correctness: 30%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/daily_challenge/controllers/userControllers.js
+suggestions for improvement:
+- The `updateUser` function has a typo:  "User not foud" should be "User not found".
+- Error handling could be improved by providing more specific error messages to the client.  Generic "Server error" messages are not helpful for debugging.
+- Consider adding input validation to prevent SQL injection vulnerabilities, especially in the `updateUser` function.
+- The database schema uses two separate tables (`users` and `hashpwd`) which is inefficient and violates normalization principles.  All user data should be in one table. Storing the password hash in a separate table is unnecessary and complicates queries.
+- The API should return appropriate HTTP status codes consistently. For example, `updateUser` doesn't specify a success status code.  A 200 OK or 204 No Content is appropriate on a successful update.
+- Add input sanitization to prevent XSS attacks.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/daily_challenge/models/db.js
+suggestions for improvement:
+- The code only sets up the database connection using Knex.js.  It doesn't implement any of the Express.js API routes, user registration, login, bcrypt hashing, or user management functionality described in the Chapter Content/Questions.
+- The code lacks error handling for database connection failures.
+- Storing database credentials directly in a .env file is a security risk. Consider using environment variables or a more secure secret management solution.
+- The code is missing crucial components like Express.js app setup, routing, controller logic, and bcrypt integration for password hashing and verification.  These are essential for fulfilling the requirements.
+- Separate `users` and `hashpwd` tables are specified, but the code doesn't create them.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/daily_challenge/routers/userRouters.js
+suggestions for improvement:
+- The code lacks implementation details for database interaction (Knex).  The controllers (`userControllers`) are missing, and we don't know how they handle database queries, password hashing, or transactions.
+- The schema for the `users` and `hashpwd` tables is not defined in the code.  It should be explicitly defined, ideally using migrations.
+- Error handling is missing. The code should include robust error handling for database operations and user input validation.
+- Security needs improvement:  While bcrypt is mentioned, its actual usage in password hashing and verification is not shown. Input sanitization is also crucial and missing.
+- The routing is correct based on the instructions, using express.Router() and defining the paths correctly.  But without the controller functions it is only partially complete.
+- Consider adding middleware for authentication and authorization (for `/users` routes after login).
+Correctness: 80%
+-----

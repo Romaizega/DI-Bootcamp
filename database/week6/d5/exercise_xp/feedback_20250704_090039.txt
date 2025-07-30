@@ -1,0 +1,66 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week6/d5/exercise_xp/blog_api/package.json
+suggestions for improvement:
+- The provided code is only a `package.json` file.  It doesn't contain the actual implementation of the APIs described in Exercises 1, 2, and 3.  The exercises require creating `server.js` (or `app.js`) files with Express.js routes to handle CRUD operations for blogs and books.  A `dataService.js` module is also required for Exercise 3. The code is missing error handling and detailed implementation for different HTTP methods (GET, POST, PUT, DELETE).
+- Add error handling for cases like invalid input, missing data, and database errors. Use appropriate HTTP status codes to communicate errors to the client.
+- Implement input validation to prevent issues like SQL injection (though this is less of a concern with in-memory arrays).
+- For Exercise 3, implement the `fetchPosts` function within the `dataService.js` module to fetch data from the JSONPlaceholder API using Axios.  The current package.json provides dependencies, but not the implementation.
+- Consider using a more robust data storage solution than in-memory arrays for production applications (e.g., a database).
+- Improve code comments to enhance readability and understanding.
+Correctness: 60%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week6/d5/exercise_xp/blog_api/server.js
+suggestions for improvement:
+- Improve error handling for invalid input types (e.g., non-numeric IDs).
+- Add input validation to prevent issues like empty titles or content in POST and PUT requests.
+- Use a more robust data store than an in-memory array for production environments (e.g., a database).
+- Implement better security practices, such as input sanitization to prevent vulnerabilities like cross-site scripting (XSS).
+- The DELETE route's response could be more informative, such as returning the deleted post or a more descriptive success message.
+- Consider using a more descriptive status code for successful PUT requests (e.g., 200 OK instead of implicitly returning the updated object).
+Correctness: 95%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week6/d5/exercise_xp/book_api/app.js
+suggestions for improvement:
+- Implement the Update (PUT) and Delete (DELETE) routes for the books API as instructed in Exercise 2.
+- Add error handling for invalid input in the POST /api/books route (e.g., missing fields).
+- Consider using a more robust data storage mechanism than an in-memory array for production environments (e.g., a database).
+- Sanitize user inputs to prevent injection attacks. For example, validate data types for 'publishedYear' before adding it to the database.
+- Add more comprehensive error handling for unexpected errors during data processing.  Currently, only 404 errors are handled explicitly.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week6/d5/exercise_xp/book_api/package.json
+suggestions for improvement:
+- The provided code is a `package.json` file, not the actual implementation of the exercises.  It only sets up the project dependencies and scripts.  The actual `app.js` (and `server.js` for Exercise 1, `dataService.js` for Exercise 3) files are missing, preventing a complete assessment of correctness.
+- Exercise 1 and 2 require the implementation of CRUD operations (GET, POST, PUT, DELETE), which are absent. The `package.json` only shows the project is set up to use Express, but doesn't show the implementation of the API routes.
+- Exercise 3 needs a `dataService.js` to fetch data using Axios and integration within `app.js` to handle the API response. These files are not provided.
+- Error handling (as specified in Exercise 1) is missing from this `package.json` file.  The implementation needs to show this.
+- Add input validation to prevent vulnerabilities like SQL injection (though not strictly required by the instructions) and sanitize user inputs.
+Correctness: 70%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week6/d5/exercise_xp/crud_api/app.js
+suggestions for improvement:
+- Exercise 1 and 2 are not implemented. The code only addresses part of Exercise 3.
+- Error handling could be more robust and informative (e.g., specifying the type of error).
+- The `fetchPosts` function is called twice unnecessarily: once outside the route handler and once inside.  Only the one inside the route is needed.
+- Consider adding input validation to prevent unexpected behavior or security vulnerabilities.
+- The code lacks the implementation of CRUD operations beyond fetching data.  The instructions clearly state to create, read, update, and delete functionality.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week6/d5/exercise_xp/crud_api/data/dataService.js
+suggestions for improvement:
+- Add input validation to handle potential errors from the external API more gracefully.  For example, check the response status code before accessing `res.data`.
+- Consider adding a timeout to the `axios` request to prevent indefinite blocking.
+- Improve error handling by providing more informative error messages to the caller, rather than just logging to the console.
+- The security score is reduced because the code directly uses an external API without any input sanitization or validation.  A malicious actor could potentially manipulate the API endpoint.
+- For better readability, consider using `async/await` instead of `.then/.catch` for cleaner error handling.
+Correctness: 100%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week6/d5/exercise_xp/crud_api/package.json
+suggestions for improvement:
+- The provided code is a `package.json` file, not a solution to any of the exercises.  It only sets up the project dependencies.  The actual code implementing the APIs (server.js, app.js, dataService.js) is missing.
+- Exercise 1 and 2 require the implementation of CRUD operations, which are absent.  Exercise 3 requires fetching data from an external API, also missing.
+- The `package.json` is reasonably well-structured and includes the necessary dependencies (express and axios), but it lacks any description and scripts for running and testing the actual API.
+- Error handling is completely absent (required by Exercise 1).
+- Security best practices are ignored;  no input validation or protection against common vulnerabilities is included in this structure. This would be relevant in the missing server code.
+- Add scripts to `package.json` to start the server (`start`, `dev`), run tests, etc.
+Correctness: 60%
+-----

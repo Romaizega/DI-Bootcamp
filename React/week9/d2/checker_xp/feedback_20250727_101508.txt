@@ -1,0 +1,10 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/React/week9/d2/checker_xp/App.jsx
+suggestions for improvement:
+- The `TaskInput` component's naming could be improved to `TaskInput` for consistency.  A minor typo.
+- Add input validation to `TaskInput` to prevent adding tasks with empty names.
+- Consider adding error handling for edge cases (e.g., unexpected data types) in the reducers.
+- The UI could benefit from visual cues for completed tasks (e.g., checkboxes, strikethrough text).  This is already partially implemented but could be improved.
+- Separate the task list display from the task addition and removal logic. The `TodoList` component is currently doing too much.
+- Use more descriptive variable names (e.g., `addTask` instead of `addTasks`).
+Correctness: 85%
+-----
