@@ -1,0 +1,8 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/React/week9/d5/checker_dchl/daily_challenge.tsx
+suggestions for improvement:
+- The `List` component's `key` prop in the `map` function should ideally use a unique identifier from the item data (e.g., `book.id`) instead of the index.  Using the index is generally discouraged for better React performance and predictability, especially if items are added or removed frequently.
+- Minor typo: `setbook` should likely be `setBook` for better naming conventions.
+- Add error handling for empty title or author inputs in `addNewBook` function to enhance user experience.
+- Consider adding input validation to prevent the addition of duplicate books or books with invalid titles/authors.
+Correctness: 95%
+-----

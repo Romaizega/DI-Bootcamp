@@ -1,0 +1,9 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/React/week9/d2/cheker_daily/App.jsx
+suggestions for improvement:
+- The application lacks a calendar or date picker component as specified in Step 3.  This is a critical omission.
+- The `TaskList` component should filter tasks based on the selected date. Currently, it displays all tasks regardless of date.
+- The `editTask` reducer could be improved to handle cases where the task with the given ID is not found. Currently, this scenario would not lead to an error but won't properly update the state either. 
+- Improve error handling and user feedback (e.g., display a message if a task with a given ID is not found during editing or deletion).
+- Consider using a more robust date handling library or format for dates to ensure consistency across the application. Currently, it just passes the date string as is.
+Correctness: 80%
+-----

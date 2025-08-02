@@ -1,0 +1,12 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/React/miniproject_10_week/checker_xp/exercise.tsx
+suggestions for improvement:
+- The `RecipeCollection` class is not fully utilized. The application should leverage this class for managing recipes instead of directly manipulating the `recipes` state in the App component.
+- The `loadFromLocalStorage` method in `RecipeCollection` has a bug.  It doesn't correctly reconstruct `RecipeItem` objects; it creates an array with incorrect values instead of a new `RecipeItem` instance.
+- The `App` component's `useEffect` hook only adds a single hardcoded recipe.  The application needs functionality to add new recipes via the form, as described in the project overview.
+- Add input fields for title, ingredients (allowing multiple ingredients), and instructions to the form in your HTML, and handle their submission in the App component.
+- The `RecipeTemplate` component's nested `<details>` elements are not optimally structured.  Consider simplifying the structure.
+- Implement a 'Clear All Recipes' button functionality.
+- Add error handling for localStorage operations (e.g., `try...catch` blocks).
+- Improve the styling of the app to make it more user friendly
+Correctness: 70%
+-----

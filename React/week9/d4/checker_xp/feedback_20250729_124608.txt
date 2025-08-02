@@ -1,0 +1,10 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/React/week9/d4/checker_xp/exercise_xp.jsx
+suggestions for improvement:
+- The `getBookByGenre` reducer is not used and should be removed.
+- The `getAllbook` action doesn't actually filter the books; it only updates `selectedGenre` in the state.  The filtering logic is entirely within the selectors and React component. This could be simplified by moving the genre filtering logic into the reducer itself, making the selectors simpler and potentially more efficient.
+- The `useFetchBooks` hook is redundant since the data is already present in the initial state.  It can be removed unless there is a plan for future asynchronous data fetching.
+- The naming of `BooksReducer` and its associated actions/selectors (`selectBookState`, `getAllbook`) in `booksSlice.js` and `app/store.js`  could be made more consistent (e.g., all lowercase `booksReducer`).
+- Add error handling for potential issues in fetching and displaying books (e.g., an empty array).
+- Improve the UI by using a more modern approach (e.g. CSS modules, styled-components) instead of inline styling.
+Correctness: 90%
+-----
