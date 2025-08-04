@@ -1,0 +1,9 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/React/week9/d3/checker_xp/App.jsx
+suggestions for improvement:
+- Use a more descriptive name for the `delayUser` thunk action creator.  Something like `fetchUsers` would be clearer.
+- Add error handling in `Users.jsx` to display more informative error messages than just "Error".  Consider showing the error details from the Redux state if possible.
+- The `App.jsx` component shows both a `Counter` and `Users` component.  The provided chapter instructions only reference fetching user data, implying only the `Users` component should be present.
+- Consider adding loading and error states to the UI to improve user experience.  While loading and error messages are already present, styling and more informative messages are recommended.
+- While the Redux store correctly uses `createSlice` and `createAsyncThunk`, a dedicated `store.js` file to hold the Redux store configuration would improve structure. This is a standard best practice for larger applications.
+Correctness: 85%
+-----

@@ -1,0 +1,10 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_5/DCHL/index_dchl.html
+suggestions for improvement:
+- Improve error handling: The error handling is basic.  More informative error messages should be displayed to the user, indicating what went wrong (e.g., network error, invalid input, API error).
+- Enhance API Key Management: The API key is hardcoded. For a production application, this is a significant security risk. Implement a more secure method for managing API keys, such as storing them in environment variables or a configuration file.
+- Optimize API Calls: The code makes multiple API calls. Consider fetching all necessary data in a single request where possible to improve performance and reduce API rate limits.
+- Add Loading Indicator: While the conversion happens, provide a loading indicator to improve user experience and inform that the process is ongoing.
+- Input Validation: Add more robust input validation for the amount field.  Check for non-numeric values and handle potential exceptions.
+- Improve Currency Selection: Currently, only USD and EUR are shown first in the select dropdown. Make the initial list of options clearer and more dynamic with all available currencies from the API response, potentially allowing the user to search through them.
+Correctness: 85%
+-----

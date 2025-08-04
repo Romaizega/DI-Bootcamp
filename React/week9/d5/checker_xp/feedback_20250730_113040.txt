@@ -1,0 +1,8 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/React/week9/d5/checker_xp/exersice.tsx
+suggestions for improvement:
+- In `UserCard`, consider using a more descriptive name than `UsercardProps` for the type.  Perhaps `UserCardProps`.
+- Add comments to explain the purpose of each component and its logic.
+- For better error handling in `UserList`, consider a more user-friendly error message instead of just displaying the raw error message. 
+- In `App.tsx`, add a title to improve the overall structure and make it clearer what each component is displaying.
+Correctness: 95%
+-----

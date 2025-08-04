@@ -1,0 +1,12 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/React/miniproject_10_week/checker_daily/exercise.tsx
+suggestions for improvement:
+- The `api.ts` file should use the provided API key from RapidAPI, rather than a hardcoded URL.  The current implementation uses a different API than specified in the instructions.
+- Add input field for the user to specify a search query instead of hardcoding 'chicken'.
+- Implement error boundaries to handle potential errors more gracefully and prevent crashes, especially during network issues.
+- Improve type safety: Add better type definitions for your API responses to improve data handling and prevent runtime type errors.
+- The `DataFetcher` component isn't truly generic; it's specific to fetching recipes.  To be generic, it should accept a type parameter that dictates what type of data it fetches and displays. It also lacks error handling at the component level. 
+- Add loading and error states to the `DataFetcher` component. The current loading and error handling relies exclusively on Redux, which is a valid approach, but can be enhanced with local component-level handling to improve user experience.
+- Use a more descriptive variable name than `query` in `getRecipes`. For example, `searchTerm`.
+- Consider adding pagination for large datasets to improve performance and user experience.
+Correctness: 85%
+-----

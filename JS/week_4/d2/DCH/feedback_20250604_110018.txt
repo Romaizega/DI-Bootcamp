@@ -1,0 +1,14 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_4/d2/DCH/index.html
+suggestions for improvement:
+- The bonus section involving the array of video data could be improved by using a more descriptive data structure, such as an array of objects, where each object represents a video with its title, uploader, and time.
+- Add error handling for invalid input types in the Video constructor.
+- The `watch()` method could be made more robust by handling cases where `title`, `uploader`, or `time` might be undefined or null.
+Correctness: 85%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/JS/week_4/d2/DCH/script.js
+suggestions for improvement:
+- The `watch()` method's output could be more robust by handling potential null or undefined values for `title`, `uploader`, or `time`.
+- Consider adding input validation within the constructor to ensure the data types of the parameters are as expected (e.g., title and uploader are strings, time is a number).
+- The variable names (`new_param`, `new_param2`) could be more descriptive.  Something like `firstVideo`, `secondVideo` would improve readability.
+Correctness: 95%
+-----
