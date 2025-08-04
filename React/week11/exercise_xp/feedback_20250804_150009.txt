@@ -1,0 +1,12 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/React/week11/exercise_xp/exercise.js
+suggestions for improvement:
+- The `users` array in `auth.js` should be replaced with a persistent database solution (e.g., MongoDB, PostgreSQL) as suggested in the exercises.  Storing user data in memory makes the application vulnerable and not suitable for production.
+- Add error handling for database operations (if a database were used).
+- Improve the password strength validation regex. The current one is basic.
+- Implement email confirmation as outlined in the exercises to enhance security.
+- Add rate limiting to `/login` and `/refresh` endpoints as suggested in the exercises to mitigate brute-force attacks.
+- The `authMiddleware` attempts token refresh but isn't entirely robust.  Consider a dedicated refresh endpoint (as implemented in the `auth.js`) and handle cases where both access and refresh tokens are invalid.
+- Add more robust input validation to prevent injection vulnerabilities.
+- Consider using a more secure method for handling cookies, such as the `Secure` flag (when using HTTPS).
+Correctness: 90%
+-----
