@@ -1,0 +1,15 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/checker_daily/app.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/checker_daily/quize_router.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/checker_daily/script.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----

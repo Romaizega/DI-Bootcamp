@@ -1,0 +1,10 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/React/week9/d4/checker_daily/daily.jsx
+suggestions for improvement:
+- The `TaskList` component renders a select element for category selection, duplicating functionality with `CategorySelector`.
+- Error in the reducer `editCategory` in `categorySlice`. The `find` method returns an object which needs to be addressed and the name assigned to the object directly.
+- Improve performance by memoizing selectors further, especially `selectTasksByCategory`, which is recalculated on every render.
+- Add input validation to prevent adding tasks with empty titles or invalid category IDs.
+- Add more comprehensive error handling in reducers and actions, for instance logging unexpected scenarios.
+- Consider using a more robust and secure way of generating unique IDs for tasks rather than `uuidv4()`.
+Correctness: 90%
+-----

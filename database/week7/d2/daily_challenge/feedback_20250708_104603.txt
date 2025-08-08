@@ -1,0 +1,37 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/daily_challenge/config/server.js
+suggestions for improvement:
+- The code only sets up the Express.js server and routes.  It lacks the crucial implementation details for user registration, login, database interaction (using Knex), password hashing (bcrypt), and error handling.
+- The `userRouters` require statement implies the existence of route handlers, but these handlers are not provided. The code does not define the `/register`, `/login`, `/users`, `/users/:id`, and `/users/:id` routes as specified in the instructions. 
+- The code doesn't demonstrate the use of Knex for database interaction, nor does it create the `users` and `hashpwd` tables as instructed.
+- There is no implementation of bcrypt for password hashing and verification. 
+- There is no transaction implementation for adding a user.
+- Input validation is missing, making the API vulnerable to injection attacks.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/daily_challenge/controllers/userControllers.js
+suggestions for improvement:
+- The code uses two separate tables (`users` and `hashpwd`) which is not ideal. It's better to store the hashed password directly in the `users` table for better data integrity and efficiency.
+- Error handling could be improved by providing more specific error messages to the client.  Generic "Server error" messages are not helpful for debugging.
+- The `updateUser` function lacks input validation.  It should check if the provided fields are valid before updating the database.
+- Consider adding input sanitization to prevent SQL injection vulnerabilities, although Knex likely handles this to some degree.
+- Add more robust error handling within the transaction block. The current `catch` block is too generic.
+Correctness: 80%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/daily_challenge/models/db.js
+suggestions for improvement:
+- The provided code only sets up a database connection using Knex.js. It doesn't implement any of the Express.js API routes, user registration, login, or bcrypt password hashing as required by the chapter content.
+- The code lacks error handling.  Production-ready code needs to handle connection errors and other potential exceptions.
+- Storing database credentials directly in a `.env` file is a security risk. Consider using a more secure method for managing sensitive information.
+- The chapter specifies using two tables (`users` and `hashpwd`).  This code doesn't create the tables or define their schema.
+- The code is missing the implementation of Express.js routes, bcrypt integration, and transaction management, which are core requirements of the assignment.
+Correctness: 20%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d2/daily_challenge/routers/userRouters.js
+suggestions for improvement:
+- The code lacks implementation details for user registration, login, and data retrieval.  The `userControllers` file is missing, and crucial aspects like password hashing with bcrypt, database interaction with Knex, and transaction management are not shown.
+- Error handling is missing.  The code should include error handling for database operations and input validation.
+- Separate routes for `/users` and `/register`/`/login` should be consolidated under `/users` as per the instructions. For example, `/users/register` and `/users/login`.
+- The security score is lowered due to the lack of explicit password hashing and input validation.  Without seeing the implementation of `registerUser` and `loginUser`, it's impossible to assess the security thoroughly.  Salt generation for bcrypt hashing is crucial and needs to be demonstrated.
+- The database schema should be explicitly defined using migrations instead of relying on potentially unreliable direct table creation commands.
+Correctness: 80%
+-----

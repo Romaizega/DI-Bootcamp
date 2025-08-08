@@ -1,0 +1,45 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/exercise_xp/exercise_xp_1/app.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/exercise_xp/exercise_xp_1/package.json
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/exercise_xp/exercise_xp_1/routers/index_router.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/exercise_xp/exercise_xp_2/app.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/exercise_xp/exercise_xp_2/package.json
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/exercise_xp/exercise_xp_2/routers/todo.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/exercise_xp/exercise_xp_3/app.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/exercise_xp/exercise_xp_3/package.json
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week7/d1/exercise_xp/exercise_xp_3/routers/router_books.js
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----

@@ -1,0 +1,14 @@
+URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/database/week6/d2/exercise_madatory/exercise_madatory.sql
+suggestions for improvement:
+- In Exercise 1,  the queries are correct but could be improved by explicitly specifying the table name for the `price` column in the `ORDER BY` clause for clarity (e.g., `ORDER BY items.price`).
+- In Exercise 2, query 2.8 assumes 'Avatar' is the favorite movie.  The prompt asks to check if *the user's* favorite movie exists. The query should accept user input or be parameterized to handle various movie titles.
+- In Exercise 2, queries 2.10 and 2.11 could be improved by using `OFFSET` and `FETCH` clauses (or `ROW_NUMBER` as in 2.11) for better pagination instead of relying on `LIMIT` which is less flexible for retrieving subsequent pages of results.
+- In Exercise 2, query 2.13  uses a `LEFT JOIN` which is correct but could be simplified to a `NOT IN` subquery for potentially better performance with large datasets.  It's also missing the film title which is more helpful than the film id.
+- Add comments to explain more complex queries like the ones using CTEs or window functions in Exercise 2.  Improve indentation for better readability.
+- Always sanitize user inputs in production code to prevent SQL injection attacks (though this is not directly applicable to the provided code snippet)
+Brief justification:
+- correctness: The code largely addresses the exercises correctly. Most queries produce the expected results based on the problem descriptions in the chapter. The minor issues mentioned above (handling user input, alternative SQL for better performance, and clarity in the `ORDER BY` clause) do not significantly affect the overall correctness but represent areas for improvement.
+- readability: The code is mostly readable, using clear naming conventions for tables and columns. However, there is room for improvement through comments, consistent indentation, and avoiding assumptions in queries (like the user's favorite movie).
+- performance: The performance of most queries is acceptable for small datasets. However, queries 2.10 and 2.11 show potential performance improvements by using `OFFSET` and `FETCH` or alternative pagination methods rather than `LIMIT`. Query 2.13, while correct, may have better performance with a `NOT IN` subquery instead of the `LEFT JOIN` approach, especially for larger datasets.
+- security: The provided code does not contain any obvious security vulnerabilities. However, it's crucial to note that in a real-world application,  input sanitization is essential to prevent SQL injection attacks if the code interacts with external user inputs.
+

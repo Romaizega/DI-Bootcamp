@@ -1,0 +1,8 @@
+URL: URL: https://github.com/Romaizega/DI-Bootcamp/blob/main/React/week8/mini_project/checker_calculator/App.jsx
+suggestions for improvement:
+- Improve error handling for non-numeric input.  Currently, it will likely result in NaN, which is not user-friendly.
+- Add input validation to prevent unexpected behavior (e.g., division by zero). While the code handles this specifically for division, it could benefit from a more robust approach.
+- Consider using more descriptive variable names (e.g., `num1` instead of `number_1`).
+- The spelling of 'muliply' should be corrected to 'multiply'.
+Correctness: 95%
+-----
